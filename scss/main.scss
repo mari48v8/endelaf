@@ -1,0 +1,132 @@
+$bluecolor: blue;
+$white:white;
+$lightblue:#12BBF1;
+
+body {
+    font: 100% Helvetica, sans-serif;
+    background-color: #efefef;
+}
+
+html,
+body,
+    {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 375px;
+    height: auto;
+    margin: 0 auto;
+    background-color: $white;
+}
+
+
+.img_background {
+    background-image: url(../img/homeless.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-left: 5%;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10%;
+    margin-top: 0%;
+    color: $white;
+    background-color: $lightblue;
+}
+
+.txt_box {
+    width: 80px;
+    height: auto;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    color: $white;
+    background-color: $lightblue;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin button-bg($bg) {
+    background: $bg;
+
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($bg, 25%);
+    }
+}
+
+.btn {
+    color: $white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-color: none;
+    font-size: 1.2em;
+
+}
+
+.btn-darkblue {
+    @include button-bg(#446B7F);
+
+}
+
+.btn-blue {
+    @include button-bg(#12BBF1);
+
+}
+
+.btn-red {
+    @include button-bg(#FF194E);
+    margin-bottom: 5%;
+}
+
+
+.ctn {
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    color: $white;
+    padding-top: 45px;
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+.c1 {
+    @include button-bg(#446B7F);
+
+}
+
+.c2 {
+    @include button-bg(#446B7F);
+    opacity: 0.8;
+
+}
+
+.c3 {
+    @include button-bg(#446B7F);
+    opacity: 0.6;
+}
+
+.c4 {
+    @include button-bg(#446B7F);
+    opacity: 0.4;
+}
