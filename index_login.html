@@ -27,17 +27,25 @@
 <body>
 
     <div class="container">
-        <input id="txtEmail" type="email" placeholder="Email">
-        <input id="txtPassword" type="password" placeholder="Password">
-
-        <button id="btnLogin" class="btn btn-action">Log in</button>
-        <button id="btnSignUp" class="btn btn-secondary">Opret bruger</button>
-        <button id="btnLogout" class="btn btn-action hide">Log ud</button>
-
         <h4>Du er logget ind som:</h4>
         <p id="user">bruger email</p>
-        <div id="uId">Brugerid</div>
+        <div id="uId"></div>
+        <form action="signUpForm">
+            <input id="txtEmail" type="email" placeholder="Email">
+            <input id="txtPassword" type="password" placeholder="Password">
 
+            <p>
+                <label for="navn">Navn</label>
+                <input type="text" name="name" id="name">
+            </p>
+
+
+
+            <button id="btnLogin" class="btn btn-action">Log in</button>
+            <button id="btnSignUp" class="btn btn-secondary">Opret bruger</button>
+            <button id="btnLogout" class="btn btn-action hide">Log ud</button>
+
+        </form>
     </div>
 
     <script src="login.js"></script>
