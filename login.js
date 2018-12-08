@@ -13,18 +13,34 @@ firebase.initializeApp(config);
 // Get elements
 const txtEmail = document.getElementById("txtEmail");
 const txtPassword = document.getElementById("txtPassword");
+// button that opens the form
 const btnLogin = document.getElementById("btnLogin");
+// button that send the form
+const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
+// container used to hide/ show the login form
+const loginForm = document.getElementById("loginContainer");
+
 const btnSignUp = document.getElementById("btnSignUp");
+const btnSubmitSignUpForm = document.getElementById("btnSubmitSignUpForm");
+
 const btnLogout = document.getElementById("btnLogout");
-const btnSubmit = document.getElementById("btnSubmit");
 
 let email;
 let pass;
 let auth;
 
+//show form when btnLogin is clicked
+btnLogin.addEventListener('click', e => {
+    loginForm.classList.remove('hide');
+})
+
+//show form when btnSignUp is clicked
+btnSignUp.addEventListener('click', e => {
+    loginForm.classList.remove('hide');
+})
 
 //Add login event
-btnLogin.addEventListener('click', e => {
+btnSubmitLogIn.addEventListener('click', e => {
     //Get email and pass
     email = txtEmail.value;
     pass = txtPassword.value;
@@ -59,11 +75,15 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser.uid);
         btnLogout.classList.remove('hide');
-        btnLogin.classList.add('hide');
+        btnSubmitLogIn.classList.add('hide');
         btnSignUp.classList.add('hide');
         document.querySelector("#uId").textContent = firebaseUser.uid;
         document.querySelector("#user").textContent = firebaseUser.email;
+        // Add userId to local storage
+        localStorage.setItem("uId", firebaseUser.uid);
 
+        // Retrieve - @TODO hvor skal denne placeres?????
+        // document.getElementById("uId2").innerHTML = sessionStorage.getItem("uId");
     } else {
         console.log("not logged in");
         btnLogout.classList.add('hide');
@@ -72,7 +92,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     }
 })
 
-//Eventlistner submitbut
+//Eventlistner submitbutton
 btnSignUp.addEventListener('click', e => {
     console.log("sendt");
 })

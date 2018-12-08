@@ -12,11 +12,22 @@
 
 <body>
     <div class="wrapper">
+        <h4>Du er logget ind som:</h4>
+        <p id="user">bruger email</p>
+        <div id="uId"></div>
         <div class="img_background">
             <div class="header">
                 <div class="buttons">
-                    <button id="btnlogin" class="btn btn-darkblue">login</button>
+                    <button id="btnLogin" class="btn btn-darkblue">Login</button>
+
+                    <div id="loginContainer" class="login-form hide">
+                        <input id="txtEmail" type="email" placeholder="Email">
+                        <input id="txtPassword" type="password" placeholder="Password">
+                        <button id="btnSubmitLogIn" class="btn btn-action">Login</button>
+                    </div>
+
                     <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+
                     <button id="btnLogout" class="btn btn-red hide">Log ud</button>
                 </div>
             </div>
@@ -25,7 +36,7 @@
                 <div class="txt_box">
                     <p>Noget tekst her om vores donations app.</p>
                 </div>
-                <button class="btn btn-red">Støt her</button>
+                <a href="donation.html"> <button class="btn btn-red">Støt her</button></a>
             </div>
         </div>
         <div class="main_body_bottom">
@@ -34,9 +45,8 @@
             <div class="ctn c3">Hygiejne</div>
             <div class="ctn c4">Vidnesbyrd</div>
         </div>
+    </div>
 
-    </div>
-    </div>
 
     <script src="login.js"></script>
 </body>
