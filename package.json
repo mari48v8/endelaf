@@ -1,0 +1,20 @@
+{
+  "name": "website_endelaf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script.js",
+    "endelafsass": "node-sass scss/main.scss css/main.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mari48v8/endelaf/issues"
+  },
+  "homepage": "https://github.com/mari48v8/endelaf#readme",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}

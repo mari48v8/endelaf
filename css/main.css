@@ -1,0 +1,126 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  width: 375px;
+  height: auto;
+  margin: 0 auto;
+  background-color: white; }
+
+.img_background {
+  background-image: url(../img/homeless.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-left: 5%; }
+
+.logo {
+  width: 100px;
+  height: auto;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 10%;
+  margin-top: 0%;
+  color: white;
+  background-color: #12BBF1; }
+
+.txt_box {
+  width: 80px;
+  height: auto;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  color: white;
+  background-color: #12BBF1; }
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border-color: none;
+  font-size: 1.2em; }
+
+.btn-darkblue {
+  background: #446B7F; }
+  .btn-darkblue:hover {
+    background: #365564;
+    transition: all 0.3s ease; }
+  .btn-darkblue:active {
+    background: #18252c; }
+
+.btn-blue {
+  background: #12BBF1; }
+  .btn-blue:hover {
+    background: #0c9fce;
+    transition: all 0.3s ease; }
+  .btn-blue:active {
+    background: #07607c; }
+
+.btn-red {
+  background: #FF194E;
+  margin-bottom: 5%; }
+  .btn-red:hover {
+    background: #ef0037;
+    transition: all 0.3s ease; }
+  .btn-red:active {
+    background: #990023; }
+
+.ctn {
+  width: 100%;
+  height: 55px;
+  text-align: center;
+  color: white;
+  padding-top: 45px;
+  font-size: 1.3em;
+  font-weight: 100; }
+
+.c1 {
+  background: #446B7F; }
+  .c1:hover {
+    background: #365564;
+    transition: all 0.3s ease; }
+  .c1:active {
+    background: #18252c; }
+
+.c2 {
+  background: #446B7F;
+  opacity: 0.8; }
+  .c2:hover {
+    background: #365564;
+    transition: all 0.3s ease; }
+  .c2:active {
+    background: #18252c; }
+
+.c3 {
+  background: #446B7F;
+  opacity: 0.6; }
+  .c3:hover {
+    background: #365564;
+    transition: all 0.3s ease; }
+  .c3:active {
+    background: #18252c; }
+
+.c4 {
+  background: #446B7F;
+  opacity: 0.4; }
+  .c4:hover {
+    background: #365564;
+    transition: all 0.3s ease; }
+  .c4:active {
+    background: #18252c; }
