@@ -25,6 +25,8 @@ const btnSubmitSignUpForm = document.getElementById("btnSubmitSignUpForm");
 
 const btnLogout = document.getElementById("btnLogout");
 
+
+
 let email;
 let pass;
 let auth;
@@ -92,7 +94,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     }
 })
 
-//Eventlistner submitbutton
+//Eventlistner submitSignUp button
 btnSignUp.addEventListener('click', e => {
     console.log("sendt");
 })
+
