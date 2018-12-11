@@ -17,26 +17,53 @@
     <h2>Giv en hånd til en hjemløs</h2>
 
     <!-- @TODO - validation -->
-    <form id="donationForm">
+    <form id="donationForm" action="" method="POST">
 
         <h3>Hjælp til hunden</h3>
         <p>
-            <input id="dogFood" type="checkbox" name="dogFood">
+            <input id="dogFood" type="checkbox" name="dog" value="75">
             <labels>Hundemad</label>
         </p>
         <p>
-            <input id="dogClothes" type="checkbox" name="dogClothes">
-            <labels>legetøj</label>
+            <input id="dogClothes" type="checkbox" name="dog" value="150">
+            <labels>Hundefrakke</label>
         </p>
         <p>
-            <input id="dogToy" type="checkbox" name="dogToy">
-            <labels>legetøj</label>
+            <input id="dogToy" type="checkbox" name="dog" value="100">
+            <labels>Hundelegetøj</label>
         </p>
 
-        <label>Beløb</label>
-        <input id="amount" name="amount" type="text" placeholder="Mindste beløb 75 kr">
+        <h3>Tøj</h3>
+        <p>
+            <input id="wintercoat" type="checkbox" name="clothes" value="75">
+            <labels>Vinterfrakke</label>
+        </p>
+        <p>
+            <input id="hatAndGloves" type="checkbox" name="clothes" value="100">
+            <labels>Hue og vanter</label>
+        </p>
+        <p>
+            <input id="socks" type="checkbox" name="clothes" value="125">
+            <labels>Uldne strømper</label>
+        </p>
 
-        <button id="btnSubmitDonation" type="submit">Send</button>
+        <h3>Personlig pleje</h3>
+        <p>
+            <input id="toothbrush" type="checkbox" name="toiletries" value="50">
+            <labels>Tandbørste og tandpasta</label>
+        </p>
+        <p>
+            <input id="tampons" type="checkbox" name="toiletries" value="75">
+            <labels>Tamponer</label>
+        </p>
+        <p>
+            <input id="shaving" type="checkbox" name="toiletries" value="75">
+            <labels>Barbergrej</label>
+        </p>
+
+        <p>
+            <input id="btnSubmitDonation" type="submit" value="Send">
+        </p>
     </form>
 
 

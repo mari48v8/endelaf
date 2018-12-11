@@ -1,6 +1,8 @@
+'use strict';
+
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyBmqq2D7nb4woMcMQ6Bs3ixbz-LzTtF8kk",
+
     authDomain: "exam-6c12b.firebaseapp.com",
     databaseURL: "https://exam-6c12b.firebaseio.com",
     projectId: "exam-6c12b",
