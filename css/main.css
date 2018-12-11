@@ -1,30 +1,35 @@
 html,
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
   background-color: white;
   font-family: 'Raleway', sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 .wrapper {
   width: 375px;
   height: auto;
   margin: 0 auto;
-  background-color: white; }
+  background-color: white;
+}
 
 .img_background {
   background-image: url(../img/homeless.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  padding-left: 5%; }
+  padding-left: 5%;
+}
 
 .logo {
   width: 180px;
   height: 40px;
-  background-image: url(../img/Logo.png); }
+  background-image: url(../img/Logo.png);
+}
 
 .txt_box {
   width: 110px;
@@ -38,26 +43,31 @@ body {
   margin-top: 10%;
   opacity: 0.8;
   filter: alpha(opacity=60);
-  background-color: white; }
+  background-color: white;
+}
 
 .txt_box p {
   color: #000000;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 .flip {
   margin: auto;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 #panel {
   display: none;
   cursor: auto;
   padding: 7%;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 .buttons {
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+}
 
 .btn {
   color: white;
@@ -65,32 +75,48 @@ body {
   padding: 5px 10px;
   border-radius: 3px;
   border-color: none;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 .btn-darkblue {
-  background: #446B7F; }
-  .btn-darkblue:hover {
-    background: #365564;
-    transition: all 0.3s ease; }
-  .btn-darkblue:active {
-    background: #18252c; }
+  background: #446B7F;
+}
+
+.btn-darkblue:hover {
+  background: #365564;
+  transition: all 0.3s ease;
+}
+
+.btn-darkblue:active {
+  background: #18252c;
+}
 
 .btn-blue {
-  background: #12BBF1; }
-  .btn-blue:hover {
-    background: #0c9fce;
-    transition: all 0.3s ease; }
-  .btn-blue:active {
-    background: #07607c; }
+  background: #12BBF1;
+}
+
+.btn-blue:hover {
+  background: #0c9fce;
+  transition: all 0.3s ease;
+}
+
+.btn-blue:active {
+  background: #07607c;
+}
 
 .btn-red {
   background: #FF194E;
-  margin-bottom: 5%; }
-  .btn-red:hover {
-    background: #ef0037;
-    transition: all 0.3s ease; }
-  .btn-red:active {
-    background: #990023; }
+  margin-bottom: 5%;
+}
+
+.btn-red:hover {
+  background: #ef0037;
+  transition: all 0.3s ease;
+}
+
+.btn-red:active {
+  background: #990023;
+}
 
 .ctn {
   width: 100%;
@@ -99,39 +125,60 @@ body {
   color: white;
   padding-top: 45px;
   font-size: 1.3em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .c1 {
-  background: #446B7F; }
-  .c1:hover {
-    background: #365564;
-    transition: all 0.3s ease; }
-  .c1:active {
-    background: #18252c; }
+  background: #446B7F;
+}
+
+.c1:hover {
+  background: #365564;
+  transition: all 0.3s ease;
+}
+
+.c1:active {
+  background: #18252c;
+}
 
 .c2 {
   background: #446B7F;
-  opacity: 0.8; }
-  .c2:hover {
-    background: #365564;
-    transition: all 0.3s ease; }
-  .c2:active {
-    background: #18252c; }
+  opacity: 0.8;
+}
+
+.c2:hover {
+  background: #365564;
+  transition: all 0.3s ease;
+}
+
+.c2:active {
+  background: #18252c;
+}
 
 .c3 {
   background: #446B7F;
-  opacity: 0.6; }
-  .c3:hover {
-    background: #365564;
-    transition: all 0.3s ease; }
-  .c3:active {
-    background: #18252c; }
+  opacity: 0.6;
+}
+
+.c3:hover {
+  background: #365564;
+  transition: all 0.3s ease;
+}
+
+.c3:active {
+  background: #18252c;
+}
 
 .c4 {
   background: #446B7F;
-  opacity: 0.4; }
-  .c4:hover {
-    background: #365564;
-    transition: all 0.3s ease; }
-  .c4:active {
-    background: #18252c; }
+  opacity: 0.4;
+}
+
+.c4:hover {
+  background: #365564;
+  transition: all 0.3s ease;
+}
+
+.c4:active {
+  background: #18252c;
+}
