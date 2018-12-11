@@ -40,8 +40,8 @@ body {
   padding-bottom: 1px;
   margin-bottom: 10%;
   margin-top: 10%;
-  color: white;
-  background-color: #12BBF1; }
+  color: #707070;
+  background-color: white; }
 
 .buttons {
   display: flex;
