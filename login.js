@@ -1,17 +1,5 @@
 'use strict';
 
-// Initialize Firebase
-const config = {
-
-    authDomain: "exam-6c12b.firebaseapp.com",
-    databaseURL: "https://exam-6c12b.firebaseio.com",
-    projectId: "exam-6c12b",
-    storageBucket: "exam-6c12b.appspot.com",
-    messagingSenderId: "662756749781"
-};
-firebase.initializeApp(config);
-
-
 // Get elements
 const txtEmail = document.getElementById("txtEmail");
 const txtPassword = document.getElementById("txtPassword");

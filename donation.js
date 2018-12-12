@@ -1,4 +1,5 @@
 'use strict';
+
 // Get element
 const donationForm = document.getElementById("donationForm");
 
@@ -7,9 +8,8 @@ donationForm.addEventListener('submit', submitDonation);
 
 function submitDonation(e) {
     e.preventDefault();
-    let donationArr = []
+    let itemsArr = []
     // Get values
-
 
     // Loop through checkbox's with the name=dog if checked push to array
     let dog = document.querySelectorAll('[name="dog"]');
@@ -20,7 +20,7 @@ function submitDonation(e) {
             dogItem.id = dog[i].id;
             dogItem.value = dog[i].value;
             dogItem.name = dog[i].name;
-            donationArr.push(dogItem);
+            itemsArr.push(dogItem);
         }
     }
 
@@ -33,7 +33,7 @@ function submitDonation(e) {
             clothesItem.id = clothes[i].id;
             clothesItem.value = clothes[i].value;
             clothesItem.name = clothes[i].name;
-            donationArr.push(clothesItem);
+            itemsArr.push(clothesItem);
             // console.log(clothesItem);
         }
     }
@@ -47,9 +47,19 @@ function submitDonation(e) {
             toiletriesItem.id = toiletries[i].id;
             toiletriesItem.value = toiletries[i].value;
             toiletriesItem.name = toiletries[i].name;
-            donationArr.push(toiletriesItem);
+            itemsArr.push(toiletriesItem);
             //console.log(toiletriesItem);
         }
     }
-    console.log(donationArr);
+    console.log(itemsArr);
+
+    // Create reference
+    const dbRefObject = firebase.database().ref();
+
+    dbRefObject.child('items').set(itemsArr);
+
+    console.log(localStorage.getItem("uId"));
+
+    // sync object changes
+    // dbRefObject.on('value', snap => console.log(snap.val()));
 };
