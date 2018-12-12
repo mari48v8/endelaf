@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node script.js",
-    "endelafsass": "node-sass scss/main.scss css/main.css -w"
+    "endelafsass": "node-sass scss/payment.scss css/payment.css -w"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
   "homepage": "https://github.com/mari48v8/endelaf#readme",
   "devDependencies": {
     "node-sass": "^4.10.0"
+  },
+  "dependencies": {
+    "scss": "^0.2.4"
   }
 }

@@ -4,13 +4,14 @@
 const donationForm = document.getElementById("donationForm");
 
 // Eventlistner for submitDonation
-donationForm.addEventListener('submit', submitDonation);
+donationForm.addEventListener('submit', getCheckedBoxes);
 
-function submitDonation(e) {
+let itemsArr = [];
+let donationArr = [];
+function getCheckedBoxes(e) {
     e.preventDefault();
-    let itemsArr = []
-    // Get values
 
+    // Get values
     // Loop through checkbox's with the name=dog if checked push to array
     let dog = document.querySelectorAll('[name="dog"]');
 
@@ -23,7 +24,6 @@ function submitDonation(e) {
             itemsArr.push(dogItem);
         }
     }
-
     // Loop through checkbox's with the name=clothes if checked push to array
     let clothes = document.querySelectorAll('[name="clothes"]');
 
@@ -37,7 +37,6 @@ function submitDonation(e) {
             // console.log(clothesItem);
         }
     }
-
     // Loop through checkbox's with the name=toiletries if checked push to array
     let toiletries = document.querySelectorAll('[name="toiletries"]');
 
@@ -51,15 +50,36 @@ function submitDonation(e) {
             //console.log(toiletriesItem);
         }
     }
-    console.log(itemsArr);
+    timestamp();
 
-    // Create reference
-    const dbRefObject = firebase.database().ref();
-
-    dbRefObject.child('items').set(itemsArr);
-
-    console.log(localStorage.getItem("uId"));
-
-    // sync object changes
-    // dbRefObject.on('value', snap => console.log(snap.val()));
 };
+
+
+// this does variable does not work if it is let
+var formattedTime;
+// get timestamp (Primært fra https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript)
+function timestamp() {
+    let timestamp = Number(new Date());
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    let minutes = "0" + date.getMinutes();
+    let seconds = "0" + date.getSeconds();
+    // Will display time in 10:30:23 format
+    formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+    submitDonation();
+}
+// Create reference to firebase
+const dbRefDonation = firebase.database().ref('donations');
+const uId = localStorage.getItem("uId");
+
+// save donation to firebase
+function submitDonation() {
+    console.log("submit");
+    let newdbDonationRef = dbRefDonation.push();
+    newdbDonationRef.set({
+        uId: uId,
+        item: itemsArr,
+        time: formattedTime,
+    })
+}
