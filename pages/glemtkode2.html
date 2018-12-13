@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="scss/form.scss">
+    <link rel="stylesheet" href="../css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <title>En-del-af.dk</title>
@@ -40,13 +39,22 @@
 
                         <div class="logo m-b-50"></div>
 
-                        <h1 class="form-txt text-center">Tak for din støtte!</h1>
+                        <h1 class="form-txt text-center">Glemt adgangskode</h1>
 
-                        <div class="container-login-form-btn"> <button id="btnLogin" class="login-form-btn-blue">Log
-                                ud</button></div>
+                        <div class="wrap-input validate-input" data-validate="Enter email">
+                            <input type="email" id="txt_email" class="input form-control" placeholder="Din e-mail adresse">
+                            <span class="focus-input" data-placeholder="&#xf207;"></span>
+                        </div>
+                        <div class="wrap-input validate-input" data-validate="Enter password">
+                            <input type="password" id="txt_password" class="input form-control" placeholder="Ny adgangskode">
+                            <span class="focus-input" data-placeholder="&#xf191;"></span>
+                        </div>
 
-                        <div class="container-login-form-btn p-t-10"> <button id="btnLogin" class="login-form-btn-red">Donér
-                                igen</button></div>
+                        <div class="container-login-form-btn p-t-19">
+                            <button id="btnLogin" class="login-form-btn">Godkendt</button>
+                        </div>
+
+
                     </form>
                 </div>
             </div>
