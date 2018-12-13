@@ -20,41 +20,9 @@
             <div class="header">
                 <div class="logo"></div>
                 <div class="buttons">
-                    <button class="btn btn-darkblue" onclick="document.getElementById('btnLogin').style.display='block'"
-                        style="width:auto;">Login</button>
-
-                    <div id="btnLogin" class="modal">
-
-                        <form class="modal-content animate" action="">
-                            <div class="imgcontainer">
-                                <span onclick="document.getElementById('btnLogin').style.display='none'" class="close"
-                                    title="Close Modal">&times;</span>
-                                <img src="img_avatar2.png" alt="Avatar" class="avatar">
-                            </div>
-
-                            <div class="container">
-                                <input id="txtEmail" type="email" placeholder="Email">
-                                <input id="txtPassword" type="password" placeholder="Password">
-                                <button id="btnSubmitLogIn" class="btn btn-action">Login</button>
-                            </div>
-
-                            <div class="container" style="background-color:#f1f1f1">
-                                <button type="button" onclick="document.getElementById('btnLogin').style.display='none'"
-                                    class="cancelbtn">Cancel</button>
-                                <span class="psw">Forgot <a href="#">password?</a></span>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!--    <div id="loginContainer" class="login-form hide">
-                        <input id="txtEmail" type="email" placeholder="Email">
-                        <input id="txtPassword" type="password" placeholder="Password">
-                        <button id="btnSubmitLogIn" class="btn btn-action">Login</button>
-                    </div> -->
+                    <button id="btnLogin" class="btn btn-darkblue">Login</button>
 
                     <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
-
-                    <button id="btnLogout" class="btn btn-red hide">Log ud</button>
                 </div>
             </div>
             <div class="main_body_top">
@@ -78,24 +46,14 @@
     </div>
     </div>
     <script src="login.js"></script>
-    <script>
-        // Get the modal
-        var modal = document.getElementById('btnLogin');
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
     <script>
         function myShowFunction() {
             var x = document.getElementById("panel");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
+            if (x.style.display == "block") {
                 x.style.display = "none";
+            } else {
+                x.style.display = "block";
             }
             //document.getElementById("panel").style.display = "block";
         }

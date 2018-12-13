@@ -11,30 +11,49 @@ firebase.initializeApp(config);
 
 
 // Get elements
-const txtEmail = document.getElementById("txtEmail");
-const txtPassword = document.getElementById("txtPassword");
+const txt_email = document.getElementById("txt_email");
+const txt_password = document.getElementById("txt_password");
 // button that opens the form
 const btnLogin = document.getElementById("btnLogin");
+const btnLogout = document.getElementById("btnLogout");
 // button that send the form
 const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
 // container used to hide/ show the login form
-const loginForm = document.getElementById("loginContainer");
+const loginForm = document.getElementById("container-login");
 
 const btnSignUp = document.getElementById("btnSignUp");
 const btnSubmitSignUpForm = document.getElementById("btnSubmitSignUpForm");
 
-const btnLogout = document.getElementById("btnLogout");
+
 
 
 
 let email;
 let pass;
 let auth;
+let promise;
 
 //show form when btnLogin is clicked
 btnLogin.addEventListener('click', e => {
-    loginForm.classList.remove('hide');
-})
+    //loginForm.classList.remove('hide');
+    email = txt_email.value;
+    pass = txt_password.value;
+    auth = firebase.auth();
+
+    //sign in
+    promise = auth.signInWithEmailAndPassword(email, pass)
+        .catch(function (error) {
+            var errorCode = error.code;
+            if (errorCode == 'auth/invalid-email') {
+                console.log('invalid email');
+            } else if (errorCode == 'auth/wrong-password') {
+                console.log('wrong password ... ')
+            } else {
+                console.log('Error:' + errorCode)
+            }
+        })
+
+});
 
 //show form when btnSignUp is clicked
 btnSignUp.addEventListener('click', e => {
@@ -44,12 +63,12 @@ btnSignUp.addEventListener('click', e => {
 //Add login event
 btnSubmitLogIn.addEventListener('click', e => {
     //Get email and pass
-    email = txtEmail.value;
-    pass = txtPassword.value;
+    email = txt_email.value;
+    pass = txt_password.value;
     auth = firebase.auth();
 
-    //signIn
-    const promise = auth.signInWithEmailAndPassword(email, pass);
+    //sign in
+    promise = auth.signInWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
 })
 
@@ -76,8 +95,15 @@ btnLogout.addEventListener('click', e => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser.uid);
+        //Log Out
         btnLogout.classList.remove('hide');
+        var user = firebase.auth().currentUser;
+        email = user.email;
+        console.log('Email:' + email);
+
+        //Logged in
         btnSubmitLogIn.classList.add('hide');
+        //Signed in
         btnSignUp.classList.add('hide');
         document.querySelector("#uId").textContent = firebaseUser.uid;
         document.querySelector("#user").textContent = firebaseUser.email;
