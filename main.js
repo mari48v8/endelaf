@@ -6,13 +6,13 @@ const txt_password = document.getElementById("txt_password");
 // button that opens the form
 const btnLogin = document.getElementById("btnLogin");
 const btnLogout = document.getElementById("btnLogout");
-// button that send the form
-const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
+// // button that send the form
+// const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
+// const btnSubmitSignUp = document.getElementById("btnSubmitSignUp");
 // container used to hide/ show the login form
 const loginForm = document.getElementById("container-login");
-
 const btnSignUp = document.getElementById("btnSignUp");
-const btnSubmitSignUpForm = document.getElementById("btnSubmitSignUpForm");
+
 
 let email;
 let pass;
@@ -26,7 +26,7 @@ btnLogin.addEventListener('click', e => {
     pass = txt_password.value;
     auth = firebase.auth();
 
-    //sign in
+    //login alert
     promise = auth.signInWithEmailAndPassword(email, pass)
         .catch(function (error) {
             var errorCode = error.code;
@@ -41,29 +41,17 @@ btnLogin.addEventListener('click', e => {
 
 });
 
-//show form when btnSignUp is clicked
-btnSignUp.addEventListener('click', e => {
-    loginForm.classList.remove('hide');
-})
 
-//Add login event
-btnSubmitLogIn.addEventListener('click', e => {
-    //Get email and pass
-    email = txt_email.value;
-    pass = txt_password.value;
-    auth = firebase.auth();
-
-    //sign in
-    const promise = auth.signInWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
-})
+// button that send the form
+const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
+const btnSubmitSignUp = document.getElementById("btnSubmitSignUp");
 
 
 // SignUp event
-btnSignUp.addEventListener('click', e => {
+btnSubmitSignUp.addEventListener('click', e => {
     //Get email and pass
-    email = txtEmail.value;
-    pass = txtPassword.value;
+    email = txt_email.value;
+    pass = txt_password.value;
     auth = firebase.auth();
 
     // create user
@@ -71,42 +59,37 @@ btnSignUp.addEventListener('click', e => {
     promise.catch(e => console.log(e.message));
 })
 
-// sign out
-btnLogout.addEventListener('click', e => {
-    firebase.auth().signOut();
-})
 
 
 //Add realtime listner
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
-        console.log(firebaseUser.uid);
+        console.log(firebaseUser);
         //Log Out
-        btnLogout.classList.remove('hide');
-        var user = firebase.auth().currentUser;
-        email = user.email;
-        console.log('Email:' + email);
+        // btnLogout.classList.remove('hide');
+        // var user = firebase.auth().currentUser;
+        // email = user.email;
+        //   console.log('Email:' + email);
 
-        //Logged in
-        btnSubmitLogIn.classList.add('hide');
+
         //Signed in
-        btnSignUp.classList.add('hide');
-        document.querySelector("#uId").textContent = firebaseUser.uid;
-        document.querySelector("#user").textContent = firebaseUser.email;
+        //  btnSignUp.classList.add('hide');
+        //  document.querySelector("#uId").textContent = firebaseUser.uid;
+        //   document.querySelector("#user").textContent = firebaseUser.email;
         // Add userId to local storage
-        localStorage.setItem("uId", firebaseUser.uid);
+        // localStorage.setItem("uId", firebaseUser.uid);
 
         // Retrieve - @TODO hvor skal denne placeres?????
         // document.getElementById("uId2").innerHTML = sessionStorage.getItem("uId");
     } else {
         console.log("not logged in");
-        btnLogout.classList.add('hide');
+        //  btnLogout.classList.add('hide');
         //reaload page
 
     }
 })
 
-//Eventlistner submitSignUp button
-btnSignUp.addEventListener('click', e => {
-    console.log("sendt");
-})
+// //Eventlistner submitSignUp button
+// btnSignUp.addEventListener('click', e => {
+//     console.log("sendt");
+// })

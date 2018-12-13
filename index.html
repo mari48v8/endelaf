@@ -13,61 +13,50 @@
 
 <body>
     <div class="wrapper">
-        <h4>Du er logget ind som:</h4>
-        <p id="user">bruger email</p>
-        <div id="uId"></div>
         <div class="img_background">
             <div class="header">
-                <div class="logo"></div>
+                <div class="logo floatleft"></div>
                 <div class="buttons">
-                    <button id="btnLogin" class="btn btn-darkblue">Login</button>
+                    <button id="btnLogin" class="btn btn-darkblue floatleft">Login</button>
 
-                    <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+                    <button id="btnSignUp" class="btn btn-blue floatleft">Ny bruger</button>
                     <!-- <div id="loginContainer" class="login-form hide">
-                        <input id="txtEmail" type="email" placeholder="Email">
-                        <input id="txtPassword" type="password" placeholder="Password">
-                        <button id="btnSubmitLogIn" class="btn btn-action">Login</button>
-                    </div>
-
-                    <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
-
-                    <button id="btnLogout" class="btn btn-red hide">Log ud</button>
-                </div> -->
+                    <input id="txtEmail" type="email" placeholder="Email">
+                    <input id="txtPassword" type="password" placeholder="Password">
+                    <button id="btnSubmitLogIn" class="btn btn-action">Login</button>
                 </div>
-                <div class="main_body_top">
-                    <div class="txt_box">
-                        <p>Giv en hånd til en hjemløs og deres hunde.</p>
-                    </div>
-                    <a href="donation.html"> <button type="button" class="btn btn-red">Støt her</button></a>
+                
+                <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+                
+            </div> -->
+                    <button id="btnLogout" class="btn btn-red hide">Log ud</button>
                 </div>
             </div>
-            <div class="main_body_bottom">
-                <div class="ctn c1 flip" onclick="myShowFunction()">Om os</div>
-                <div id="panel">
-                    Vi er en organisation der hjælper hjemløse med at klare hverdagen. Vi ønsker at hjemløse skal føle
-                    sig
-                    som en del af Danmark, med din hjælp kan de klare hverdagen på en mere værdig og ligeværdig måde.
+            <div class="main_body_top">
+                <div class="txt_box">
+                    <p>Giv en hånd til en hjemløs og deres hunde.</p>
                 </div>
-                <div class="ctn c2">Vinter</div>
-                <div class="ctn c3">Hygiejne</div>
-                <div class="ctn c4">Vidnesbyrd</div>
+                <a href="donation.html"> <button type="button" class="btn btn-red">Støt her</button></a>
             </div>
         </div>
+        <div class="main_body_bottom">
+            <div class="ctn c1 flip" onclick="myShowFunction()">Om os</div>
+            <div id="panel">
+                Vi er en organisation der hjælper hjemløse med at klare hverdagen. Vi ønsker at hjemløse skal føle
+                sig
+                som en del af Danmark, med din hjælp kan de klare hverdagen på en mere værdig og ligeværdig måde.
+            </div>
+            <div class="ctn c2">Vinter</div>
+            <div class="ctn c3">Hygiejne</div>
+            <div class="ctn c4">Vidnesbyrd</div>
+        </div>
+    </div>
 
-        <script>
-            function myShowFunction() {
-                var x = document.getElementById("panel");
-                if (x.style.display == "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-                //document.getElementById("panel").style.display = "block";
-            }
-        </script>
 
-        <script src="config.js"></script>
-        <script src="login.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="main.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/logOut.js"></script>
 </body>
 
 </html>
