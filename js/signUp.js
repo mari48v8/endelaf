@@ -16,8 +16,6 @@ btnSubmitSignUp.addEventListener('click', e => {
     promise.catch(e => console.log(e.message));
 })
 
-
-
 //Add realtime listner
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
@@ -30,7 +28,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 
         //Signed in
-        //  btnSignUp.classList.add('hide');
+        btnSignUp.classList.add('hide');
         //  document.querySelector("#uId").textContent = firebaseUser.uid;
         //   document.querySelector("#user").textContent = firebaseUser.email;
         // Add userId to local storage

@@ -13,5 +13,14 @@ function myShowFunction() {
 
 //show form/ opretkonto.html when btnSignUp is clicked
 btnSignUp.addEventListener('click', e => {
-    document.location.href = '/pages/opretkonto.html';;
+    console.log("button find")
+    document.location.href = 'pages/opretkonto.html';
+
+})
+
+//show form/ opretkonto.html when btnSignUp is clicked
+btnLogin.addEventListener('click', e => {
+    console.log("button find")
+    document.location.href = 'pages/loginform.html';
+
 })
