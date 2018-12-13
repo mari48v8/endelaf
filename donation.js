@@ -1,17 +1,14 @@
 'use strict';
 
-// Get element
+let itemsArr = [];
+let donationArr = [];
 const donationForm = document.getElementById("donationForm");
 
 // Eventlistner for submitDonation
 donationForm.addEventListener('submit', getCheckedBoxes);
 
-let itemsArr = [];
-let donationArr = [];
 function getCheckedBoxes(e) {
     e.preventDefault();
-
-    // Get values
     // Loop through checkbox's with the name=dog if checked push to array
     let dog = document.querySelectorAll('[name="dog"]');
 
@@ -51,11 +48,9 @@ function getCheckedBoxes(e) {
         }
     }
     timestamp();
-
 };
 
-
-// this does variable does not work if it is let
+// this variable does not work if it is let
 var formattedTime;
 // get timestamp (Primært fra https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript)
 function timestamp() {

@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Donations</title>
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-    <link rel="stylesheet" href="scss/payment.scss">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <style>
         img {
              max-width: 50px;
@@ -86,7 +86,7 @@
             <div class="pay">
                 <input type="radio" name="payment" id="visa-dankort" value="visa-dankort" required>
                 <label for="visa-dankort">
-                    <p>Visa/Dankort</p><span class="imgs"><img src="assets/img/logo-dankort.png" alt="dankort logo"></span>
+                    <p>Visa/Dankort</p><span class="imgs"><img src="img/logo-dankort.png" alt="dankort logo"></span>
                 </label>
                 <label class="payment-label-around-div" for="dankort-nr">
                     <span class="close">x</span>
@@ -104,8 +104,8 @@
             <div class="pay">
                 <input type="radio" name="payment" id="credit-card" value="credit-card" required>
                 <label for="credit-card">
-                    <p>Kreditkort</p><span class="imgs"><img src="assets/img/visa.png" alt="visa logo"><img src="assets/img/visa-electron.png"
-                            alt="visa electron logo"><img src="assets/img/master200px.png" alt="master logo"><img src="assets/img/Maestro.png"
+                    <p>Kreditkort</p><span class="imgs"><img src="img/visa.png" alt="visa logo"><img src="img/visa-electron.png"
+                            alt="visa electron logo"><img src="img/master200px.png" alt="master logo"><img src="img/Maestro.png"
                             alt="maestro logo"></span>
                 </label>
                 <label class="payment-label-around-div" for="credit-card-nr">
@@ -125,7 +125,7 @@
             <div class="pay">
                 <input type="radio" name="payment" id="mobile-pay" value="mobile-pay" required>
                 <label for="mobile-pay">
-                    <p>MobilePay</p><span class="imgs"><img src="assets/img/mobilepay.png" alt="mobilepay logo" id="mobile-pay-img"></span>
+                    <p>MobilePay</p><span class="imgs"><img src="img/mobilepay.png" alt="mobilepay logo" id="mobile-pay-img"></span>
                 </label>
                 <label class="payment-label-around-div half-height" for="mobile-pay-nr">
                     <span class="close">x</span>
@@ -148,13 +148,6 @@
                         <div>
                             <h3>Din donation</h3>
                             <hr>
-                            <br />
-                            <p class="jacket-choice">Vælg en Jakke!</p>
-                            <p class="issue-choice">Hvor mange blade vil du have?</p>
-                            <br />
-                            <p>39,50 kr. i porto og eksp.</p>
-                            <br />
-                            <hr>
                             <div class="i-alt">I ALT: <span class="sum"></span></div>
                         </div>
                     </div>
@@ -165,7 +158,7 @@
                 <!-- <button class="button" type="submit">Gennemfør Køb</button> -->
                 <div id="mobile-pay-confirm" class="not-active">
                     <div>
-                        <p>></p>
+                        <p></p>
                     </div>
                     <p>Swipe to finish</p>
                 </div>

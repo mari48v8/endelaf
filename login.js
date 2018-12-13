@@ -9,13 +9,9 @@ const btnLogin = document.getElementById("btnLogin");
 const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
 // container used to hide/ show the login form
 const loginForm = document.getElementById("loginContainer");
-
 const btnSignUp = document.getElementById("btnSignUp");
 const btnSubmitSignUpForm = document.getElementById("btnSubmitSignUpForm");
-
 const btnLogout = document.getElementById("btnLogout");
-
-
 
 let email;
 let pass;
