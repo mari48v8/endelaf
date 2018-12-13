@@ -68,7 +68,7 @@ btnSubmitLogIn.addEventListener('click', e => {
     auth = firebase.auth();
 
     //sign in
-    promise = auth.signInWithEmailAndPassword(email, pass);
+    const promise = auth.signInWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
 })
 
