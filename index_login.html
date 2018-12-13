@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>En-del-af-dk</title>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hide {
+            display:none;
+        }
+        .alert {
+            height: 60px;
+            width: 200px;
+            margin: 5px;
+            background-color: green;
+            text-align: center;
+                }
+        
+        </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h4>Du er logget ind som:</h4>
+        <p id="user">bruger email</p>
+        <div id="uId"></div>
+        <form action="signUpForm">
+            <input id="txtEmail" type="email" placeholder="Email">
+            <input id="txtPassword" type="password" placeholder="Password">
+
+            <p>
+                <label for="navn">Navn</label>
+                <input type="text" name="name" id="name">
+            </p>
+
+
+
+            <button id="btnLogin" class="btn btn-action">Log in</button>
+            <button id="btnSignUp" class="btn btn-secondary">Opret bruger</button>
+            <button id="btnLogout" class="btn btn-action hide">Log ud</button>
+
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

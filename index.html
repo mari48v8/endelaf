@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
     <title>En-del-af.dk</title>
 </head>
 
@@ -23,41 +23,51 @@
                     <button id="btnLogin" class="btn btn-darkblue">Login</button>
 
                     <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+                    <!-- <div id="loginContainer" class="login-form hide">
+                        <input id="txtEmail" type="email" placeholder="Email">
+                        <input id="txtPassword" type="password" placeholder="Password">
+                        <button id="btnSubmitLogIn" class="btn btn-action">Login</button>
+                    </div>
+
+                    <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+
+                    <button id="btnLogout" class="btn btn-red hide">Log ud</button>
+                </div> -->
+                </div>
+                <div class="main_body_top">
+                    <div class="txt_box">
+                        <p>Giv en hånd til en hjemløs og deres hunde.</p>
+                    </div>
+                    <a href="donation.html"> <button type="button" class="btn btn-red">Støt her</button></a>
                 </div>
             </div>
-            <div class="main_body_top">
-                <div class="txt_box">
-                    <p>Giv en hånd til en hjemløs og deres hunde.</p>
+            <div class="main_body_bottom">
+                <div class="ctn c1 flip" onclick="myShowFunction()">Om os</div>
+                <div id="panel">
+                    Vi er en organisation der hjælper hjemløse med at klare hverdagen. Vi ønsker at hjemløse skal føle
+                    sig
+                    som en del af Danmark, med din hjælp kan de klare hverdagen på en mere værdig og ligeværdig måde.
                 </div>
-                <a href="donation.html"> <button type="button" class="btn btn-red">Støt her</button></a>
+                <div class="ctn c2">Vinter</div>
+                <div class="ctn c3">Hygiejne</div>
+                <div class="ctn c4">Vidnesbyrd</div>
             </div>
         </div>
-        <div class="main_body_bottom">
-            <div class="ctn c1 flip" onclick="myShowFunction()">Om os</div>
-            <div id="panel">
-                Vi er en organisation der hjælper hjemløse med at klare hverdagen. Vi ønsker at hjemløse skal føle sig
-                som en del af Danmark, med din hjælp kan de klare hverdagen på en mere værdig og ligeværdig måde.
-            </div>
-            <div class="ctn c2">Vinter</div>
-            <div class="ctn c3">Hygiejne</div>
-            <div class="ctn c4">Vidnesbyrd</div>
-        </div>
 
-    </div>
-    </div>
-    <script src="login.js"></script>
-
-    <script>
-        function myShowFunction() {
-            var x = document.getElementById("panel");
-            if (x.style.display == "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
+        <script>
+            function myShowFunction() {
+                var x = document.getElementById("panel");
+                if (x.style.display == "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+                //document.getElementById("panel").style.display = "block";
             }
-            //document.getElementById("panel").style.display = "block";
-        }
-    </script>
+        </script>
+
+        <script src="config.js"></script>
+        <script src="login.js"></script>
 </body>
 
 </html>

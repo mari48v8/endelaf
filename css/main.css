@@ -371,3 +371,6 @@ a {
     transition: all 0.3s ease; }
   .c4:active {
     background: #18252c; }
+
+.hide {
+  display: none; }

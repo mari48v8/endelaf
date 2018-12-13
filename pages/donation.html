@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Donations</title>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <link rel="stylesheet" href="css/payment.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <style>
+        img {
+             max-width: 50px;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Velkommen til</h2>
+    <p>
+
+        Dette er en donations app som skal gøre det nemmere, at donere til hjemløse.
+
+        Hvis du ønsker at give en hjælpende hånd, skal du blot vælge en felt i en af de tre hovede- kategorier (Til
+        Hunden, Tøj og Personlig pleje).
+
+        Har du nogle spørgsmål angående indhold, så kan du altid trykke på informations knappen højre for feltet.
+
+
+    </p>
+    <main>
+        <!-- @TODO - validation -->
+        <form id="donationForm" action="" method="POST">
+            <div id="dog">
+                <h3>Hjælp til hunden</h3>
+                <p>
+                    <input id="dogFood" type="checkbox" name="dog" value="75">
+                    <labels>Hundemad</label>
+                </p>
+                <p>
+                    <input id="dogClothes" type="checkbox" name="dog" value="150">
+                    <labels>Hundefrakke</label>
+                </p>
+                <p>
+                    <input id="dogToy" type="checkbox" name="dog" value="100">
+                    <labels>Hundelegetøj</label>
+                </p>
+            </div>
+            <div id="clothes">
+                <h3>Tøj</h3>
+                <p>
+                    <input id="wintercoat" type="checkbox" name="clothes" value="200">
+                    <labels>Vinterfrakke</label>
+                </p>
+                <p>
+                    <input id="hatAndGloves" type="checkbox" name="clothes" value="100">
+                    <labels>Hue og vanter</label>
+                </p>
+                <p>
+                    <input id="socks" type="checkbox" name="clothes" value="125">
+                    <labels>Uldne strømper</label>
+                </p>
+            </div>
+            <div id="toiletries">
+                <h3>Personlig pleje</h3>
+                <p>
+                    <input id="toothbrush" type="checkbox" name="toiletries" value="50">
+                    <labels>Tandbørste og tandpasta</label>
+                </p>
+                <p>
+                    <input id="tampons" type="checkbox" name="toiletries" value="75">
+                    <labels>Tamponer</label>
+                </p>
+                <p>
+                    <input id="shaving" type="checkbox" name="toiletries" value="75">
+                    <labels>Barbergrej</label>
+                </p>
+            </div>
+
+
+            <!-- creditcard -->
+            <h4>Vælg betalingsmetode:</h4>
+            <div class="pay">
+                <input type="radio" name="payment" id="visa-dankort" value="visa-dankort" required>
+                <label for="visa-dankort">
+                    <p>Visa/Dankort</p><span class="imgs"><img src="img/logo-dankort.png" alt="dankort logo"></span>
+                </label>
+                <label class="payment-label-around-div" for="dankort-nr">
+                    <span class="close">x</span>
+                    <p>
+                        <input type="number" name="card-nr" id="dankort-nr" pattern="[0-9]{16}" min="0" max="9999999999999999"
+                            autocomplete="cc-number" placeholder="Kortnummer" required></p>
+                    <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1" max="12" placeholder="mm"
+                            class="digit2" pattern="[0-9]{2}" autocomplete="cc-exp-month" required><span>
+                            / </span><input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
+                            placeholder="yyyy" maxlength="4" class="digit4" autocomplete="cc-exp-year" required></p>
+                    <p><input type="number" id="control" name="control" min="0" max="999" pattern="[0-9]{3}"
+                            placeholder="CVV" autocomplete="cc-csc" class="digit4" required></p>
+                </label>
+            </div>
+            <div class="pay">
+                <input type="radio" name="payment" id="credit-card" value="credit-card" required>
+                <label for="credit-card">
+                    <p>Kreditkort</p><span class="imgs"><img src="img/visa.png" alt="visa logo"><img src="img/visa-electron.png"
+                            alt="visa electron logo"><img src="img/master200px.png" alt="master logo"><img src="img/Maestro.png"
+                            alt="maestro logo"></span>
+                </label>
+                <label class="payment-label-around-div" for="credit-card-nr">
+                    <span class="close">x</span>
+                    <p>
+                        <input type="number" name="card-nr" id="dankort-nr" pattern="[0-9]{16}" min="0" max="9999999999999999"
+                            placeholder="Kortnummer" autocomplete="cc-number" required></p>
+                    <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1" max="12" maxlength="2"
+                            placeholder="mm" autocomplete="cc-exp-month" class="digit2" pattern="[0-9]{2}" required><span>
+                            / </span><input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
+                            placeholder="yyyy" maxlength="4" autocomplete="cc-exp-year" class="digit4" pattern="[0-9]{4}"
+                            required></p>
+                    <p><input type="number" id="control" name="control" pattern="[0-9]{3}" min="0" max="999"
+                            placeholder="CVV" autocomplete="cc-csc" class="digit4" required></p>
+                </label>
+            </div>
+            <div class="pay">
+                <input type="radio" name="payment" id="mobile-pay" value="mobile-pay" required>
+                <label for="mobile-pay">
+                    <p>MobilePay</p><span class="imgs"><img src="img/mobilepay.png" alt="mobilepay logo" id="mobile-pay-img"></span>
+                </label>
+                <label class="payment-label-around-div half-height" for="mobile-pay-nr">
+                    <span class="close">x</span>
+                    <p id="mobile-pay-p">
+                        <span>+45</span>
+                        <input type="tel" name="card-nr" id="mobile-pay-nr" pattern="[1-9][0-9]{7}" required>
+                    </p>
+                </label>
+            </div>
+            </div>
+            </div>
+            <div class="block5">
+                <h1>Bekræft</h1>
+
+            </div>
+            <div class="block6">
+                <div class="order-overview">
+                    <div class="order-overview-container">
+                        <br />
+                        <div>
+                            <h3>Din donation</h3>
+                            <hr>
+                            <div class="i-alt">I ALT: <span class="sum"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block7">
+                <!-- <button class="button" type="submit">Gennemfør Køb</button> -->
+                <div id="mobile-pay-confirm" class="not-active">
+                    <div>
+                        <p></p>
+                    </div>
+                    <p>Swipe to finish</p>
+                </div>
+                <br>
+                <hr>
+            </div>
+            <p>
+                <input id="btnSubmitDonation" type="submit" value="Send">
+            </p>
+        </form>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="donation.js"></script>
+</body>
+
+</html>
