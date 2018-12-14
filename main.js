@@ -25,7 +25,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser);
         //Log Out
-        // btnLogout.classList.remove('hide');
+        btnLogout.classList.remove('hide');
         // var user = firebase.auth().currentUser;
         // email = user.email;
         //   console.log('Email:' + email);

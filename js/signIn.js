@@ -12,11 +12,11 @@ signupButton.addEventListener("click", clickSignupButton);
 function clickSignupButton() {
     //signup firebase method
     auth.createUserWithEmailAndPassword(email.value, password.value).
-    then(function (user) {
-        console.log(auth.currentUser.email)
-    }, function (error) {
-        console.log(error.message);
-    });
+        then(function (user) {
+            console.log(auth.currentUser.email)
+        }, function (error) {
+            console.log(error.message);
+        });
 }
 
 auth.onAuthStateChanged(firebaseUser => {
