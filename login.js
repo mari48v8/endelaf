@@ -98,4 +98,3 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 btnSignUp.addEventListener('click', e => {
     console.log("sendt");
 })
-
