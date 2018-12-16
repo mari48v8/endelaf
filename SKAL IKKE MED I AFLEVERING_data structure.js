@@ -26,6 +26,7 @@ users[
     }
 ]
 
+
 // categories data taken from the database and displayed in the donation form
 categories[
     {
