@@ -11,6 +11,32 @@
     <title>En-del-af.dk Dashboard</title>
 
     <style>
+        body {
+            margin: 0;
+        }
+
+        #doggraph1,
+        #doggraph2,
+        #doggraph3,
+        #clothesgraph1,
+        #clothesgraph2,
+        #clothesgraph3,
+        #toiletriesgraph1,
+        #toiletriesgraph2,
+        #toiletriesgraph3 {
+            width: 50px;
+            height: 0px;
+            border: 1px black solid;
+        }
+
+        #dogContainer,
+        #clothesContainer,
+        #toiletriesContainer {
+            display: flex;
+            align-items: flex-end;
+
+        }
+
         #doggraph1 {
             background-color: blue;
         }
@@ -27,11 +53,34 @@
 
 <body>
     <button id="btnLogout" class="login-form-btn">XX btnLogout</button>
-    <article>
+    <article id="dogContainer">
         <img src="../img/Maestro.png" alt=""> </div>
-        <div id="doggraph1">Hundemad</div>
-        <div id="doggraph2">Hundetøj</div>
-        <div id="doggraph3">Hundelegetøj</div>
+        <div id="doggraph1"></div>
+        Hundemad
+        <div id="doggraph2"></div>
+        Hundetøj
+        <div id="doggraph3"></div>
+        Hundelegetøj
+    </article>
+
+    <article id="clothesContainer">
+        <img src="../img/Maestro.png" alt=""> </div>
+        <div id="clothesgraph1"></div>
+        Vinterfrakke
+        <div id="clothesgraph2"></div>
+        Hue og vanter
+        <div id="clothesgraph3"></div>
+        Uldne sokker
+    </article>
+
+    <article id="toiletriesContainer">
+        <img src="../img/Maestro.png" alt=""> </div>
+        <div id="toiletriesgraph1"></div>
+        Tandpleje
+        <div id="toiletriesgraph2"></div>
+        Tamponer
+        <div id="toiletriesgraph3"></div>
+        Barbergrej
     </article>
 
 
