@@ -1,17 +1,19 @@
 'use strict';
 
 // Get elements
-const txt_email = document.getElementById("txt_email");
-const txt_password = document.getElementById("txt_password");
+//const txt_email = document.getElementById("txt_email");
+//const txt_password = document.getElementById("txt_password");
+
 // button that opens the form
 const btnLogin = document.getElementById("btnLogin");
 const btnLogout = document.getElementById("btnLogout");
 // // button that send the form
 //const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
 //const btnSubmitSignUp = document.getElementById("btnSubmitSignUp");
+
 // container used to hide/ show the login form
-const loginForm = document.getElementById("container-login");
-const btnSignUp = document.getElementById("btnSignUp");
+//const loginForm = document.getElementById("container-login");
+//const btnSignUp = document.getElementById("btnSignUp");
 
 
 let email;

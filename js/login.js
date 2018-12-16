@@ -1,4 +1,6 @@
 'use strict'
+
+
 // Get elements
 const txt_email = document.getElementById("txt_email");
 const txt_password = document.getElementById("txt_password");

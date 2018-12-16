@@ -199,7 +199,7 @@ label {
   display: inline-block; }
 
 .order-overview {
-  background-color: #446B7F;
+  background: url(../img/notes.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 417px;
