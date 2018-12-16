@@ -1,3 +1,4 @@
+'use strict'
 // Firebase Variables
 var auth = firebase.auth();
 

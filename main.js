@@ -7,8 +7,8 @@ const txt_password = document.getElementById("txt_password");
 const btnLogin = document.getElementById("btnLogin");
 const btnLogout = document.getElementById("btnLogout");
 // // button that send the form
-const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
-const btnSubmitSignUp = document.getElementById("btnSubmitSignUp");
+//const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
+//const btnSubmitSignUp = document.getElementById("btnSubmitSignUp");
 // container used to hide/ show the login form
 const loginForm = document.getElementById("container-login");
 const btnSignUp = document.getElementById("btnSignUp");
