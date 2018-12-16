@@ -16,7 +16,7 @@ function getCheckedBoxes(e) {
         if (dog[i].checked) {
             let dogItem = new Object();
             dogItem.id = dog[i].id;
-            dogItem.value = dog[i].value;
+            dogItem.value = dog[i].min;
             dogItem.name = dog[i].name;
             itemsArr.push(dogItem);
         }
@@ -28,7 +28,7 @@ function getCheckedBoxes(e) {
         if (clothes[i].checked) {
             let clothesItem = new Object();
             clothesItem.id = clothes[i].id;
-            clothesItem.value = clothes[i].value;
+            clothesItem.value = clothes[i].min;
             clothesItem.name = clothes[i].name;
             itemsArr.push(clothesItem);
             // console.log(clothesItem);
@@ -41,7 +41,7 @@ function getCheckedBoxes(e) {
         if (toiletries[i].checked) {
             let toiletriesItem = new Object();
             toiletriesItem.id = toiletries[i].id;
-            toiletriesItem.value = toiletries[i].value;
+            toiletriesItem.value = toiletries[i].min;
             toiletriesItem.name = toiletries[i].name;
             itemsArr.push(toiletriesItem);
             //console.log(toiletriesItem);
@@ -70,11 +70,12 @@ const uId = localStorage.getItem("uId");
 
 // save donation to firebase
 function submitDonation() {
-    console.log("submit");
     let newdbDonationRef = dbRefDonation.push();
+    console.log(newdbDonationRef);
     newdbDonationRef.set({
         uId: uId,
         item: itemsArr,
         time: formattedTime,
     })
+
 }

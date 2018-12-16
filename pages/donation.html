@@ -8,12 +8,13 @@
     <title>Donations</title>
     <!---- CSS stylesheet -->
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/donation.css">
     <!---- SCSS stylesheet -->
     <link rel="stylesheet" href="../scss/donation.scss">
 
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-    
+
 
 
     <!-- <script>
@@ -87,18 +88,18 @@
                         <div id="kategori-img-dog"></div>
                         <div class="left-block">
                             <p class="checkbox-p">
-                                <label><input id="dogFood" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                <label><input id="dogFood" min="75" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
                                         value="Hundemad">
                                     Hundemad 75,- </label>
                             </p>
 
                             <p class="checkbox-p">
-                                <label><input id="dogClothes" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                <label><input id="dogClothes" min="150" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
                                         value="Hundefrakke">
                                     Hundefrakke 150,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <label> <input id="dogToy" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                <label> <input id="dogToy" min="100" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
                                         value="Hundelegetøj">
                                     Hundelegetøj 100,-</label>
                             </p>
@@ -121,17 +122,17 @@
                         <div id="kategori-img-hue"></div>
                         <div class="left-block">
                             <p class="checkbox-p">
-                                <label><input id="wintercoat" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
+                                <label><input id="wintercoat" min="200" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
                                         value="Vinterfrakke">
                                     Vinterfrakke 200,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <label><input id="hatAndGloves" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
+                                <label><input id="hatAndGloves" min="100" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
                                         value="Hue og vanter">
                                     Hue og vanter 100,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <label><input id="socks" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
+                                <label><input id="socks" min="125" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
                                         value="Uldne strømper">
                                     Uldne strømper 125,-</label>
                             </p>
@@ -153,17 +154,17 @@
                         <div id="kategori-img-tand"></div>
                         <div class="left-block">
                             <p class="checkbox-p">
-                                <label><input id="toothbrush" class="tot" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
+                                <label><input id="toothbrush" min="50" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
                                         value="Tandpleje">
                                     Tandpleje 50,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <label><input id="tampons" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
+                                <label><input id="tampons" min="75" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
                                         value="Tamponer">
                                     Tamponer 75,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <label><input id="shaving" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
+                                <label><input id="shaving" min="75" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
                                         value="Barbergrej">
                                     Barbergrej 75,-</label>
                             </p>
@@ -263,9 +264,9 @@
 
 
     <!-- <script src="../js/validation.js"></script> -->
-    <script src="../js/kvittering.js"> </script>
     <script src="../js/config.js"> </script>
-    <!-- <script src="../js/donation.js"></script> -->
+    <script src="../js/kvittering.js"> </script>
+    <script src="../js/donation.js"></script>
     <!--  <script src="../js/logOut.js"></script> -->
 </body>
 
