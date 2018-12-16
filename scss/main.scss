@@ -1,13 +1,12 @@
+@import 'form.scss';
 @import 'payment.scss';
 
 $bluecolor: blue;
 $white:white;
-$lightblue:#12BBF1;
-
-body {
-    font: 100% Helvetica, sans-serif;
-    background-color: #efefef;
-}
+$lightblue:#12bbf1;
+$lightgrey:#5C5656;
+$darkgrey:#707070;
+$black:#000000;
 
 html,
 body,
@@ -16,35 +15,108 @@ body,
     padding: 0;
 }
 
+input,
+button,
+submit {
+    border: none;
+}
+
+body {
+    background-color: $white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+@mixin font-weight($weight) {
+    $weights: (light: 300,
+        regular: 400,
+        medium: 500,
+        semi-bold: 600,
+        bold: 700, )
+}
+
+a {
+    color: $lightblue;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.p-s-09 {
+    font-size: 0.9em;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.p-t-10 {
+    padding-top: 10px;
+}
+
+.p-t-19 {
+    padding-top: 19px;
+}
+
+.p-t-40 {
+    padding-top: 40px;
+}
+
+.p-t-90 {
+    padding-top: 90px;
+}
+
+.m-b-50 {
+    margin-bottom: 50px;
+}
+
 .wrapper {
     width: 375px;
     height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
     margin: 0 auto;
-    background-color: $white;
 }
 
+.header {
+    background-color: $lightblue;
+    padding: 3%;
+    padding-bottom: 4%;
+}
 
 .img_background {
     background-image: url(../img/homeless.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    padding-left: 5%;
+   // padding-left: 5%;
 }
 
 .logo {
-    width: 100px;
-    height: auto;
-    text-align: left;
-    padding: 10px;
-    margin-bottom: 10%;
-    margin-top: 0%;
-    color: $white;
-    background-color: $lightblue;
+    width: 180px;
+    height: 40px;
+    background-image: url(../img/Logo.png);
 }
 
+
+
 .txt_box {
-    width: 80px;
+    width: 110px;
     height: auto;
     text-align: left;
     padding-left: 5px;
@@ -53,8 +125,29 @@ body,
     padding-bottom: 1px;
     margin-bottom: 10%;
     margin-top: 10%;
-    color: $white;
-    background-color: $lightblue;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    background-color: $white;
+}
+
+.txt_box p {
+    color: $black;
+    font-size: 14px;
+}
+
+
+.flip {
+    margin: auto;
+    cursor: pointer;
+
+}
+
+#panel {
+    display: none;
+    cursor: auto;
+    padding: 7%;
+    font-size: 14px;
+
 }
 
 .buttons {
@@ -82,7 +175,7 @@ body,
     padding: 5px 10px;
     border-radius: 3px;
     border-color: none;
-    font-size: 1.2em;
+    font-size: 1em;
 
 }
 

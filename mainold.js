@@ -1,4 +1,9 @@
-'use strict';
+/* // Initialize Firebase
+const config = {
+   
+};
+firebase.initializeApp(config); */
+
 
 // Get elements
 const txtEmail = document.getElementById("txtEmail");
@@ -9,9 +14,13 @@ const btnLogin = document.getElementById("btnLogin");
 const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
 // container used to hide/ show the login form
 const loginForm = document.getElementById("loginContainer");
+
 const btnSignUp = document.getElementById("btnSignUp");
 const btnSubmitSignUpForm = document.getElementById("btnSubmitSignUpForm");
+
 const btnLogout = document.getElementById("btnLogout");
+
+
 
 let email;
 let pass;
@@ -84,4 +93,3 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 btnSignUp.addEventListener('click', e => {
     console.log("sendt");
 })
-

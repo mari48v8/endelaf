@@ -1,0 +1,83 @@
+IT HAS NO USE!!!
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <title>En-del-af.dk</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h4>Du er logget ind som:</h4>
+        <p id="user">bruger email</p>
+        <div id="uId"></div>
+        <div class="img_background">
+            <div class="header">
+                <div class="logo"></div>
+                <div class="buttons">
+                    <button class="btn btn-darkblue" onclick="document.getElementById('btnLogin').style.display='block'"
+                        style="width:auto;">Login</button>
+
+
+                    <!--  <form class="modal-content animate" action="">
+                    
+ -->
+                    <div id="btnLogin" class="Container">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('btnLogin').style.display='none'" class="close"
+                                title="Close Modal">&times;</span>
+                            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="container">
+                            <input id="txtEmail" type="email" placeholder="Email">
+                            <input id="txtPassword" type="password" placeholder="Password">
+                            <button id="btnSubmitLogIn" class="btn btn-action">Login</button>
+                        </div>
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('btnLogin').style.display='none'"
+                                class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </div>
+                    <!--   
+                        </form> -->
+
+
+                    <!--    <div id="loginContainer" class="login-form hide">
+                        <input id="txtEmail" type="email" placeholder="Email">
+                        <input id="txtPassword" type="password" placeholder="Password">
+                        <button id="btnSubmitLogIn" class="btn btn-action">Login</button>
+                    </div> -->
+
+                    <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+
+                    <button id="btnLogout" class="btn btn-red hide">Log ud</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('btnLogin');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

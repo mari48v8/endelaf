@@ -1,0 +1,239 @@
+/*----------------------- Background Image -----------------------*/
+
+.bg-img {
+    width: 100%;
+    margin: 0 auto;
+    /*  background-image: url(../img/homeless.jpeg); */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#536f7c+0,9cc5e5+49,bcd3e5+99 */
+    background: rgb(83, 111, 124);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(83, 111, 124, 1) 0%, rgba(156, 197, 229, 1) 49%, rgba(188, 211, 229, 1) 99%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(83, 111, 124, 1) 0%, rgba(156, 197, 229, 1) 49%, rgba(188, 211, 229, 1) 99%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(83, 111, 124, 1) 0%, rgba(156, 197, 229, 1) 49%, rgba(188, 211, 229, 1) 99%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/*----------------------- Form Container and Wrapper -----------------------*/
+
+.container-login {
+    width: 92%;
+    /*  min-height: 100vh; */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.99);
+    }
+}
+
+.wrap-login {
+    width: 375px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px 31px 37px 31px;
+}
+
+/*----------------------- Form Logo -----------------------*/
+
+.login-form-logo {
+    font-size: 60px;
+    color: #333333;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+/*----------------------- Form text -----------------------*/
+.form-txt {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/*----------------------- Form button -----------------------*/
+
+.container-login-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.login-form-btn {
+    color: #5C5656;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-color: none;
+    font-size: 1.2em;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.login-form-btn-red {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    width: 210px;
+    border-radius: 3px;
+    border-color: none;
+    font-size: 1.2em;
+    background-color: #FF194E;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.login-form-btn-blue {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    width: 210px;
+    border-radius: 3px;
+    border-color: none;
+    font-size: 1.2em;
+    background-color: #12BBF1;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+/*----------------------- Form input -----------------------*/
+
+.wrap-input {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #5C5656;
+    line-height: 1.2;
+    display: block;
+    width: 83%;
+    height: 45px;
+    background: transparent;
+    /* padding: 0 5px 0 38px; */
+}
+
+.focus-input {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/*----------------------- Form input and textarea design -----------------------*/
+
+input {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    outline: none;
+    border: none;
+
+    &:focus {
+        border-color: transparent !important;
+    }
+}
+
+input:focus {
+    border-color: transparent !important;
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+        color: transparent;
+    }
+}
+
+textarea:focus {
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+        color: transparent;
+    }
+}
+
+input {
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+        color: #5C5656;
+    }
+}
+
+textarea {
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+        color: #5C5656;
+    }
+}
+
+label {
+    margin: 0;
+    display: block;
+}
