@@ -22,6 +22,12 @@ input[type=number] {
     margin-bottom: 2px;
 }
 
+.p-span {
+    position: relative;
+    top: 10px;
+    left: -6px;
+}
+
 input {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
@@ -29,15 +35,16 @@ input {
     line-height: 1.2;
     background: transparent;
     outline: none;
-    border: none;
     height: 35px;
     position: relative;
     border-bottom: 2px solid #ccc;
     margin-bottom: 30px;
+    top: 8px;
+    left: -5px;
 }
 
 
-input#dankort-nr {
+#dankort-nr {
     background: url(../img/logo-dankort.png);
     background-repeat: no-repeat;
     background-position: right center;
@@ -52,7 +59,7 @@ input#dankort-nr {
     width: 90%;
 }
 
-input#visa-nr {
+.visa-nr {
     background: url(../img/visa.png);
     background-repeat: no-repeat;
     background-position: right center;
@@ -143,11 +150,12 @@ label {
 .checkbox-p {
     height: 20px;
     padding: 0;
+    color: white;
 }
 
 .left-block {
     display: inline-block;
-    margin-right: 5%;
+    margin-right: 7%;
 }
 
 .kategori-sections {
@@ -184,7 +192,7 @@ label {
     margin-top: 0%;
     margin-bottom: -2%;
     font-size: 1em;
-    margin-left: 28%;
+    margin-left: 30%;
     padding-top: 8%;
     color: white;
 }
@@ -197,7 +205,7 @@ label {
     height: 100px;
     width: 18%;
     margin-right: 4%;
-    margin-left: 4%;
+    margin-left: 7%;
     display: inline-block;
 }
 
@@ -226,10 +234,11 @@ label {
 }
 
 .order-overview {
-    background: url(../img/notes.png);
+    background-color: #446B7F;
+    //background: url(../img/notes.png);
     background-repeat: no-repeat;
     background-position: center;
-    height: 335px;
+    height: 417px;
     width: 100%;
 }
 
@@ -259,4 +268,47 @@ label {
     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     cursor: pointer;
+}
+
+#show {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    color: #ccc;
+    line-height: 1.2;
+    background: transparent;
+    outline: none;
+    height: 80px;
+    border: none;
+    margin-left: 5%;
+    margin-bottom: 0;
+
+}
+
+#count {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    color: #ccc;
+    line-height: 1.2;
+    background: transparent;
+    outline: none;
+    height: 35px;
+    border: none;
+    margin-left: 5%;
+    width: 50%;
+    margin-top: -10px;
+}
+
+.donation {
+    padding-top: 20%;
+    padding-bottom: 0;
+    font-size: 1.3em;
+}
+
+.order-overview-container p {
+    margin: 0;
+}
+
+.order-overview-container input {
+    top: 0;
+
 }

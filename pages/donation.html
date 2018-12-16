@@ -15,17 +15,44 @@
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
     <link rel="stylesheet" href="css/payment.css">
 
-    <style>
-        img {
-             max-width: 50px;
-            }
-    </style>
+    <!-- <script>
+        $(document).ready(displayCheckbox);
 
+        function displayCheckbox() {    
+    
+        var checkboxes = $("input[type=checkbox]");
+        var results = $("#results");
+
+        $.each(checkboxes, function() {
+        $(this).change(printChecked);
+        })
+        
+        function printChecked() {
+            var checkedIds = [];
+            
+            checkboxes.each(function() {
+                if($(this).is(':checked')) {
+                    checkedIds.push($(this).attr('id'));
+                }
+            });
+
+            var count = $("[type='checkbox']:checked").length;
+            $('#count').val($("[type='checkbox']:checked").length);
+            
+            console.log(results);
+            results.text(checkedIds);
+    }
+    
+} 
+    </script>
+ -->
 </head>
 
 <body>
     <div class="header">
-        <div class="logo floatleft"></div>
+        <a href="../index.html">
+            <div class="logo floatleft"></div>
+        </a>
         <div class="buttons">
             <button id="btnLogin" class="btn btn-darkblue">Login</button>
 
@@ -59,17 +86,20 @@
                         <div id="kategori-img-dog"></div>
                         <div class="left-block">
                             <p class="checkbox-p">
-                                <input id="dogFood" type="checkbox" name="dog" value="75">
-                                <label>Hundemad</label>
+                                <label><input id="dogFood" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                        value="Hundemad">
+                                    Hundemad 75,- </label>
                             </p>
 
                             <p class="checkbox-p">
-                                <input id="dogClothes" type="checkbox" name="dog" value="150">
-                                <label>Hundefrakke</label>
+                                <label><input id="dogClothes" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                        value="Hundefrakke">
+                                    Hundefrakke 150,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <input id="dogToy" type="checkbox" name="dog" value="100">
-                                <label>Hundelegetøj</label>
+                                <label> <input id="dogToy" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                        value="Hundelegetøj">
+                                    Hundelegetøj 100,-</label>
                             </p>
                         </div>
                         <div class="left-block">
@@ -89,16 +119,19 @@
                         <div id="kategori-img-hue"></div>
                         <div class="left-block">
                             <p class="checkbox-p">
-                                <input id="wintercoat" type="checkbox" name="clothes" value="200">
-                                <label>Vinterfrakke</label>
+                                <label><input id="wintercoat" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
+                                        value="Vinterfrakke">
+                                    Vinterfrakke 200,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <input id="hatAndGloves" type="checkbox" name="clothes" value="100">
-                                <label>Hue og vanter</label>
+                                <label><input id="hatAndGloves" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
+                                        value="Hue og vanter">
+                                    Hue og vanter 100,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <input id="socks" type="checkbox" name="clothes" value="125">
-                                <label>Uldne strømper</label>
+                                <label><input id="socks" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
+                                        value="Uldne strømper">
+                                    Uldne strømper 125,-</label>
                             </p>
                         </div>
                         <div class="left-block">
@@ -118,16 +151,19 @@
                         <div id="kategori-img-tand"></div>
                         <div class="left-block">
                             <p class="checkbox-p">
-                                <input id="toothbrush" type="checkbox" name="toiletries" value="50">
-                                <label>Tandpleje</label>
+                                <label><input id="toothbrush" class="tot" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
+                                        value="Tandpleje">
+                                    Tandpleje 50,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <input id="tampons" type="checkbox" name="toiletries" value="75">
-                                <label>Tamponer</label>
+                                <label><input id="tampons" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
+                                        value="Tamponer">
+                                    Tamponer 75,-</label>
                             </p>
                             <p class="checkbox-p">
-                                <input id="shaving" type="checkbox" name="toiletries" value="75">
-                                <label>Barbergrej</label>
+                                <label><input id="shaving" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
+                                        value="Barbergrej">
+                                    Barbergrej 75,-</label>
                             </p>
                         </div>
                         <div class="left-block">
@@ -141,62 +177,42 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!-- creditcard -->
-                <h3 class="kategori">Vælg betalingsmetode:</h3>
-                <div class="pay">
-                    <!-- <input type="radio" name="payment" id="visa-dankort" value="visa-dankort" required> -->
-                    <label for="visa-dankort" class="inline">
-                        <p id="m-b-2" class="inline">Visa/Dankort</p>
-                        <!-- <span class="imgs inline"><img src="../img/logo-dankort.png"
+                <div class="block4">
+                    <!-- creditcard -->
+                    <h3 class="kategori">Vælg betalingsmetode:</h3>
+                    <div class="pay">
+                        <input type="radio" name="payment" id="visa-dankort" value="visa-dankort">
+                        <label for="visa-dankort" class="inline">
+                            <p id="m-b-2" class="inline">Visa/Dankort</p>
+                            <!-- <span class="imgs inline"><img src="../img/logo-dankort.png"
                                 alt="dankort logo"></span> -->
-                    </label>
-                    <label class="payment-label-around-div" for="dankort-nr">
-                        <!--    <span class="close">x</span> -->
-                        <p>
-                            <input type="number" name="card-nr" id="dankort-nr" pattern="[0-9]{16}" min="0" max="9999999999999999"
-                                autocomplete="cc-number" placeholder="Kortnummer" required></p>
-                        <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1" max="12"
-                                placeholder="mm" class="digit2" pattern="[0-9]{2}" autocomplete="cc-exp-month" required><span>
-                                / </span><input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
-                                placeholder="yyyy" maxlength="4" class="digit4" autocomplete="cc-exp-year" required></p>
-                        <p><input type="number" id="control" name="control" min="0" max="999" pattern="[0-9]{3}"
-                                placeholder="CVV" autocomplete="cc-csc" class="digit4" required></p>
-                    </label>
-                </div>
-                <div class="pay">
-                    <!--                  <input type="radio" name="payment" id="credit-card" value="credit-card" required> -->
-                    <label for="credit-card">
-                        <p id="m-b-2" class="inline">Kreditkort</p><!-- <span class="imgs inline"><img src="../img/visa.png" alt="visa logo"></span> -->
-                    </label>
-                    <label class="payment-label-around-div" for="credit-card-nr">
-                        <!-- <span class="close">x</span> -->
-                        <p>
-                            <input type="number" name="card-nr" id="visa-nr" pattern="[0-9]{16}" min="0" max="9999999999999999"
-                                placeholder="Kortnummer" autocomplete="cc-number" required></p>
-                        <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1" max="12" maxlength="2"
-                                placeholder="mm" autocomplete="cc-exp-month" class="digit2" pattern="[0-9]{2}" required><span>
-                                / </span><input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
-                                placeholder="yyyy" maxlength="4" autocomplete="cc-exp-year" class="digit4" pattern="[0-9]{4}"
-                                required></p>
-                        <p><input type="number" id="control" name="control" pattern="[0-9]{3}" min="0" max="999"
-                                placeholder="CVV" autocomplete="cc-csc" class="digit4" required></p>
-                    </label>
-                </div>
-                <div class="pay">
-                    <!--   <input type="radio" name="payment" id="mobile-pay" value="mobile-pay" required> -->
-                    <label for="mobile-pay">
-                        <p id="m-b-2" class="inline">MobilePay</p><span class="imgs inline"><img src="../img/mobilepay.png"
-                                alt="mobilepay logo" id="mobile-pay-img"></span>
-                    </label>
-                    <label class="payment-label-around-div half-height" for="mobile-pay-nr">
-                        <!--    <span class="close">x</span> -->
-                        <p id="mobile-pay-p">
-                            <span>+45</span>
-                            <input type="tel" name="card-nr" id="mobile-pay-nr" pattern="[1-9][0-9]{7}" required>
-                        </p>
-                    </label>
+                        </label>
+                        <label class="payment-label-around-div" for="dankort-nr">
+                            <!--    <span class="close">x</span> -->
+                            <p><input type="number" name="card-nr" id="dankort-nr" pattern="[0-9]{16}" min="0" max="9999999999999999"
+                                    autocomplete="cc-number" placeholder="Kortnummer"></p>
+                            <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1" max="12"
+                                    placeholder="mm" class="digit2" pattern="[0-9]{2}" autocomplete="cc-exp-month"><span>
+                                    / </span><input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
+                                    placeholder="yyyy" maxlength="4" class="digit4" autocomplete="cc-exp-year"></p>
+                            <p><input type="number" id="control" name="control" min="0" max="999" pattern="[0-9]{3}"
+                                    placeholder="CVV" autocomplete="cc-csc" class="digit4"></p>
+                        </label>
+                    </div>
+                    <div class="pay">
+                        <input type="radio" name="payment" id="mobile-pay" value="mobile-pay">
+                        <label for="mobile-pay">
+                            <p id="m-b-2" class="inline">MobilePay</p><span class="imgs inline"><img src="../img/mobilepay.png"
+                                    alt="mobilepay logo" id="mobile-pay-img"></span>
+                        </label>
+                        <label class="payment-label-around-div half-height" for="mobile-pay-nr">
+                            <!--    <span class="close">x</span> -->
+                            <p id="mobile-pay-p">
+                                <span class="p-span">+45</span>
+                                <input type="tel" name="card-nr" id="mobile-pay-nr" pattern="[1-9][0-9]{7}">
+                            </p>
+                        </label>
+                    </div>
                 </div>
                 <div class="block5">
                     <h1 class="kategori">Bekræft</h1>
@@ -204,18 +220,29 @@
                 <div class="block6">
                     <div class="order-overview">
                         <div class="order-overview-container">
-                            <br />
+                            <h1 class="donation">Donations detajler</h1>
                             <div>
-                                <h3>Din donation</h3>
-                                <hr>
-                                <div class="i-alt">I ALT: <span class="sum"></span></div>
+                                <p>Din bestilling:</p>
+                                <p class="floatleft">Kategori:</p>
+                                <input type="text" id="checkbox-kategori" class="" placeholder="">
+                                <p class="floatleft">Varer:</p>
+                                <input type="text" id="show" class="" placeholder="Det valgte produkt">
                             </div>
+                            <div>
+                                <p class="floatleft">Antal Varer:</p> <input type="text" id="count" class=""
+                                    placeholder="Antal varer">
+                            </div>
+
+                            <div id="totalPrice" placeholder="Samlet pris" style="color: red; text-align: center; font-size: 18px;"></div>
+                            <!--   Checked ids:<div id="results">
+                            </div>
+                           -->
                         </div>
                     </div>
                 </div>
 
                 <div class="block7">
-                    <!-- <button class="button" type="submit">Gennemfør Køb</button> -->
+                    <button class="button" type="submit">Gennemfør Køb</button>
                     <div id="mobile-pay-confirm" class="not-active">
                         <div>
                             <p></p>
@@ -233,9 +260,10 @@
 
 
 
-
-    <script src="../js/config.js"></script>
-    <script src="../js/donation.js"></script>
+    <!-- <script src="../js/validation.js"></script> -->
+    <script src="../js/kvittering.js"> </script>
+    <script src="../js/config.js"> </script>
+    <!-- <script src="../js/donation.js"></script> -->
     <!--  <script src="../js/logOut.js"></script> -->
 </body>
 
