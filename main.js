@@ -28,13 +28,12 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         console.log(firebaseUser);
         //Log Out
         btnLogout.classList.remove('hide');
-        // var user = firebase.auth().currentUser;
-        // email = user.email;
-        //   console.log('Email:' + email);
+        btnLogin.classList.add('hide');
+
 
 
         //Signed in
-        btnSignUp.classList.add('hide');
+        //  btnSignUp.classList.add('hide');
         document.querySelector("#uId").textContent = firebaseUser.uid;
         document.querySelector("#user").textContent = firebaseUser.email;
         // Add userId to local storage
@@ -44,7 +43,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         // document.getElementById("uId2").innerHTML = sessionStorage.getItem("uId");
     } else {
         console.log("not logged in");
-        //  btnLogout.classList.add('hide');
+        btnLogout.classList.add('hide');
         //reaload page
 
     }
