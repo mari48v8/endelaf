@@ -5,10 +5,13 @@ const btnLogin = document.getElementById("btnLogin");
 const btnLogout = document.getElementById("btnLogout");
 const btnSignUp = document.getElementById("btnSignUp");
 
-let email;
-let pass;
-let auth;
-let promise;
+//let email;
+//let pass;
+
+//let promise;
+
+// Firebase Variables
+let auth = firebase.auth();
 
 //Add realtime listner
 firebase.auth().onAuthStateChanged(firebaseUser => {

@@ -4,6 +4,7 @@
 let input
 let count;
 let checkedValue;
+let x;
 
 function checkbox() {
 
@@ -16,10 +17,18 @@ function checkbox() {
         if (input[i].checked) {
             result.push(input[i].value);
             console.log("Pushed : " + input[i].value);
+            x = input[i].value;
         }
     }
-    document.getElementById("show").value = result.join(",");
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(x);
+    node.appendChild(textnode);
+    document.getElementById("show").appendChild(node);
     document.getElementById("count").value = document.querySelectorAll("[type='checkbox']:checked").length;
+
+
+    // var totalPriceDK = document.getElementById("totalPrice");
+    // totalPriceDK.innerText = "Samlet pris: " + "" + totalPrice + ",- Kr";
 
 
 }

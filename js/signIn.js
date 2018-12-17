@@ -1,12 +1,11 @@
-'use strict'
-// Firebase Variables
-var auth = firebase.auth();
+//'use strict'
 
-var signupForm = document.querySelector("#signup-form");
-var userName = document.querySelector("#username");
-var email = document.querySelector("#email");
-var password = document.querySelector("#password");
-var signupButton = document.querySelector("#signup");
+
+let signupForm = document.querySelector("#signup-form");
+// let userName = document.querySelector("#username");
+let email = document.querySelector("#email");
+let password = document.querySelector("#password");
+let signupButton = document.querySelector("#signup");
 
 
 // Authentication
@@ -48,9 +47,9 @@ function submitUserData(e) {
     let by_val = getInputValues('txt_by');
     let email_val = getInputValues('email');
     let phone_val = getInputValues('txt_telefon');
-    let uId = localStorage.getItem("uId");
-    console.log(uId);
-    saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, email_val, phone_val, uId);
+    //let uId = localStorage.getItem("uId");
+    //console.log(uId);
+    saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, email_val, phone_val);
 }
 
 // get input values
@@ -59,7 +58,7 @@ function getInputValues(id) {
 }
 
 // save User to db
-function saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, email_val, phone_val, uId) {
+function saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, email_val, phone_val) {
     let newdbUserRef = dbUserRef.push();
     newdbUserRef.set({
         fornavn: firstname_val,
@@ -69,8 +68,10 @@ function saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, e
         by: by_val,
         email: email_val,
         telefon: phone_val,
-        UID: uId // this doesn't not work because it takes Uid from localstorage, but there is nothing in localstorage before the button is pushed.
+        //UID: uId // this doesn't not work because it takes Uid from localstorage, but there is nothing in localstorage before the button is pushed.
     })
     console.log("submit");
 }
+
+
 
