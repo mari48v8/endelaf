@@ -34,39 +34,69 @@
             </div>
         </div>
         <div class="main_body_bottom">
-            <div class="ctn c1 flip" onclick="myShowFunction()">Om os</div>
-            <div id="panel">
-                Vi er en organisation der hjælper hjemløse med at klare hverdagen. Vi ønsker at hjemløse skal føle
-                sig
-                som en del af Danmark, med din hjælp kan de klare hverdagen på en mere værdig og ligeværdig måde.
-            </div>
-            <div class="ctn c2 flip">Vinter</div>
-            <div id="panel1">
-                Det er hårdt at leve på gaden, i sær om vinteren hvor kulden går i marv og ben. Hjemløse har oftere
-                frostskader end andre mennesker. Derfor håber vi at du vil støtte med noget varmt tøj til vores
-                hjemløse.
-            </div>
-            <div class="ctn c3 flip">Personlig pleje</div>
-            <div id="panel2">
-                Det er hårdt at leve på gaden, i sær om vinteren hvor kulden går i marv og ben. Hjemløse har oftere
-                frostskader end andre mennesker. Derfor håber vi at du vil støtte med noget varmt tøj til vores
-                hjemløse.
-            </div>
-            <div class="ctn c4 flip">Historier</div>
-            <div id="panel3">
-                Det er hårdt at leve på gaden, i sær om vinteren hvor kulden går i marv og ben. Hjemløse har oftere
-                frostskader end andre mennesker. Derfor håber vi at du vil støtte med noget varmt tøj til vores
-                hjemløse.
+            <div class="main_div">
+                <div onclick="divVisibility('Div1');">
+                    <div class="ctn c1 flip">
+                        <h1 class="idx">Om os</h1>
+                    </div>
+                    <div class="inner_div">
+                        <div id="Div1" class="hide innerBox"> Vi er en organisation der hjælper hjemløse med at klare
+                            hverdagen.
+                            Vi ønsker at
+                            hjemløse skal føle sig som en del af Danmark, med din hjælp kan de klare hverdagen på en
+                            mere
+                            værdig og ligeværdig
+                            måde.</div>
+                    </div>
+                </div>
+                <div onclick="divVisibility('Div2');">
+                    <div class="c2 flip">
+                        <h1 class="idx">Vinter</h1>
+                    </div>
+                    <div class="inner_div">
+                        <div id="Div2" class="hide innerBox"> Det er hårdt at leve på gaden, i sær om
+                            vinteren hvor
+                            kulden
+                            går i marv og ben. Hjemløse har oftere
+                            frostskader end andre mennesker. Derfor håber vi at du vil støtte med noget varmt tøj til
+                            vores
+                            hjemløse.</div>
+                    </div>
+                </div>
+                <div onclick="divVisibility('Div3');">
+                    <div class="c3 flip">
+                        <h1 class="idx">Personlig pleje</h1>
+                    </div>
+                    <div class="inner_div">
+                        <div id="Div3" class="hide innerBox"> Det er hårdt at leve på gaden, i sær om vinteren hvor
+                            kulden går i marv og ben. Hjemløse har oftere
+                            frostskader end andre mennesker. Derfor håber vi at du vil støtte med noget varmt tøj til
+                            vores
+                            hjemløse.</div>
+                    </div>
+                </div>
+                <div onclick="divVisibility('Div4');">
+                    <div class="c4 flip">
+                        <h1 class="idx">Historier</h1>
+                    </div>
+                    <div class="inner_div">
+                        <div id="Div4" class="hide innerBox"> Det er hårdt at leve på gaden, i sær om vinteren hvor
+                            kulden går i marv og ben. Hjemløse har oftere
+                            frostskader end andre mennesker. Derfor håber vi at du vil støtte med noget varmt tøj til
+                            vores
+                            hjemløse.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
     <script src="/js/config.js"></script>
-    <script src="js/index.js"></script>
     <script src="main.js"></script>
-
-    <script src="/js/logOut.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/main-direc.js"></script>
+    <!-- <script src="/js/logOut.js"></script> -->
 </body>
 
 </html>

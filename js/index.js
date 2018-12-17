@@ -1,26 +1,27 @@
 'use strict'
 
-// show / hide overlay
-function myShowFunction() {
-    var x = document.getElementById("panel");
-    if (x.style.display == "block") {
-        x.style.display = "none";
+var divs = ["Div1", "Div2", "Div3", "Div4"];
+var visibleDivId = null;
+
+function divVisibility(divId) {
+    if (visibleDivId === divId) {
+        visibleDivId = null;
     } else {
-        x.style.display = "block";
+        visibleDivId = divId;
+
     }
-    //document.getElementById("panel").style.display = "block";
+    hideNonVisibleDivs();
 }
 
-//show form/ opretkonto.html when btnSignUp is clicked
-btnSignUp.addEventListener('click', e => {
-    console.log("button find")
-    document.location.href = 'pages/opretkonto.html';
-
-})
-
-//show form/ opretkonto.html when btnSignUp is clicked
-btnLogin.addEventListener('click', e => {
-    console.log("button find")
-    document.location.href = 'pages/loginform.html';
-
-})
+function hideNonVisibleDivs() {
+    var i, divId, div;
+    for (i = 0; i < divs.length; i++) {
+        divId = divs[i];
+        div = document.getElementById(divId);
+        if (visibleDivId === divId) {
+            div.style.display = "block";
+        } else {
+            div.style.display = "none";
+        }
+    }
+}
