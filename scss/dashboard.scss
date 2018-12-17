@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+}
+
+#doggraph1,
+#doggraph2,
+#doggraph3,
+#clothesgraph1,
+#clothesgraph2,
+#clothesgraph3,
+#toiletriesgraph1,
+#toiletriesgraph2,
+#toiletriesgraph3 {
+    width: 50px;
+    height: 0px;
+    border: 1px black solid;
+}
+
+article {
+    background-color: blueviolet;
+    height: 250px;
+    width: 100%;
+}
+
+
+#doggraph1 {
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 1;
+    grid-row-end: 102;
+
+}
+
+#doggraph2 {
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 4;
+    grid-row-end: 102;
+
+}
+
+#doggraph3 {
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 1;
+    grid-row-end: 102;
+}
+
+#clothesgraph1 {
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 1;
+    grid-row-end: 102;
+
+}
+
+#clothesgraph2 {
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 5;
+    grid-row-end: 102;
+
+}
+
+#clothesgraph3 {
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 6;
+    grid-row-end: 102;
+}
+
+#toiletriesgraph1 {
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 2.2;
+    grid-row-end: 102;
+
+}
+
+#toiletriesgraph2 {
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 2.2;
+    grid-row-end: 102;
+
+}
+
+#toiletriesgraph3 {
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    transition: all .6s ease;
+    grid-row-start: 1;
+    grid-row-end: 102;
+}
+
+
+
+.wrapper-grid {
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: repeat(2, [col] 100px);
+    margin: 0;
+    border-top: 2px dotted black;
+}
+
+
+
+.box {
+    color: #fff;
+    border-radius: 5px;
+
+
+}
+
+.a {
+    position: relative;
+    grid-column: col;
+    grid-row: row 2;
+}
+
+.b {
+    grid-column: col 2 / span 2;
+    grid-row: row 2;
+    padding-top: 30%;
+    color: black;
+}
+
+
+
+.grid-graph-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 39px;
+    height: auto;
+    width: auto;
+
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 2%;
+}
+
+
+.grid-p-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 17px;
+    height: auto;
+    width: 100%;
+
+}
+
+
+.grid-p-container p {
+    margin: 0;
+    font-size: 0.7em;
+
+}
+
+.grid-p-container p:nth-child(2) {
+    margin-right: 18px;
+    margin-left: 3px;
+    font-size: 0.7em;
+
+}
+
+.dashboard-dog-size {
+    width: 40%;
+    height: 35%;
+    margin-left: 10%;
+
+}
+
+.dashboard-hue-size {
+    width: 42%;
+    height: 22%;
+    margin-left: 10%;
+
+}
+
+.dashboard-tand-size {
+    width: 42%;
+    height: 22%;
+    margin-left: 10%;
+
+}
+
+.dash-h1 {
+    font-size: 0.8em;
+    text-align: left;
+    color: black;
+
+}

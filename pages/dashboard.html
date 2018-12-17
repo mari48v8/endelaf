@@ -6,99 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../scss/dashboard.scss">
+
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
     <title>En-del-af.dk Dashboard</title>
-
-    <style>
-        body {
-            margin: 0;
-        }
-
-        #doggraph1,
-        #doggraph2,
-        #doggraph3,
-        #clothesgraph1,
-        #clothesgraph2,
-        #clothesgraph3,
-        #toiletriesgraph1,
-        #toiletriesgraph2,
-        #toiletriesgraph3 {
-            width: 50px;
-            height: 0px;
-            border: 1px black solid;
-        }
-
-        #dogContainer,
-        #clothesContainer,
-        #toiletriesContainer {
-            display: flex;
-            align-items: flex-end;
-
-        }
-
-        #doggraph1 {
-            background-color: blue;
-        }
-
-        #doggraph2 {
-            background-color: pink;
-        }
-
-        #doggraph3 {
-            background-color: yellow;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="dashboard_wrapper">
-        <div class="header">
-            <a href="../index.html">
-                <div class="logo floatleft"></div>
-            </a>
-            <div class="buttons">
-                <button id="btnLogin" class="btn btn-darkblue floatleft">Login</button>
 
-                <button id="btnSignUp" class="btn btn-blue floatleft">Ny bruger</button>
+    <div class="header">
+        <a href="../index.html">
+            <div class="logo floatleft"></div>
+        </a>
+        <div class="buttons">
+            <button id="btnLogin" class="btn btn-darkblue floatleft">Login</button>
 
-                <button id="btnLogout" class="btn btn-red hide">Log ud</button>
+            <button id="btnSignUp" class="btn btn-blue floatleft">Ny bruger</button>
+
+            <button id="btnLogout" class="btn btn-red hide">Log ud</button>
+        </div>
+    </div>
+    <div class="bg-img">
+        <div class="wrapper">
+            <div class="container-login">
+                <button id="btnLogout" class="login-form-btn">XX btnLogout</button>
+
+                <div class="wrapper-grid">
+                    <div class="box a">
+                        <h1 class="dash-h1">Til Hunden</h1>
+                        <img class="dashboard-dog-size" src="../img/dog.png" alt="">
+                    </div>
+                    <div class="box b">
+                        <div class="grid-container">
+                            <div class="grid-graph-container">
+                                <div id="doggraph1"></div>
+                                <div id="doggraph2"></div>
+                                <div id="doggraph3"></div>
+                            </div>
+                        </div>
+                        <div class="grid-container">
+                            <div class="grid-p-container">
+                                <p>Hundemad</p>
+                                <p>Hundetøj</p>
+                                <p>Hundelegetøj</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-grid">
+                    <div class="box a">
+                        <h1 class="dash-h1">Tøj</h1>
+                        <img class="dashboard-hue-size" src="../img/hue.png" alt="">
+                    </div>
+                    <div class="box b">
+                        <div class="grid-container">
+                            <div class="grid-graph-container">
+                                <div id="clothesgraph1"></div>
+                                <div id="clothesgraph2"></div>
+                                <div id="clothesgraph3"></div>
+                            </div>
+                        </div>
+                        <div class="grid-container">
+                            <div class="grid-p-container">
+                                <p>Vinterfrakke</p>
+                                <p>Hue og vanter</p>
+                                <p>Uldne sokker</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-grid">
+                    <div class="box a">
+                        <h1 class="dash-h1">Personlig Pleje</h1>
+                        <img class="dashboard-tand-size" src="../img/tand.png" alt="">
+                    </div>
+                    <div class="box b">
+                        <div class="grid-container">
+                            <div class="grid-graph-container">
+                                <div id="toiletriesgraph1"></div>
+                                <div id="toiletriesgraph2"></div>
+                                <div id="toiletriesgraph3"></div>
+                            </div>
+                        </div>
+                        <div class="grid-container">
+                            <div class="grid-p-container">
+                                <p>Tandpleje</p>
+                                <p>Tamponer</p>
+                                <p>Barbergrej</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <button id="btnLogout" class="login-form-btn">XX btnLogout</button>
-        <article id="dogContainer">
-            <img src="../img/Maestro.png" alt="">
-
-            <div id="doggraph1"></div>
-            Hundemad
-            <div id="doggraph2"></div>
-            Hundetøj
-            <div id="doggraph3"></div>
-            Hundelegetøj
-        </article>
-
-        <article id="clothesContainer">
-            <img src="../img/Maestro.png" alt="">
-
-            <div id="clothesgraph1"></div>
-            Vinterfrakke
-            <div id="clothesgraph2"></div>
-            Hue og vanter
-            <div id="clothesgraph3"></div>
-            Uldne sokker
-        </article>
-
-        <article id="toiletriesContainer">
-            <img src="../img/Maestro.png" alt="">
-
-            <div id="toiletriesgraph1"></div>
-            Tandpleje
-            <div id="toiletriesgraph2"></div>
-            Tamponer
-            <div id="toiletriesgraph3"></div>
-            Barbergrej
-        </article>
     </div>
+
 
     <script src="../js/config.js"></script>
     <script src="main.js"></script>
