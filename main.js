@@ -1,51 +1,32 @@
 'use strict';
 
 // Get elements
-//const txt_email = document.getElementById("txt_email");
-//const txt_password = document.getElementById("txt_password");
-
-// button that opens the form
 const btnLogin = document.getElementById("btnLogin");
 const btnLogout = document.getElementById("btnLogout");
-// // button that send the form
-//const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
-//const btnSubmitSignUp = document.getElementById("btnSubmitSignUp");
+const btnSignUp = document.getElementById("btnSignUp");
 
-// container used to hide/ show the login form
-//const loginForm = document.getElementById("container-login");
-//const btnSignUp = document.getElementById("btnSignUp");
+//let email;
+//let pass;
 
+//let promise;
 
-let email;
-let pass;
-let auth;
-let promise;
-
+// Firebase Variables
+let auth = firebase.auth();
 
 //Add realtime listner
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
-        console.log(firebaseUser);
-        //Log Out
         btnLogout.classList.remove('hide');
-        // var user = firebase.auth().currentUser;
-        // email = user.email;
-        //   console.log('Email:' + email);
-
-
-        //Signed in
+        btnLogin.classList.add('hide');
         btnSignUp.classList.add('hide');
-        document.querySelector("#uId").textContent = firebaseUser.uid;
-        document.querySelector("#user").textContent = firebaseUser.email;
+
         // Add userId to local storage
         localStorage.setItem("uId", firebaseUser.uid);
 
-        // Retrieve - @TODO hvor skal denne placeres?????
-        // document.getElementById("uId2").innerHTML = sessionStorage.getItem("uId");
     } else {
         console.log("not logged in");
-        //  btnLogout.classList.add('hide');
-        //reaload page
-
+        btnLogout.classList.add('hide');
+        btnLogin.classList.remove('hide');
+        btnSignUp.classList.remove('hide');
     }
 })

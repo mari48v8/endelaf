@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <title>En-del-af.dk</title>
+
 </head>
 
 <body>
@@ -20,9 +21,12 @@
             </div>
         </div> -->
     <div class="header">
-        <div class="logo floatleft"></div>
+        <a href="../index.html">
+            <div class="logo floatleft"></div>
+        </a>
         <div class="buttons">
             <button id="btnLogin" class="btn btn-darkblue">Login</button>
+            <button id="btnLogout" class="btn btn-red hide">Log ud</button>
 
             <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
         </div>
@@ -51,7 +55,8 @@
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter postnr">
-                            <input type="postnr" id="txt_postnr" class="input form-control" placeholder="Postnr">
+                            <input pattern="[0-9]{4}" type="postnr" id="txt_postnr" class="input form-control"
+                                placeholder="Postnr">
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter by">
@@ -60,16 +65,15 @@
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter email">
                             <input type="email" id="email" class="input form-control" placeholder="Email">
-                            <!-- <input type="email" id="txt_email" class="input form-control" placeholder="Email"> -->
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter passsword">
                             <input type="password" id="password" class="input form-control" placeholder="Password" />
-                            <!-- <input type="password" id="txt_password" class="input form-control" placeholder="Password"> -->
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter telefon">
-                            <input type="telefon" id="txt_telefon" class="input form-control" placeholder="Telefon">
+                            <input pattern="[0-9]{8}" type="telefon" id="txt_telefon" class="input form-control"
+                                placeholder="Telefon">
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                     </form>
@@ -83,11 +87,10 @@
     </div>
     </div>
     <script src="../js/config.js"></script>
+    <script src="../main.js"></script>
     <script src="../js/signIn.js"></script>
+    <script src="../js/logOut.js"></script>
     <script src="../js/directions.js"></script>
-    <!-- <script src="../main.js"></script> -->
-
-    <!-- <script src="../js/signUp.js"></script> -->
 
 </body>
 
