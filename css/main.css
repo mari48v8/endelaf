@@ -251,6 +251,15 @@ a {
   padding: 3%;
   padding-bottom: 4%; }
 
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border-color: none;
+  font-size: 1em; }
+
+/*----------------------- index.html -----------------------*/
 .img_background {
   background-image: url(../img/homeless.jpeg);
   background-size: cover;
@@ -265,13 +274,14 @@ a {
 .txt_box {
   width: 110px;
   height: auto;
-  text-align: left;
-  padding-left: 5px;
+  text-align: center;
+  padding-left: 2px;
   padding-right: 5px;
   padding-top: 1px;
   padding-bottom: 1px;
   margin-bottom: 10%;
   margin-top: 10%;
+  margin-left: 7%;
   opacity: 0.8;
   filter: alpha(opacity=60);
   background-color: white; }
@@ -284,24 +294,10 @@ a {
   margin: auto;
   cursor: pointer; }
 
-#panel {
-  display: none;
-  cursor: auto;
-  padding: 7%;
-  font-size: 14px; }
-
 .buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
-
-.btn {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  border-color: none;
-  font-size: 1em; }
 
 .btn-darkblue {
   background: #446B7F; }
@@ -321,7 +317,9 @@ a {
 
 .btn-red {
   background: #FF194E;
-  margin-bottom: 5%; }
+  margin-bottom: 15%;
+  margin-left: 8%;
+  font-size: 1.25em; }
   .btn-red:hover {
     background: #ef0037;
     transition: all 0.3s ease; }
@@ -330,12 +328,7 @@ a {
 
 .ctn {
   width: 100%;
-  height: 55px;
-  text-align: center;
-  color: white;
-  padding-top: 45px;
-  font-size: 1.3em;
-  font-weight: 100; }
+  margin-top: 0; }
 
 .c1 {
   background: #446B7F; }
@@ -374,3 +367,84 @@ a {
 
 .hide {
   display: none; }
+
+#myDIV1 {
+  width: 150px;
+  height: 150px;
+  background-color: lightblue;
+  display: none; }
+
+#myDIV2 {
+  width: 150px;
+  height: 150px;
+  background-color: lightblue;
+  display: none; }
+
+#myDIV3 {
+  width: 150px;
+  height: 150px;
+  background-color: lightblue;
+  display: none; }
+
+#myDIV4 {
+  width: 150px;
+  height: 150px;
+  background-color: lightblue;
+  display: none; }
+
+.idx {
+  font-size: 1.2em;
+  margin-top: 0;
+  padding-top: 0;
+  color: white;
+  text-align: center;
+  padding: 7%;
+  font-weight: 400;
+  margin: 0; }
+
+.innerBox {
+  padding: 7%;
+  font-size: 0.8em;
+  text-align: justify-left;
+  text-align: left; }
+
+/*----------------------- modal newpassword.html -----------------------*/
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem; }
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray; }
+
+.close-button:hover {
+  background-color: darkgray; }
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }

@@ -49,8 +49,3 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
     }
 })
-
-// //Eventlistner submitSignUp button
-// btnSignUp.addEventListener('click', e => {
-//     console.log("sendt");
-// }) */
