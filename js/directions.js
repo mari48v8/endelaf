@@ -1,9 +1,10 @@
-/* //show donation.html when signup is clicked
-signup.addEventListener('click', e => {
-    console.log("button find opretform")
-    document.location.href = 'donation.html';
+//show donation.html when signup is clicked
+//@TODO denne funktion skal kun køre hvis bruger er logget ind
+// signup.addEventListener('click', e => {
+//     console.log("button find opretform")
+//     document.location.href = 'donation.html';
 
-}) */
+// })
 
 //show form/ opretkonto.html when btnSignUp is clicked
 btnSignUp.addEventListener('click', e => {
@@ -19,16 +20,10 @@ btnLogin.addEventListener('click', e => {
 
 })
 
-//show glemkode2.html when btnForgot is clicked
-btnForgot.addEventListener('click', e => {
-    console.log("button find newpassword")
-    document.location.href = 'newpassword.html';
-
-})
-
 //show index.html when btnLogout is clicked
 btnLogout.addEventListener('click', e => {
     console.log("button find index.html")
     document.location.href = 'index.html';
 
 })
+

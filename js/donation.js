@@ -2,10 +2,17 @@
 
 let itemsArr = [];
 let donationArr = [];
-const donationForm = document.getElementById("donationForm");
+const btnSubmitDonation = document.getElementById("btnSubmitDonation");
+
+//show tak.html when btnSubmitDonation is clicked
+btnSubmitDonation.addEventListener('click', e => {
+    console.log("button find index.html")
+    document.location.href = 'tak.html';
+
+})
 
 // Eventlistner for submitDonation
-donationForm.addEventListener('submit', getCheckedBoxes);
+btnSubmitDonation.addEventListener('click', getCheckedBoxes);
 
 function getCheckedBoxes(e) {
     e.preventDefault();

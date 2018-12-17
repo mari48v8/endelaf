@@ -28,6 +28,12 @@ auth.onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         // Add userId to local storage
         localStorage.setItem("uId", firebaseUser.uid);
+
+        signup.addEventListener('click', e => {
+            console.log("button find opretform")
+            document.location.href = 'donation.html';
+
+        })
     } else {
         /* signupForm.style.display = 'block'; */
     }

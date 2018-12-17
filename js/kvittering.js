@@ -70,38 +70,3 @@ function getTotals() {
 }
 
 
-/////////////////////////// Display kategori //////////////////////////////////////
-
-function showCategory() {
-    hunden = document.getElementById("dog");
-    checkedValue = "";
-    let category = [];
-    console.log(category_hunden);
-    for (let i = 0; i < hunden.length; i++) {
-        if (hunden[i].checked) {
-            category.push(hunden[i].id);
-            console.log("Pushed : " + hunden[i].id);
-        }
-    }
-    document.getElementById("checkbox-kategori").value = category.join(",");
-
-
-
-}
-
-
-/* 
-var e = document.getElementById("#dogFood"),
-    t = document.querySelector(".block6 .jacket-choice");
-var newline = '&nbsp';
-
-function n(e) {
-    var n = e.target.getAttribute("value");
-    t.textContent = "", t.textContent += "Hjælp til hunden" + newline + " ", t.textContent += "Hundemad", n
-}
-e.forEach(function (e) {
-    return e.addEventListener("change", n)
-});
-
-var e = new dogFood();
-document.getElementById("#dogFood").innerHTML = e; */
