@@ -11,13 +11,6 @@ function init() {
     dbRefDonations.on('value', getDonationsData, errData);
     dbRefDonations.on('value', snap => {
         let donations = (snap.val());
-        //  console.log(donations);
-
-        //turn object into an array
-        let donationsArrObj = Object.keys(donations).map(function (key) {
-            return [Number(key), donations[key]];
-        });
-        //     console.log(donationsArrObj);
     });
 }
 
