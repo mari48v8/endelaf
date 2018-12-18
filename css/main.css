@@ -520,7 +520,10 @@ body {
 #clothesgraph3,
 #toiletriesgraph1,
 #toiletriesgraph2,
-#toiletriesgraph3 {
+#toiletriesgraph3,
+#totaldoggraph1,
+#totalclothesgraph2,
+#totaltoiletriesgraph3 {
   width: 50px;
   height: 0px;
   border: 1px black solid; }
@@ -679,6 +682,33 @@ article {
   grid-row-start: 1;
   grid-row-end: 102; }
 
+/*----------------------- Graph 4 Data  -----------------------*/
+#totaldoggraph1 {
+  background-color: #446b7f;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: all 0.6s ease;
+  align-self: end; }
+
+#totalclothesgraph2 {
+  background-color: #de4a5e;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: all 0.6s ease;
+  grid-row-start: 1;
+  grid-row-end: 102; }
+
+#totaltoiletriesgraph3 {
+  background-color: #78bd6f;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: all 0.6s ease;
+  grid-row-start: 4;
+  grid-row-end: 102; }
+
 /*----------------------- Graph Y Axis  -----------------------*/
 .y-axis {
   position: relative;
@@ -753,6 +783,12 @@ span {
 .antal3 {
   position: absolute;
   top: 68%;
+  left: 30%;
+  font-size: 0.7em; }
+
+.antal4 {
+  position: absolute;
+  top: 76%;
   left: 30%;
   font-size: 0.7em; }
 

@@ -78,12 +78,22 @@ function errData(err) {
 }
 
 function dogGraphs() {
+    let dogTotal = dogFoodCount + dogClothesCount + dogToyCount;
+    let clothesTotal = wintercoatCount + hatAndGlovesCount + socksCount;
+    let toiletriesTotal = toothbrushCount + tamponsCount + shavingCount;
     let dogFoodHeight = (dogFoodCount * 10);
     let dogClothesHeight = (dogClothesCount * 10);
     let dogToyHeight = (dogToyCount * 10);
+    let totalDogHeight = (dogTotal * 10);
+    let totalClothesHeight = (clothesTotal * 10);
+    let totalToiletriesHeight = (toiletriesTotal * 10);
+
     document.querySelector("#doggraph1").setAttribute("style", "height:" + dogFoodHeight + "px");
     document.querySelector("#doggraph2").setAttribute("style", "height:" + dogClothesHeight + "px");
     document.querySelector("#doggraph3").setAttribute("style", "height:" + dogToyHeight + "px");
+    document.querySelector("#totaldoggraph1").setAttribute("style", "height:" + totalDogHeight + "px");
+    document.querySelector("#totalclothesgraph2").setAttribute("style", "height:" + totalClothesHeight + "px");
+    document.querySelector("#totaltoiletriesgraph3").setAttribute("style", "height:" + totalToiletriesHeight + "px");
     console.log(dogFoodHeight, +" " + dogClothesHeight + " " + dogToyHeight);
 }
 
