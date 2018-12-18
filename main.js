@@ -25,10 +25,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
             btnSupport.addEventListener('click', e => {
                 console.log("støt")
                 document.location.href = '../pages/donation.html';
-
             });
         }
-
     } else {
         console.log("not logged in");
         btnLogout.classList.add('hide');

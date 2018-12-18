@@ -15,7 +15,7 @@
 
 /*----------------------- Form Container and Wrapper -----------------------*/
 .container-login {
-  width: 100%;
+  width: 92%;
   /*  min-height: 100vh; */
   display: -webkit-box;
   display: -webkit-flex;
@@ -508,6 +508,284 @@ label {
   font-size: 20px;
   font-weight: 600;
   font-family: 'Raleway', sans-serif; }
+
+body {
+  margin: 0; }
+
+#doggraph1,
+#doggraph2,
+#doggraph3,
+#clothesgraph1,
+#clothesgraph2,
+#clothesgraph3,
+#toiletriesgraph1,
+#toiletriesgraph2,
+#toiletriesgraph3 {
+  width: 50px;
+  height: 0px;
+  border: 1px black solid; }
+
+article {
+  background-color: blueviolet;
+  height: 250px;
+  width: 100%; }
+
+/*-----------------------  Wrapper og Container  -----------------------*/
+.wrapper-grid {
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-top: 2px dotted black; }
+
+.wrapper-grid:nth-child(1) {
+  width: 100%;
+  padding-top: 3%;
+  border: none;
+  padding-bottom: 3%; }
+
+.graph-container {
+  display: flex;
+  align-items: flex-end;
+  height: auto;
+  width: auto;
+  position: absolute;
+  left: 142px; }
+
+/*----------------------- Graph row  -----------------------*/
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+.row-col {
+  margin-left: 3.8%;
+  line-height: 7px; }
+
+/*----------------------- Graph Columns  -----------------------*/
+.col-a {
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+  padding-left: 4%; }
+
+.col-b {
+  -ms-flex: 0 0 66%;
+  flex: 0 0 66%;
+  max-width: 66%; }
+
+.col-c {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+/*-----------------------  Graph Overskrift  -----------------------*/
+.dash-h1 {
+  font-size: 0.8em;
+  text-align: left;
+  color: black; }
+
+/*-----------------------  Graph 1 Data  -----------------------*/
+.dashboard-dog-size {
+  width: 40%;
+  height: 23%; }
+
+#doggraph1 {
+  background-color: #446b7f;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: all 0.6s ease;
+  align-self: end; }
+
+#doggraph2 {
+  background-color: #446b7f;
+  padding: 0;
+  border: none;
+  opacity: 0.9;
+  transition: all 0.6s ease;
+  align-self: end; }
+
+#doggraph3 {
+  background-color: #446b7f;
+  padding: 0;
+  border: none;
+  opacity: 0.2;
+  transition: all 0.6s ease;
+  align-self: end; }
+
+/*----------------------- Graph 2 Data -----------------------*/
+.dashboard-hue-size {
+  width: 40%;
+  height: 19%; }
+
+#clothesgraph1 {
+  background-color: #de4a5e;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: all 0.6s ease;
+  grid-row-start: 1;
+  grid-row-end: 102; }
+
+#clothesgraph2 {
+  background-color: #de4a5e;
+  padding: 0;
+  border: none;
+  opacity: 0.5;
+  transition: all 0.6s ease;
+  grid-row-end: 102; }
+
+#clothesgraph3 {
+  background-color: #de4a5e;
+  padding: 0;
+  border: none;
+  opacity: 0.2;
+  transition: all 0.6s ease;
+  grid-row-start: 5;
+  grid-row-end: 102; }
+
+/*----------------------- Graph 3 Data  -----------------------*/
+.dashboard-tand-size {
+  width: 40%;
+  height: 18%; }
+
+#toiletriesgraph1 {
+  background-color: #78bd6f;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: all 0.6s ease;
+  grid-row-start: 4;
+  grid-row-end: 102; }
+
+#toiletriesgraph2 {
+  background-color: #78bd6f;
+  padding: 0;
+  border: none;
+  opacity: 0.5;
+  transition: all 0.6s ease;
+  grid-row-start: 4;
+  grid-row-end: 102; }
+
+#toiletriesgraph3 {
+  background-color: #78bd6f;
+  padding: 0;
+  border: none;
+  opacity: 0.2;
+  transition: all 0.6s ease;
+  grid-row-start: 1;
+  grid-row-end: 102; }
+
+/*----------------------- Graph Y Axis  -----------------------*/
+.y-axis {
+  position: relative;
+  width: 97%;
+  left: 0px;
+  top: 0px; }
+
+ul {
+  list-style: none;
+  margin-top: 20%;
+  margin-left: -4px;
+  padding: 0; }
+
+li {
+  border-top: 1px solid #4e5464;
+  display: block;
+  height: 8.9px;
+  width: 4%; }
+
+li:nth-child(even) {
+  width: 2.5%;
+  margin-right: 4%;
+  border-top: 1px solid #ccc; }
+
+li:last-child {
+  border-top: 1px solid #4e5464;
+  display: block;
+  height: 9.2px;
+  width: 92%;
+  position: relative; }
+
+span {
+  display: block;
+  font-size: 0.6em;
+  margin: -10px 0 0 -32px;
+  padding: 0 10px;
+  width: 40px; }
+
+/*----------------------- Graph Y Axis linje  -----------------------*/
+.vl1 {
+  border-left: 1px solid black;
+  height: 170px;
+  margin-top: -79.9%;
+  display: flex;
+  align-items: flex-end; }
+
+.vl2 {
+  border-left: 1px solid black;
+  height: 174px;
+  margin-top: -102%;
+  margin-left: -4%; }
+
+.vl3 {
+  border-left: 1px solid black;
+  height: 174px;
+  margin-top: -103.1%;
+  margin-left: -4%; }
+
+/*----------------------- Graph Antal  -----------------------*/
+.antal1 {
+  position: absolute;
+  top: 1%;
+  left: 30%;
+  font-size: 0.7em; }
+
+.antal2 {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  font-size: 0.7em; }
+
+.antal3 {
+  position: absolute;
+  top: 68%;
+  left: 30%;
+  font-size: 0.7em; }
+
+/*----------------------- Graph p  -----------------------*/
+.p-graph {
+  font-size: 0.7em;
+  margin-left: 8px; }
+
+/*----------------------- Graph p  -----------------------*/
+.color-bx {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background-color: #de4a5e;
+  margin-bottom: 5px;
+  margin-right: 7px;
+  position: relative;
+  top: -2px;
+  margin-left: 6px; }
+
+/*----------------------- Graph padding's  -----------------------*/
+.p-r-10 {
+  margin-right: 12px; }
+
+.p-r-11 {
+  margin-right: 12px; }
+
+.p-r-12 {
+  margin-right: 0px; }
+
+/*----------------------- Graph Donno??  -----------------------*/
+.graph-axis {
+  position: relative; }
 
 html,
 body {
