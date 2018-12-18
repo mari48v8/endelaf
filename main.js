@@ -4,13 +4,7 @@
 const btnLogin = document.getElementById("btnLogin");
 const btnLogout = document.getElementById("btnLogout");
 const btnSignUp = document.getElementById("btnSignUp");
-
-
-
-//let email;
-//let pass;
-
-//let promise;
+const btnSupport = document.getElementById("btnSupport");
 
 // Firebase Variables
 let auth = firebase.auth();
@@ -24,11 +18,29 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
         // Add userId to local storage
         localStorage.setItem("uId", firebaseUser.uid);
+        //console.log(localStorage);
+
+        //show donations.html when btnSupport is clicked (from index.html)
+        if (btnSupport) {
+            btnSupport.addEventListener('click', e => {
+                console.log("støt")
+                document.location.href = '../pages/donation.html';
+
+            });
+        }
 
     } else {
         console.log("not logged in");
         btnLogout.classList.add('hide');
         btnLogin.classList.remove('hide');
         btnSignUp.classList.remove('hide');
+
+        //show opretkonto.html when btnSupport is clicked (from index.html)
+        if (btnSupport) {
+            btnSupport.addEventListener('click', e => {
+                document.location.href = '../pages/opretkonto.html';
+            });
+        }
+
     }
 })

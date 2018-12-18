@@ -1,3 +1,6 @@
+
+$red: #FF194E;
+
 input[type=number] {
 
     &::-webkit-inner-spin-button,
@@ -5,12 +8,6 @@ input[type=number] {
         -webkit-appearance: none;
         margin: 0;
     }
-}
-
-.wrapper-login {
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
 .inline {
@@ -38,9 +35,7 @@ input {
     height: 35px;
     position: relative;
     border-bottom: 2px solid #ccc;
-    margin-bottom: 30px;
     top: 8px;
-    left: -5px;
 }
 
 
@@ -99,6 +94,7 @@ label {
     padding-left: 4%;
     margin-bottom: -4%;
     margin-top: 9%;
+    padding-bottom: 2%;
 }
 
 .i-img:nth-child(2) {
@@ -194,9 +190,11 @@ label {
     font-size: 1em;
     margin-left: 30%;
     padding-top: 8%;
-    color: white;
+    color: black;
 }
-
+.paymethod {
+    padding-bottom: 5%;
+}
 #kategori-img-dog {
     background: url(../img/dog.png);
     background-repeat: no-repeat;
@@ -273,21 +271,25 @@ label {
 #show {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
-    color: #ccc;
+    color: #5c5656;
     line-height: 1.2;
     background: transparent;
     outline: none;
     height: 80px;
     border: none;
-    margin-left: 5%;
+    margin-left: 0%;
     margin-bottom: 0;
 
+}
+
+#show li {
+    list-style: none;
 }
 
 #count {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
-    color: #ccc;
+    color: #5c5656;
     line-height: 1.2;
     background: transparent;
     outline: none;
@@ -299,7 +301,7 @@ label {
 }
 
 .donation {
-    padding-top: 20%;
+    padding-top: 33%;
     padding-bottom: 0;
     font-size: 1.3em;
 }
@@ -311,4 +313,25 @@ label {
 .order-overview-container input {
     top: 0;
 
+}
+
+#main {
+    width: 100%;
+}
+#choose {
+    background-color: $red;
+    color: white;
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    bottom: 3%;
+    padding:15px;
+}
+
+#totalPrice {
+    color: #5c5656; 
+    text-align: left; 
+    font-size: 20px; 
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
 }

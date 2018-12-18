@@ -1,7 +1,9 @@
 'use strict'
 
-var divs = ["Div1", "Div2", "Div3", "Div4"];
-var visibleDivId = null;
+
+
+let divs = ["Div1", "Div2", "Div3", "Div4"];
+let visibleDivId = null;
 
 function divVisibility(divId) {
     if (visibleDivId === divId) {
@@ -14,7 +16,7 @@ function divVisibility(divId) {
 }
 
 function hideNonVisibleDivs() {
-    var i, divId, div;
+    let i, divId, div;
     for (i = 0; i < divs.length; i++) {
         divId = divs[i];
         div = document.getElementById(divId);

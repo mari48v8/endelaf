@@ -15,7 +15,7 @@
 
 /*----------------------- Form Container and Wrapper -----------------------*/
 .container-login {
-  width: 92%;
+  width: 100%;
   /*  min-height: 100vh; */
   display: -webkit-box;
   display: -webkit-flex;
@@ -85,6 +85,9 @@
   border-radius: 10px;
   overflow: hidden;
   padding: 55px 31px 37px 31px; }
+
+.donation-padding {
+  padding: 0; }
 
 /*----------------------- Form Logo -----------------------*/
 .login-form-logo {
@@ -219,6 +222,293 @@ label {
   margin: 0;
   display: block; }
 
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.inline {
+  display: inline-block;
+  margin-right: 2%; }
+
+#m-b-2 {
+  margin-bottom: 2px; }
+
+.p-span {
+  position: relative;
+  top: 10px;
+  left: -6px; }
+
+input {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  color: #ccc;
+  line-height: 1.2;
+  background: transparent;
+  outline: none;
+  height: 35px;
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  top: 8px; }
+
+#dankort-nr {
+  background: url(../img/logo-dankort.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-origin: content-box;
+  background-size: 3.5rem 2.5rem;
+  padding-right: 8px;
+  outline: none;
+  border: none;
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+  width: 90%; }
+
+.visa-nr {
+  background: url(../img/visa.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-origin: content-box;
+  background-size: 3.5rem 1.2rem;
+  padding-right: 8px;
+  outline: none;
+  border: none;
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+  width: 90%; }
+
+input#dankort-exp-month,
+input#dankort-exp-year,
+input#control {
+  width: 35%; }
+
+label {
+  margin: 0;
+  /*   width: 100%; */
+  position: relative;
+  top: -8px;
+  left: 10px;
+  display: inline; }
+
+#mobile-pay-img {
+  max-width: 79px;
+  margin-left: 100%; }
+
+.into-txt {
+  padding-left: 4%;
+  margin-bottom: -4%;
+  margin-top: 9%;
+  padding-bottom: 2%; }
+
+.i-img:nth-child(2) {
+  background: url(../img/information_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 25%;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+  position: relative;
+  top: -26px; }
+
+.i-img:nth-child(3) {
+  background: url(../img/information_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 25%;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+  position: relative;
+  top: -7px; }
+
+.i-img:nth-child(4) {
+  background: url(../img/information_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 25%;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+  position: relative;
+  top: 13px; }
+
+.infobox {
+  height: auto;
+  padding: 0; }
+
+.payment-p {
+  font-size: 0.8em;
+  padding: 4%; }
+
+.checkbox-p {
+  height: 20px;
+  padding: 0;
+  color: white; }
+
+.left-block {
+  display: inline-block;
+  margin-right: 7%; }
+
+.kategori-sections {
+  margin-top: 15%;
+  margin-bottom: 0%;
+  font-size: 1em; }
+
+/* @mixin div-colour($divbg) {
+      background-color: $divbg;
+  } */
+.b1 {
+  /*  @include div-colour(#446B7F); */
+  background-color: #446B7F;
+  padding-bottom: 8%; }
+
+.b2 {
+  background-color: #7ea6ba;
+  padding-bottom: 8%; }
+
+.b3 {
+  background-color: #b2c9d6;
+  padding-bottom: 8%; }
+
+.pay {
+  padding-left: 4%; }
+
+.kategori {
+  margin-top: 0%;
+  margin-bottom: -2%;
+  font-size: 1em;
+  margin-left: 30%;
+  padding-top: 8%;
+  color: black; }
+
+.paymethod {
+  padding-bottom: 5%; }
+
+#kategori-img-dog {
+  background: url(../img/dog.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100px;
+  width: 18%;
+  margin-right: 4%;
+  margin-left: 7%;
+  display: inline-block; }
+
+#kategori-img-hue {
+  background: url(../img/hue.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100px;
+  width: 18%;
+  margin-right: 4%;
+  margin-left: 4%;
+  display: inline-block; }
+
+#kategori-img-tand {
+  background: url(../img/tand.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100px;
+  width: 18%;
+  margin-right: 4%;
+  margin-left: 4%;
+  display: inline-block; }
+
+.order-overview {
+  background: url(../img/notes.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 417px;
+  width: 100%; }
+
+.order-overview-container {
+  height: 300px;
+  width: 60%;
+  margin: 0 auto; }
+
+.container-login-form-btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.login-form-btn {
+  color: #5C5656;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border-color: none;
+  font-size: 1.2em;
+  background-color: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  cursor: pointer; }
+
+#show {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  color: #5c5656;
+  line-height: 1.2;
+  background: transparent;
+  outline: none;
+  height: 80px;
+  border: none;
+  margin-left: 0%;
+  margin-bottom: 0; }
+
+#show li {
+  list-style: none; }
+
+#count {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  color: #5c5656;
+  line-height: 1.2;
+  background: transparent;
+  outline: none;
+  height: 35px;
+  border: none;
+  margin-left: 5%;
+  width: 50%;
+  margin-top: -10px; }
+
+.donation {
+  padding-top: 33%;
+  padding-bottom: 0;
+  font-size: 1.3em; }
+
+.order-overview-container p {
+  margin: 0; }
+
+.order-overview-container input {
+  top: 0; }
+
+#main {
+  width: 100%; }
+
+#choose {
+  background-color: #FF194E;
+  color: white;
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 3%;
+  padding: 15px; }
+
+#totalPrice {
+  color: #5c5656;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif; }
+
 html,
 body {
   margin: 0;
@@ -296,10 +586,10 @@ a {
 
 /*----------------------- index.html -----------------------*/
 .img_background {
-  background-image: url(../img/homeless.jpeg);
+  background-image: url(../img/people-1495855_960_720.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%; }
+  background-position: 50% -175%; }
 
 .logo {
   width: 180px;
@@ -315,7 +605,7 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
   margin-bottom: 10%;
-  margin-top: 10%;
+  margin-top: 24%;
   margin-left: 7%;
   opacity: 0.8;
   filter: alpha(opacity=60);
@@ -324,6 +614,9 @@ a {
 .txt_box p {
   color: #000000;
   font-size: 14px; }
+
+#btnSupport {
+  margin-bottom: 8%; }
 
 .flip {
   margin: auto;
@@ -352,9 +645,8 @@ a {
 
 .btn-red {
   background: #FF194E;
-  margin-bottom: 15%;
   margin-left: 8%;
-  font-size: 1.25em; }
+  font-size: 1.1em; }
   .btn-red:hover {
     background: #ef0037;
     transition: all 0.3s ease; }

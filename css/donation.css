@@ -2,11 +2,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   -webkit-appearance: none;
   margin: 0; }
 
-.wrapper-login {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden; }
-
 .inline {
   display: inline-block;
   margin-right: 2%; }
@@ -265,3 +260,6 @@ label {
 
 .order-overview-container input {
   top: 0; }
+
+#main {
+  width: 100%; }

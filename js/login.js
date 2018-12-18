@@ -42,7 +42,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 })
 
-// @TO-DO KAN DEN LAVES ANDERLEDES? HVIS MAN KLIKKER TILBAGE KNAPPEN PÅ DEN NYE SIDE BLIVER DEN VED MED AT REDIRECTE TIL DEN NYE SIDE
 function checkAdmin() {
     // if user is admin go to dashboard.html else donation.html
     if (id === "P4sMSboWYhXKhCWKk0jVzEcgRdD2") {

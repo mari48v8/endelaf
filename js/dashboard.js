@@ -11,14 +11,6 @@ function init() {
     dbRefDonations.on('value', getDonationsData, errData);
     dbRefDonations.on('value', snap => {
         let donations = (snap.val());
-        //  console.log(donations);
-
-
-        //turn object into an array
-        let donationsArrObj = Object.keys(donations).map(function (key) {
-            return [Number(key), donations[key]];
-        });
-        //     console.log(donationsArrObj);
     });
 }
 
@@ -52,7 +44,7 @@ let shavingCount = 0;
 function searchItems(items) {
 
     items.forEach(item => {
-        // console.log(item.id);
+        console.log(item.id);
         if (item.id === "dogFood") {
             dogFoodCount += 1;
         } else if (item.id === "dogClothes") {
