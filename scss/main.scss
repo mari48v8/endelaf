@@ -96,6 +96,8 @@ a {
     background-color: $lightblue;
     padding: 3%;
     padding-bottom: 4%;
+    z-index: 1000;
+    position: relative;
 }
 
 .btn {
@@ -268,6 +270,7 @@ a {
     font-size: 0.8em;
     text-align: justify-left;
     text-align: left;
+    background: $white;
 }
 
 /*----------------------- modal newpassword.html -----------------------*/

@@ -13,32 +13,39 @@
     <title>En-del-af.dk Dashboard</title>
 </head>
 
-<body>
+<body class="bg-img">
+    <div class="wrapper">
+        <div class="header">
+            <a href="../index.html">
+                <div class="logo floatleft"></div>
+            </a>
+            <div class="buttons">
+                <button id="btnLogin" class="btn btn-darkblue floatleft">Login</button>
 
-    <div class="header">
-        <a href="../index.html">
-            <div class="logo floatleft"></div>
-        </a>
-        <div class="buttons">
-            <button id="btnLogin" class="btn btn-darkblue floatleft">Login</button>
+                <button id="btnSignUp" class="btn btn-blue floatleft">Ny bruger</button>
 
-            <button id="btnSignUp" class="btn btn-blue floatleft">Ny bruger</button>
-
-            <button id="btnLogout" class="btn btn-red hide">Log ud</button>
+                <button id="btnLogout" class="btn btn-red hide">Log ud</button>
+            </div>
         </div>
-    </div>
-    <div class="bg-img">
-        <div class="wrapper">
-            <div class="container-login">
-                <button id="btnLogout" class="login-form-btn">XX btnLogout</button>
-
-                <div class="wrapper-grid">
+        <div class="container-login">
+            <!-- <button id="btnLogout" class="login-form-btn">XX btnLogout</button> -->
+            <div class="wrapper-grid">
+                <div class="grid">
                     <div class="box a">
                         <h1 class="dash-h1">Til Hunden</h1>
                         <img class="dashboard-dog-size" src="../img/dog.png" alt="">
                     </div>
                     <div class="box b">
-                        <div class="grid-container">
+                        <ul class="y-axis">
+                            <li><span>40</span></li>
+                            <li><span>30</span></li>
+                            <li><span>20</span></li>
+                            <li><span>10</span></li>
+                            <li><span>0</span></li>
+                        </ul>
+                        <p class="kr1">Kr.</p>
+                        <div class="vl1"></div>
+                        <div class="grid-container-item-dog">
                             <div class="grid-graph-container">
                                 <div id="doggraph1"></div>
                                 <div id="doggraph2"></div>
@@ -54,13 +61,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="wrapper-grid">
+            </div>
+            <div class="wrapper-grid">
+                <div class="grid-2">
                     <div class="box a">
                         <h1 class="dash-h1">Tøj</h1>
                         <img class="dashboard-hue-size" src="../img/hue.png" alt="">
                     </div>
-                    <div class="box b">
-                        <div class="grid-container">
+                    <div class="box b-2">
+                        <ul class="y-axis">
+                            <li><span>40</span></li>
+                            <li><span>30</span></li>
+                            <li><span>20</span></li>
+                            <li><span>10</span></li>
+                            <li><span>0</span></li>
+                        </ul>
+                        <p class="kr2">Kr.</p>
+                        <div class="vl2"></div>
+                        <div class="grid-container-item-hue">
                             <div class="grid-graph-container">
                                 <div id="clothesgraph1"></div>
                                 <div id="clothesgraph2"></div>
@@ -68,7 +86,7 @@
                             </div>
                         </div>
                         <div class="grid-container">
-                            <div class="grid-p-container">
+                            <div class="grid-p-container-2">
                                 <p>Vinterfrakke</p>
                                 <p>Hue og vanter</p>
                                 <p>Uldne sokker</p>
@@ -76,13 +94,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="wrapper-grid">
+            </div>
+            <div class="wrapper-grid">
+                <div class="grid-3">
                     <div class="box a">
-                        <h1 class="dash-h1">Personlig Pleje</h1>
+                        <h1 class="dash-h1">Per. Pleje</h1>
                         <img class="dashboard-tand-size" src="../img/tand.png" alt="">
                     </div>
-                    <div class="box b">
-                        <div class="grid-container">
+                    <div class="box b-3">
+                        <ul class="y-axis">
+                            <li><span>40</span></li>
+                            <li><span>30</span></li>
+                            <li><span>20</span></li>
+                            <li><span>10</span></li>
+                            <li><span>0</span></li>
+                        </ul>
+                        <p class="kr3">Kr.</p>
+                        <div class="vl3"></div>
+                        <div class="grid-container-item-tand">
                             <div class="grid-graph-container">
                                 <div id="toiletriesgraph1"></div>
                                 <div id="toiletriesgraph2"></div>
@@ -90,7 +119,7 @@
                             </div>
                         </div>
                         <div class="grid-container">
-                            <div class="grid-p-container">
+                            <div class="grid-p-container-3">
                                 <p>Tandpleje</p>
                                 <p>Tamponer</p>
                                 <p>Barbergrej</p>
@@ -101,6 +130,7 @@
             </div>
         </div>
     </div>
+
 
 
     <script src="../js/config.js"></script>

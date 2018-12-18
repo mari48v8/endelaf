@@ -11,49 +11,41 @@
     <title>En-del-af.dk</title>
 </head>
 
-<body>
+<body class="bg-img">
 
+    <div class="wrapper">
+        <div class="header">
+            <a href="../index.html">
+                <div class="logo floatleft"></div>
+            </a>
+            <div class="buttons">
+                <button id="btnLogin" class="btn btn-darkblue">Login</button>
 
-    <!--  <div class="container">
-            <h1>Login</h1>
-            <div id="loginContainer">
-                <button id="btnLogout" class="btn btn-red">LogOut</button>
+                <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+                <button id="btnLogout" class="btn btn-red hide">Log ud</button>
             </div>
-        </div> -->
-    <div class="header">
-        <a href="../index.html">
-            <div class="logo floatleft"></div>
-        </a>
-        <div class="buttons">
-            <button id="btnLogin" class="btn btn-darkblue">Login</button>
-
-            <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
-            <button id="btnLogout" class="btn btn-red hide">Log ud</button>
         </div>
-    </div>
-    <div class="bg-img">
-        <div class="wrapper">
-            <div class="container-login">
-                <div class="wrap-login">
-                    <form class="login-form validate-form">
+        <div class="container-login">
+            <div class="wrap-login">
+                <form class="login-form validate-form">
 
-                        <div class="logo m-b-50"></div>
+                    <div class="logo m-b-50"></div>
 
-                        <h1 class="form-txt text-center">Glemt adgangskode</h1>
+                    <h1 class="form-txt text-center">Glemt adgangskode</h1>
 
-                        <div class="wrap-input validate-input" data-validate="Enter email">
-                            <input type="email" id="txt_email" class="input form-control" placeholder="Din e-mail adresse">
-                            <span class="focus-input" data-placeholder="&#xf207;"></span>
-                        </div>
-
-                    </form>
-                    <div class="container-login-form-btn p-t-19">
-                        <button id="btnForgot" type="button" class="login-form-btn">Send ny</button>
+                    <div class="wrap-input validate-input" data-validate="Enter email">
+                        <input type="email" id="txt_email" class="input form-control" placeholder="Din e-mail adresse">
+                        <span class="focus-input" data-placeholder="&#xf207;"></span>
                     </div>
+
+                </form>
+                <div class="container-login-form-btn p-t-19">
+                    <button id="btnForgot" type="button" class="login-form-btn">Send ny</button>
                 </div>
             </div>
         </div>
     </div>
+
     </div>
     <script src="../js/config.js"></script>
     <script src="../main.js"></script>
