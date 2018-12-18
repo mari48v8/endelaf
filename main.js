@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
         // Add userId to local storage
         localStorage.setItem("uId", firebaseUser.uid);
-        console.log(localStorage);
+        //console.log(localStorage);
 
         //show donations.html when btnSupport is clicked (from index.html)
         if (btnSupport) {
@@ -38,7 +38,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         //show opretkonto.html when btnSupport is clicked (from index.html)
         if (btnSupport) {
             btnSupport.addEventListener('click', e => {
-                console.log("støt")
                 document.location.href = '../pages/opretkonto.html';
             });
         }

@@ -7,6 +7,7 @@ $lightblue:#12bbf1;
 $lightgrey:#5C5656;
 $darkgrey:#707070;
 $black:#000000;
+$red: #FF194E;
 
 html,
 body,
@@ -113,10 +114,10 @@ a {
 
 
 .img_background {
-    background-image: url(../img/homeless.jpeg);
+    background-image: url(../img/people-1495855_960_720.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% -175%;
     // padding-left: 5%;
 }
 
@@ -135,7 +136,7 @@ a {
     padding-top: 1px;
     padding-bottom: 1px;
     margin-bottom: 10%;
-    margin-top: 10%;
+    margin-top: 24%;
     margin-left: 7%;
     opacity: 0.8;
     filter: alpha(opacity=60);
@@ -147,6 +148,9 @@ a {
     font-size: 14px;
 }
 
+#btnSupport{
+    margin-bottom: 8%;
+}
 
 .flip {
     margin: auto;
@@ -189,12 +193,11 @@ a {
     font-size: 1.1em;
 }
 
-.btn-red_index {
-    @include button-bg(#FF194E);
-    margin-bottom: 15%;
-    margin-left: 8%;
-    font-size: 1.1em;
-}
+// .btn-red_index {
+//     @include button-bg(#FF194E);
+//     margin-left: 8%;
+//     font-size: 1.1em;
+// }
 
 .ctn {
     width: 100%;

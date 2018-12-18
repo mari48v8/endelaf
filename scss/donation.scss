@@ -1,3 +1,6 @@
+
+$red: #FF194E;
+
 input[type=number] {
 
     &::-webkit-inner-spin-button,
@@ -32,9 +35,7 @@ input {
     height: 35px;
     position: relative;
     border-bottom: 2px solid #ccc;
-    margin-bottom: 30px;
     top: 8px;
-    left: -5px;
 }
 
 
@@ -270,13 +271,13 @@ label {
 #show {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
-    color: #ccc;
+    color: #5c5656;
     line-height: 1.2;
     background: transparent;
     outline: none;
     height: 80px;
     border: none;
-    margin-left: 5%;
+    margin-left: 0%;
     margin-bottom: 0;
 
 }
@@ -288,7 +289,7 @@ label {
 #count {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
-    color: #ccc;
+    color: #5c5656;
     line-height: 1.2;
     background: transparent;
     outline: none;
@@ -316,4 +317,21 @@ label {
 
 #main {
     width: 100%;
+}
+#choose {
+    background-color: $red;
+    color: white;
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    bottom: 3%;
+    padding:15px;
+}
+
+#totalPrice {
+    color: #5c5656; 
+    text-align: left; 
+    font-size: 20px; 
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
 }

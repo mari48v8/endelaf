@@ -7,9 +7,23 @@ if (btnLogout) {
     })
 }
 
+const btnDonateAgain = document.querySelector("#btnDonateAgain");
+
 if (btnDonateAgain) {
-    document.querySelector("btnDonateAgain").addEventListener('click', e => {
-        console.log("støt")
-        document.location.href = '../pages/donation.html';
+    console.log("donér igen")
+    btnDonateAgain.addEventListener('click', e => {
+        e.preventDefault();
+        document.location.href = 'donation.html';
     })
 }
+
+
+// const btnDonateAgain = document.querySelector("#btnDonateAgain");
+
+if (btnLogout) {
+    console.log("gå til forside")
+    btnLogout.addEventListener('click', e => {
+        e.preventDefault();
+        document.location.href = '../index.html';
+    })
+}  

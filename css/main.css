@@ -215,9 +215,7 @@ input {
   height: 35px;
   position: relative;
   border-bottom: 2px solid #ccc;
-  margin-bottom: 30px;
-  top: 8px;
-  left: -5px; }
+  top: 8px; }
 
 #dankort-nr {
   background: url(../img/logo-dankort.png);
@@ -423,13 +421,13 @@ label {
 #show {
   font-family: 'Raleway', sans-serif;
   font-size: 1.1em;
-  color: #ccc;
+  color: #5c5656;
   line-height: 1.2;
   background: transparent;
   outline: none;
   height: 80px;
   border: none;
-  margin-left: 5%;
+  margin-left: 0%;
   margin-bottom: 0; }
 
 #show li {
@@ -438,7 +436,7 @@ label {
 #count {
   font-family: 'Raleway', sans-serif;
   font-size: 1.1em;
-  color: #ccc;
+  color: #5c5656;
   line-height: 1.2;
   background: transparent;
   outline: none;
@@ -461,6 +459,22 @@ label {
 
 #main {
   width: 100%; }
+
+#choose {
+  background-color: #FF194E;
+  color: white;
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 3%;
+  padding: 15px; }
+
+#totalPrice {
+  color: #5c5656;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif; }
 
 html,
 body {
@@ -537,10 +551,10 @@ a {
 
 /*----------------------- index.html -----------------------*/
 .img_background {
-  background-image: url(../img/homeless.jpeg);
+  background-image: url(../img/people-1495855_960_720.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%; }
+  background-position: 50% -175%; }
 
 .logo {
   width: 180px;
@@ -556,7 +570,7 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
   margin-bottom: 10%;
-  margin-top: 10%;
+  margin-top: 24%;
   margin-left: 7%;
   opacity: 0.8;
   filter: alpha(opacity=60);
@@ -565,6 +579,9 @@ a {
 .txt_box p {
   color: #000000;
   font-size: 14px; }
+
+#btnSupport {
+  margin-bottom: 8%; }
 
 .flip {
   margin: auto;
@@ -599,17 +616,6 @@ a {
     background: #ef0037;
     transition: all 0.3s ease; }
   .btn-red:active {
-    background: #990023; }
-
-.btn-red_index {
-  background: #FF194E;
-  margin-bottom: 15%;
-  margin-left: 8%;
-  font-size: 1.1em; }
-  .btn-red_index:hover {
-    background: #ef0037;
-    transition: all 0.3s ease; }
-  .btn-red_index:active {
     background: #990023; }
 
 .ctn {
