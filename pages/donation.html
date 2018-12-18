@@ -8,9 +8,9 @@
     <title>Donations</title>
     <!---- CSS stylesheet -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/donation.css">
+    <!-- <link rel="stylesheet" href="../css/donation.css"> -->
     <!---- SCSS stylesheet -->
-    <link rel="stylesheet" href="../scss/donation.scss">
+    <!-- <link rel="stylesheet" href="../scss/donation.scss"> -->
 
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
@@ -61,208 +61,203 @@
             <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
         </div>
     </div>
+    <div class="bg-img">
+        <div class="wrapper">
+            <div class="container-login donation-padding">
+                <h2 class="into-txt">Velkommen til</h2> <img src="../img/Logo.png" alt="logo">
+                <p class="payment-p">
 
-    <div class="wrapper-login">
-
-        <h2 class="into-txt">Velkommen til</h2>
-        <p class="payment-p">
-
-            Dette er en donations app som skal gøre det nemmere, at donere til hjemløse.
-
-            Hvis du ønsker at give en hjælpende hånd, skal du blot vælge en felt i en af de tre hovede-
-            kategorier
-            (Til
-            Hunden, Tøj og Personlig pleje).
-
-            Har du nogle spørgsmål angående indhold, så kan du altid trykke på informations knappen højre for
-            feltet.
+                    Hvis du ønsker at give en hjælpende hånd, skal du blot vælge et felt i en af de tre
+                    hovedekategorier (Til hunden, Tøj og Personlig pleje).
+                    Har du nogle spørgsmål angående indhold, så kan du altid trykke på informations knappen højre for
+                    feltet.
 
 
-        </p>
-        <main>
-            <!-- @TODO - validation -->
-            <form id="donationForm" action="" method="POST">
-                <div id="dog" class="b1">
-                    <div>
-                        <h3 class="kategori">Hjælp til hunden</h3>
-                        <div id="kategori-img-dog"></div>
-                        <div class="left-block">
-                            <p class="checkbox-p">
-                                <label><input id="dogFood" min="75" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
-                                        value="Hundemad">
-                                    Hundemad 75,- </label>
-                            </p>
+                </p>
+                <main id="main">
+                    <!-- @TODO - validation -->
+                    <form id="donationForm" action="tak.html" method="GET">
+                        <div id="dog" class="b1">
+                            <div>
+                                <h3 class="kategori">Hjælp til hunden</h3>
+                                <div id="kategori-img-dog"></div>
+                                <div class="left-block">
+                                    <p class="checkbox-p">
+                                        <label><input id="dogFood" min="75" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                                value="Hundemad">
+                                            Hundemad 75,- </label>
+                                    </p>
 
-                            <p class="checkbox-p">
-                                <label><input id="dogClothes" min="150" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
-                                        value="Hundefrakke">
-                                    Hundefrakke 150,-</label>
-                            </p>
-                            <p class="checkbox-p">
-                                <label> <input id="dogToy" min="100" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
-                                        value="Hundelegetøj">
-                                    Hundelegetøj 100,-</label>
-                            </p>
+                                    <p class="checkbox-p">
+                                        <label><input id="dogClothes" min="150" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                                value="Hundefrakke">
+                                            Hundefrakke 150,-</label>
+                                    </p>
+                                    <p class="checkbox-p">
+                                        <label> <input id="dogToy" min="100" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                                value="Hundelegetøj">
+                                            Hundelegetøj 100,-</label>
+                                    </p>
+                                </div>
+                                <div class="left-block">
+                                    <p class="infobox">
+                                        <div class="i-img"></div>
+
+                                        <div class="i-img"></div>
+
+                                        <div class="i-img"></div>
+                                    </p>
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="left-block">
-                            <p class="infobox">
-                                <div class="i-img"></div>
+                        <div id="clothes" class="b2">
+                            <div>
+                                <h3 class="kategori">Tøj</h3>
+                                <div id="kategori-img-hue"></div>
+                                <div class="left-block">
+                                    <p class="checkbox-p">
+                                        <label><input id="wintercoat" min="200" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
+                                                value="Vinterfrakke">
+                                            Vinterfrakke 200,-</label>
+                                    </p>
+                                    <p class="checkbox-p">
+                                        <label><input id="hatAndGloves" min="100" type="checkbox" name="clothes"
+                                                onChange="checkbox(this.value),getTotals()" value="Hue og vanter">
+                                            Hue og vanter 100,-</label>
+                                    </p>
+                                    <p class="checkbox-p">
+                                        <label><input id="socks" min="125" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
+                                                value="Uldne strømper">
+                                            Uldne strømper 125,-</label>
+                                    </p>
+                                </div>
+                                <div class="left-block">
+                                    <p class="infobox">
+                                        <div class="i-img"></div>
 
-                                <div class="i-img"></div>
+                                        <div class="i-img"></div>
 
-                                <div class="i-img"></div>
-                            </p>
-
+                                        <div class="i-img"></div>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div id="clothes" class="b2">
-                    <div>
-                        <h3 class="kategori">Tøj</h3>
-                        <div id="kategori-img-hue"></div>
-                        <div class="left-block">
-                            <p class="checkbox-p">
-                                <label><input id="wintercoat" min="200" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
-                                        value="Vinterfrakke">
-                                    Vinterfrakke 200,-</label>
-                            </p>
-                            <p class="checkbox-p">
-                                <label><input id="hatAndGloves" min="100" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
-                                        value="Hue og vanter">
-                                    Hue og vanter 100,-</label>
-                            </p>
-                            <p class="checkbox-p">
-                                <label><input id="socks" min="125" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
-                                        value="Uldne strømper">
-                                    Uldne strømper 125,-</label>
-                            </p>
-                        </div>
-                        <div class="left-block">
-                            <p class="infobox">
-                                <div class="i-img"></div>
+                        <div id="toiletries" class="b3">
+                            <div>
+                                <h3 class="kategori">Personlig pleje</h3>
+                                <div id="kategori-img-tand"></div>
+                                <div class="left-block">
+                                    <p class="checkbox-p">
+                                        <label><input id="toothbrush" min="50" type="checkbox" name="toiletries"
+                                                onChange="checkbox(this.value),getTotals()" value="Tandpleje">
+                                            Tandpleje 50,-</label>
+                                    </p>
+                                    <p class="checkbox-p">
+                                        <label><input id="tampons" min="75" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
+                                                value="Tamponer">
+                                            Tamponer 75,-</label>
+                                    </p>
+                                    <p class="checkbox-p">
+                                        <label><input id="shaving" min="75" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
+                                                value="Barbergrej">
+                                            Barbergrej 75,-</label>
+                                    </p>
+                                </div>
+                                <div class="left-block">
+                                    <p class="infobox">
+                                        <div class="i-img"></div>
 
-                                <div class="i-img"></div>
+                                        <div class="i-img"></div>
 
-                                <div class="i-img"></div>
-                            </p>
+                                        <div class="i-img"></div>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div id="toiletries" class="b3">
-                    <div>
-                        <h3 class="kategori">Personlig pleje</h3>
-                        <div id="kategori-img-tand"></div>
-                        <div class="left-block">
-                            <p class="checkbox-p">
-                                <label><input id="toothbrush" min="50" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
-                                        value="Tandpleje">
-                                    Tandpleje 50,-</label>
-                            </p>
-                            <p class="checkbox-p">
-                                <label><input id="tampons" min="75" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
-                                        value="Tamponer">
-                                    Tamponer 75,-</label>
-                            </p>
-                            <p class="checkbox-p">
-                                <label><input id="shaving" min="75" type="checkbox" name="toiletries" onChange="checkbox(this.value),getTotals()"
-                                        value="Barbergrej">
-                                    Barbergrej 75,-</label>
-                            </p>
-                        </div>
-                        <div class="left-block">
-                            <p class="infobox">
-                                <div class="i-img"></div>
+                        <div class="block4">
+                            <!-- creditcard -->
+                            <h3 class="kategori paymethod">Vælg betalingsmetode:</h3>
 
-                                <div class="i-img"></div>
-
-                                <div class="i-img"></div>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="block4">
-                    <!-- creditcard -->
-                    <h3 class="kategori">Vælg betalingsmetode:</h3>
-                    <div class="pay">
-                        <input type="radio" name="payment" id="visa-dankort" value="visa-dankort">
-                        <label for="visa-dankort" class="inline">
-                            <p id="m-b-2" class="inline">Visa/Dankort</p>
-                            <!-- <span class="imgs inline"><img src="../img/logo-dankort.png"
+                            <div class="pay">
+                                <input type="radio" name="payment" id="visa-dankort" value="visa-dankort" required>
+                                <label for="visa-dankort" class="inline">
+                                    <p id="m-b-2" class="inline">Visa/Dankort</p>
+                                    <!-- <span class="imgs inline"><img src="../img/logo-dankort.png"
                                 alt="dankort logo"></span> -->
-                        </label>
-                        <label class="payment-label-around-div" for="dankort-nr">
-                            <!--    <span class="close">x</span> -->
-                            <p><input type="number" name="card-nr" id="dankort-nr" pattern="[0-9]{16}" min="0" max="9999999999999999"
-                                    autocomplete="cc-number" placeholder="Kortnummer"></p>
-                            <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1" max="12"
-                                    placeholder="mm" class="digit2" pattern="[0-9]{2}" autocomplete="cc-exp-month"><span>
-                                    / </span><input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
-                                    placeholder="yyyy" maxlength="4" class="digit4" autocomplete="cc-exp-year"></p>
-                            <p><input type="number" id="control" name="control" min="0" max="999" pattern="[0-9]{3}"
-                                    placeholder="CVV" autocomplete="cc-csc" class="digit4"></p>
-                        </label>
-                    </div>
-                    <div class="pay">
-                        <input type="radio" name="payment" id="mobile-pay" value="mobile-pay">
-                        <label for="mobile-pay">
-                            <p id="m-b-2" class="inline">MobilePay</p><span class="imgs inline"><img src="../img/mobilepay.png"
-                                    alt="mobilepay logo" id="mobile-pay-img"></span>
-                        </label>
-                        <label class="payment-label-around-div half-height" for="mobile-pay-nr">
-                            <!--    <span class="close">x</span> -->
-                            <p id="mobile-pay-p">
-                                <span class="p-span">+45</span>
-                                <input type="tel" name="card-nr" id="mobile-pay-nr" pattern="[1-9][0-9]{7}">
-                            </p>
-                        </label>
-                    </div>
-                </div>
-                <div class="block5">
-                    <h1 class="kategori">Bekræft</h1>
-                </div>
-                <div class="block6">
-                    <div class="order-overview">
-                        <div class="order-overview-container">
-                            <h1 class="donation">Donations detajler</h1>
-                            <div>
-                                <p>Din donation:</p>
-                                <p class="floatleft">Varer:</p>
-                                <p type="text" id="show" class="" placeholder="Det valgte produkt"></p>
+                                </label>
+                                <label class="payment-label-around-div" for="dankort-nr">
+                                    <!--    <span class="close">x</span> -->
+                                    <p><input type="number" name="card-nr" id="dankort-nr" pattern="[0-9]{16}" min="0"
+                                            max="9999999999999999" autocomplete="cc-number" placeholder="Kortnummer"></p>
+                                    <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1" max="12"
+                                            placeholder="mm" class="digit2" pattern="[0-9]{2}" autocomplete="cc-exp-month"><span>
+                                            / </span><input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
+                                            placeholder="yyyy" maxlength="4" class="digit4" autocomplete="cc-exp-year"></p>
+                                    <p><input type="number" id="control" name="control" min="0" max="999" pattern="[0-9]{3}"
+                                            placeholder="CVV" autocomplete="cc-csc" class="digit4"></p>
+                                </label>
                             </div>
-                            <div>
-                                <p class="floatleft">Antal Varer:</p> <input type="text" id="count" class=""
-                                    placeholder="Antal varer">
+                            <div class="pay">
+                                <input type="radio" name="payment" id="mobile-pay" value="mobile-pay">
+                                <label for="mobile-pay">
+                                    <p id="m-b-2" class="inline">MobilePay</p><span class="imgs inline"><img src="../img/mobilepay.png"
+                                            alt="mobilepay logo" id="mobile-pay-img"></span>
+                                </label>
+                                <label class="payment-label-around-div half-height" for="mobile-pay-nr">
+                                    <!--    <span class="close">x</span> -->
+                                    <p id="mobile-pay-p">
+                                        <span class="p-span">+45</span>
+                                        <input type="tel" name="card-nr" id="mobile-pay-nr" pattern="[1-9][0-9]{7}">
+                                    </p>
+                                </label>
                             </div>
 
-                            <div id="totalPrice" placeholder="Samlet pris" style="color: red; text-align: center; font-size: 18px;"></div>
-                            <!--   Checked ids:<div id="results">
+                        </div>
+
+                        <div class="block6">
+                            <div class="order-overview">
+                                <div class="order-overview-container">
+                                    <h1 class="donation">Din donation</h1>
+                                    <div>
+                                        <p class="floatleft">Varer:</p>
+                                        <br>
+                                        <p type="text" id="show" class="" placeholder="Det valgte produkt"></p>
+                                    </div>
+                                    <div>
+                                        <p class="floatleft">Antal Varer:</p> <input type="text" id="count" class=""
+                                            placeholder="Antal varer">
+                                    </div>
+
+                                    <div id="totalPrice" placeholder="Samlet pris" style="color: red; text-align: center; font-size: 18px;"></div>
+                                    <!--   Checked ids:<div id="results">
                             </div>
                            -->
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="block7">
-                    <button class="button" type="submit">Gennemfør Køb</button>
-                    <div id="mobile-pay-confirm" class="not-active">
-                        <div>
-                            <p></p>
+                        <div class="block7">
+                            <button class="button" type="submit">Gennemfør Køb</button>
+                            <div id="mobile-pay-confirm" class="not-active">
+                                <div>
+                                    <p></p>
+                                </div>
+                                <p>Swipe to finish</p>
+                            </div>
                         </div>
-                        <p>Swipe to finish</p>
-                    </div>
-                </div>
-            </form>
-            <div class="container-login-form-btn ">
-                <button id="btnSubmitDonation" class="login-form-btn" type="submit" value="Send">Send</button>
+                        <div class="container-login-form-btn ">
+                            <input id="btnSubmitDonation" class="login-form-btn" type="submit" value="Send">
+                        </div>
+                </main>
+                </form>
             </div>
-        </main>
+        </div>
     </div>
-
     <script src="../js/config.js"> </script>
     <script src="../main.js"> </script>
     <script src="../js/kvittering.js"> </script>
     <script src="../js/donation.js"></script>
-    <!-- <script src="../js/validation.js"></script> -->
     <script src="../js/logOut.js"></script>
 </body>
 

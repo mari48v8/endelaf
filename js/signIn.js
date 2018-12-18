@@ -9,42 +9,58 @@ let signupButton = document.querySelector("#signup");
 
 
 // Authentication
-signupButton.addEventListener("click", clickSignupButton);
+//signupButton.addEventListener("click", clickSignupButton);
 
 // listen for submit - form
 signupForm.addEventListener('submit', submitUserData);
 
 function clickSignupButton() {
+    console.log("nr 1");
     //signup firebase method
     auth.createUserWithEmailAndPassword(email.value, password.value).
         then(function (user) {
-            console.log(auth.currentUser.email)
+            console.log(auth.currentUser.email);
+            document.location.href = '../pages/donation.html';
         }, function (error) {
             console.log(error.message);
         });
 }
 
-auth.onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-        // Add userId to local storage
-        localStorage.setItem("uId", firebaseUser.uid);
+// auth.onAuthStateChanged(firebaseUser => {
+//     if (firebaseUser) {
+//         // Add userId to local storage
+//         localStorage.setItem("uId", firebaseUser.uid);
 
-        signup.addEventListener('click', e => {
-            console.log("button find opretform")
-            document.location.href = 'donation.html';
+//         // signup.addEventListener('click', e => {
+//         //     console.log("button find opretform")
+//         //     document.location.href = 'donation.html';
 
-        })
-    } else {
-        /* signupForm.style.display = 'block'; */
-    }
+//         // })
 
-});
+//         //  show donation.html when signupButton is clicked (from opretkonto.html)
+//         // if (signupButton) {
+//         //     signupButton.addEventListener('click', e => {
+//         //         console.log("button find opretform")
+//         //         document.location.href = 'donation.html';
+//         //     })
+//         // }
+//     } else {
+
+//         //go to donation.html when signupButton is clicked (from opretkonto.html)
+//         // if (signupButton) {
+//         //     signupButton.addEventListener('click', e => {
+//         console.log("Du er ikke logget ind")
+//         // });
+//         //}
+//     }
+
+// });
 
 const dbUserRef = firebase.database().ref('users')
 
 function submitUserData(e) {
     e.preventDefault();
-
+    console.log("nr 2");
     //get values
     let firstname_val = getInputValues('txt_fornavn');
     let lastname_val = getInputValues('txt_efternavn');
@@ -77,6 +93,7 @@ function saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, e
         //UID: uId // this doesn't not work because it takes Uid from localstorage, but there is nothing in localstorage before the button is pushed.
     })
     console.log("submit");
+    clickSignupButton();
 }
 
 

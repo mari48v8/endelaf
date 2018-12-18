@@ -13,13 +13,6 @@
 </head>
 
 <body>
-
-    <!--  <div class="container">
-            <h1>Login</h1>
-            <div id="loginContainer">
-                <button id="btnLogout" class="btn btn-red">LogOut</button>
-            </div>
-        </div> -->
     <div class="header">
         <a href="../index.html">
             <div class="logo floatleft"></div>
@@ -35,40 +28,44 @@
         <div class="wrapper">
             <div class="container-login">
                 <div class="wrap-login">
-                    <form id="signup-form" class="login-form validate-form">
+                    <form id="signup-form" class="login-form validate-form" action="donation.html" method="GET">
 
                         <div class="logo m-b-50"></div>
 
                         <h1 class="form-txt text-center">Opret en gratis konto</h1>
 
                         <div class="wrap-input validate-input" data-validate="Enter fornavn">
-                            <input type="fornavn" id="txt_fornavn" class="input form-control" placeholder="Fornavn">
+                            <input type="fornavn" id="txt_fornavn" class="input form-control" placeholder="Fornavn"
+                                required>
                             <span class="focus-input" data-placeholder="&#xf207;"></span>
                         </div>
 
                         <div class="wrap-input validate-input" data-validate="Enter efternavn">
-                            <input type="Efternavn" id="txt_efternavn" class="input form-control" placeholder="Efternavn">
+                            <input type="Efternavn" id="txt_efternavn" class="input form-control" placeholder="Efternavn"
+                                required>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter adresse">
-                            <input type="adresse" id="txt_adresse" class="input form-control" placeholder="Adresse">
+                            <input type="adresse" id="txt_adresse" class="input form-control" placeholder="Adresse"
+                                required>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter postnr">
                             <input pattern="[0-9]{4}" type="postnr" id="txt_postnr" class="input form-control"
-                                placeholder="Postnr">
+                                placeholder="Postnr" required>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter by">
-                            <input type="by" id="txt_by" class="input form-control" placeholder="By">
+                            <input type="by" id="txt_by" class="input form-control" placeholder="By" required>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter email">
-                            <input type="email" id="email" class="input form-control" placeholder="Email">
+                            <input type="email" id="email" class="input form-control" placeholder="Email" required>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter passsword">
-                            <input type="password" id="password" class="input form-control" placeholder="Password" />
+                            <input type="password" id="password" class="input form-control" placeholder="Password"
+                                required>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
                         <div class="wrap-input validate-input" data-validate="Enter telefon">
@@ -76,10 +73,10 @@
                                 placeholder="Telefon">
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
+                        <div class="container-login-form-btn p-t-19">
+                            <input type="submit" name="button" id="signup" class="login-form-btn" value="Opret bruger">
+                        </div>
                     </form>
-                    <div class="container-login-form-btn p-t-19">
-                        <button type="button" name="button" id="signup" class="login-form-btn">Signup</button>
-                    </div>
                 </div>
             </div>
         </div>

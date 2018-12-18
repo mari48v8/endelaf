@@ -23,7 +23,7 @@ btnLogin.addEventListener('click', e => {
 //show index.html when btnLogout is clicked
 btnLogout.addEventListener('click', e => {
     console.log("button find index.html")
-    document.location.href = 'index.html';
+    document.location.href = '../index.html';
 
 })
 

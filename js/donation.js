@@ -3,46 +3,40 @@
 let itemsArr = [];
 let donationArr = [];
 const btnSubmitDonation = document.getElementById("btnSubmitDonation");
-
-//show tak.html when btnSubmitDonation is clicked
-btnSubmitDonation.addEventListener('click', e => {
-    console.log("button find index.html")
-    document.location.href = 'tak.html';
-
-})
+const submitDonationForm = document.getElementById("donationForm");
 
 // Eventlistner for submitDonation
-btnSubmitDonation.addEventListener('click', getCheckedBoxes);
+submitDonationForm.addEventListener('submit', getCheckedBoxes);
 
 function getCheckedBoxes(e) {
-    e.preventDefault();
+    //  e.preventDefault();
     // Loop through checkbox's with the name=dog if checked push to array
-    let dog = document.querySelectorAll('[name="dog"]');
-
-    for (let i = 0; i < dog.length; i++) {
-        if (dog[i].checked) {
-            let dogItem = new Object();
-            dogItem.id = dog[i].id;
-            dogItem.value = dog[i].min;
-            dogItem.name = dog[i].name;
-            itemsArr.push(dogItem);
-        }
-    }
-    // Loop through checkbox's with the name=clothes if checked push to array
-    let clothes = document.querySelectorAll('[name="clothes"]');
-
-    for (let i = 0; i < clothes.length; i++) {
-        if (clothes[i].checked) {
-            let clothesItem = new Object();
-            clothesItem.id = clothes[i].id;
-            clothesItem.value = clothes[i].min;
-            clothesItem.name = clothes[i].name;
-            itemsArr.push(clothesItem);
-            // console.log(clothesItem);
-        }
-    }
+    /* let dog = document.querySelectorAll('[name="dog"]');
+ 
+     for (let i = 0; i < dog.length; i++) {
+         if (dog[i].checked) {
+             let dogItem = new Object();
+             dogItem.id = dog[i].id;
+             dogItem.value = dog[i].min;
+             dogItem.name = dog[i].name;
+             itemsArr.push(dogItem);
+         }
+     }
+     // Loop through checkbox's with the name=clothes if checked push to array
+     let clothes = document.querySelectorAll('[name="clothes"]');
+ 
+     for (let i = 0; i < clothes.length; i++) {
+         if (clothes[i].checked) {
+             let clothesItem = new Object();
+             clothesItem.id = clothes[i].id;
+             clothesItem.value = clothes[i].min;
+             clothesItem.name = clothes[i].name;
+             itemsArr.push(clothesItem);
+             // console.log(clothesItem);
+         }
+     }*/
     // Loop through checkbox's with the name=toiletries if checked push to array
-    let toiletries = document.querySelectorAll('[name="toiletries"]');
+    let toiletries = document.querySelectorAll('[name="toiletries"],[name="clothes"],[name="dog"]');
 
     for (let i = 0; i < toiletries.length; i++) {
         if (toiletries[i].checked) {
@@ -84,5 +78,11 @@ function submitDonation() {
         item: itemsArr,
         time: formattedTime,
     })
-
+    //if (submitDonation)
 }
+// //show tak.html when btnSubmitDonation is clicked
+// btnSubmitDonation.addEventListener('click', e => {
+//     console.log("button find index.html")
+//     // document.location.href = 'tak.html';
+
+// })

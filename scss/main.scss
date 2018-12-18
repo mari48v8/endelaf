@@ -1,4 +1,5 @@
 @import 'form.scss';
+@import 'donation.scss';
 
 $bluecolor: blue;
 $white:white;
@@ -184,11 +185,16 @@ a {
 
 .btn-red {
     @include button-bg(#FF194E);
-    margin-bottom: 15%;
     margin-left: 8%;
-    font-size: 1.25em;
+    font-size: 1.1em;
 }
 
+.btn-red_index {
+    @include button-bg(#FF194E);
+    margin-bottom: 15%;
+    margin-left: 8%;
+    font-size: 1.1em;
+}
 
 .ctn {
     width: 100%;

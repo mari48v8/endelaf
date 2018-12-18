@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node script.js",
-    "endelafsass": "node-sass scss/main.scss css/main.css -w",
-    "endelafsass1": "node-sass scss/donation.scss css/donation.css -w"
+    "endelafsass": "node-sass scss/main.scss css/main.css -w"
   },
   "author": "",
   "license": "ISC",
