@@ -11,15 +11,28 @@
     <title>En-del-af.dk</title>
 </head>
 
-<body>
+<body class="bg-img">
 
+    <div class="wrapper">
+        <div class="header">
+            <a href="../index.html">
+                <div class="logo floatleft"></div>
+            </a>
+            <div class="buttons">
+                <button id="btnLogin" class="btn btn-darkblue">Login</button>
 
-    <div class="header">
-        <a href="../index.html">
-            <div class="logo floatleft"></div>
-        </a>
-        <div class="buttons">
-            <button id="btnLogin" class="btn btn-darkblue">Login</button>
+                <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
+                <button id="btnLogout" class="btn btn-red hide">Log ud</button>
+            </div>
+        </div>
+        <div class="container-login">
+            <div class="wrap-login">
+                <form class="login-form validate-form">
+
+                    <div class="logo m-b-50"></div>
+
+                    <h1 class="form-txt text-center">Log ind på din konto</h1>
+
 
             <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
             <button id="btnLogout" class="btn btn-red hide">Log ud</button>
@@ -57,10 +70,12 @@
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
-
     </div>
+
+
     </div>
     <script src="../js/config.js"></script>
     <!--    <script src="../main.js"></script>  -->
