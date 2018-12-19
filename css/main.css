@@ -402,7 +402,7 @@ label {
   font-size: 1em;
   margin-left: 34%;
   padding-top: 8%;
-  color: black; }
+  color: white; }
 
 .paymethod {
   padding-bottom: 5%;
@@ -589,6 +589,30 @@ label {
 
 .hide {
   display: none; }
+
+#infoBob {
+  position: relative; }
+
+#infoBob .infotext {
+  visibility: hidden;
+  width: 120px;
+  font-size: 0.8em;
+  background-color: #10a8d8;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* Position the tooltip */
+  position: absolute;
+  top: 30%;
+  left: -700%;
+  z-index: 1; }
+
+#infoBob:hover .infotext {
+  visibility: visible; }
 
 /* @import 'dashboard.scss'; */
 html,
