@@ -584,9 +584,6 @@ label {
   text-align: center;
   width: 100%; }
 
-#btnYes {
-  margin-bottom: 20%; }
-
 .hide {
   display: none; }
 
@@ -745,7 +742,8 @@ a {
     background: #07607c; }
 
 .btn-green {
-  background: #78BD6F; }
+  background: #78BD6F;
+  margin-bottom: 20%; }
   .btn-green:hover {
     background: #5eb053;
     transition: all 0.3s ease; }

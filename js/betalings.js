@@ -2,10 +2,10 @@
 
 function btnRadio(x) {
     if (x == 0) {
-        document.getElementById("btnYes").style.display = "block";
+        document.getElementById("btnSubmitDonation").style.display = "block";
         document.getElementById("swip").style.display = "none";
     } else {
-        document.getElementById("btnYes").style.display = "none";
+        document.getElementById("btnSubmitDonation").style.display = "none";
         document.getElementById("swip").style.display = "block";
         return;
     }
@@ -27,3 +27,7 @@ function show2() {
     document.getElementById('div2').style.display = 'block';
 
 }
+
+// document.querySelector('#btnSubmitDonation').addEventListener('click', e => {
+//     document.getElementById("dankort-nr").innerHTML += "required";
+// })
