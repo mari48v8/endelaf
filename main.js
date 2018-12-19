@@ -15,15 +15,11 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         btnLogout.classList.remove('hide');
         btnLogin.classList.add('hide');
         btnSignUp.classList.add('hide');
-
         // Add userId to local storage
         localStorage.setItem("uId", firebaseUser.uid);
-        //console.log(localStorage);
-
         //show donations.html when btnSupport is clicked (from index.html)
         if (btnSupport) {
             btnSupport.addEventListener('click', e => {
-                console.log("støt")
                 document.location.href = '../pages/donation.html';
             });
         }
@@ -33,10 +29,10 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         btnLogin.classList.remove('hide');
         btnSignUp.classList.remove('hide');
 
-        //show opretkonto.html when btnSupport is clicked (from index.html)
+        //show newuser.html when btnSupport is clicked (from index.html)
         if (btnSupport) {
             btnSupport.addEventListener('click', e => {
-                document.location.href = '../pages/opretkonto.html';
+                document.location.href = '../pages/newuser.html';
             });
         }
 

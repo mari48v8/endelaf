@@ -274,8 +274,7 @@ textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-p
   color: #5C5656; }
 
 label {
-  margin: 0;
-  display: block; }
+  margin: 0; }
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -317,7 +316,6 @@ input {
   outline: none;
   height: 35px;
   position: relative;
-  border-bottom: 2px solid #ccc;
   top: 8px; }
 
 #dankort-nr {
@@ -603,6 +601,69 @@ label {
 #mobile-pay-confirm.not-active {
   display: none; }
 
+#mobile-pay-confirm {
+  background-color: #5B79FF;
+  border-radius: 34px;
+  display: flex;
+  height: 60px;
+  position: relative;
+  width: 74%;
+  margin: 5% auto 30% auto; }
+
+#mobile-pay-confirm.live {
+  filter: grayscale(0); }
+
+#mobile-pay-confirm div {
+  background-color: #fff;
+  border-radius: 28px;
+  display: flex;
+  height: 56px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  width: 56px; }
+
+#mobile-pay-confirm div p {
+  align-self: center;
+  color: #5B79FF;
+  font-weight: 700;
+  text-align: center;
+  width: 100%; }
+
+#mobile-pay-confirm div + p {
+  align-self: center;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  width: 100%; }
+
+.hide {
+  display: none; }
+
+#infoBob {
+  position: relative; }
+
+#infoBob .infotext {
+  visibility: hidden;
+  width: 120px;
+  font-size: 0.8em;
+  background-color: #10a8d8;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* Position the tooltip */
+  position: absolute;
+  top: 30%;
+  left: -700%;
+  z-index: 1; }
+
+#infoBob:hover .infotext {
+  visibility: visible; }
+
 body {
   margin: 0; }
 
@@ -660,12 +721,10 @@ article {
   position: absolute;
   left: 131px; }
 
-
-#mobile-pay-confirm {
-  background-color: #5B79FF;
-  border-radius: 34px;
+/*----------------------- Graph row  -----------------------*/
+.row {
+  display: -ms-flexbox;
   display: flex;
-  height: 60px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -837,18 +896,15 @@ article {
 /*----------------------- Graph Y Axis  -----------------------*/
 .y-axis {
   position: relative;
-  width: 74%;
-  margin: 5% auto 30% auto; }
+  width: 97%;
+  left: 0px;
+  top: 0px; }
 
-#mobile-pay-confirm.live {
-  filter: grayscale(0); }
-
-#mobile-pay-confirm div {
-  background-color: #fff;
-  border-radius: 28px;
-  display: flex;
-  height: 56px;
-  left: 2px;
+ul {
+  list-style: none;
+  margin-top: 20%;
+  margin-left: -4px;
+  padding: 0; }
 
 li {
   border-top: 1px solid #4e5464;
@@ -904,27 +960,10 @@ span {
 
 /*----------------------- Graph Antal  -----------------------*/
 .antal1 {
-
   position: absolute;
-  top: 2px;
-  width: 56px; }
-
-#mobile-pay-confirm div p {
-  align-self: center;
-  color: #5B79FF;
-  font-weight: 700;
-  text-align: center;
-  width: 100%; }
-
-#mobile-pay-confirm div + p {
-  align-self: center;
-  color: #fff;
-  display: inline-block;
-  text-align: center;
-  width: 100%; }
-
-.hide {
-  display: none; }
+  top: 1%;
+  left: 30%;
+  font-size: 0.7em; }
 
 .antal2 {
   position: absolute;
@@ -1003,32 +1042,16 @@ span {
 .p-r-10 {
   margin-right: 12px; }
 
+.p-r-11 {
+  margin-right: 12px; }
 
-#infoBob {
+.p-r-12 {
+  margin-right: 0px; }
+
+/*----------------------- Graph Donno??  -----------------------*/
+.graph-axis {
   position: relative; }
 
-#infoBob .infotext {
-  visibility: hidden;
-  width: 120px;
-  font-size: 0.8em;
-  background-color: #10a8d8;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  /* Position the tooltip */
-  position: absolute;
-  top: 30%;
-  left: -700%;
-  z-index: 1; }
-
-#infoBob:hover .infotext {
-  visibility: visible; }
-
-/* @import 'dashboard.scss'; */
 html,
 body {
   margin: 0;
@@ -1143,7 +1166,8 @@ a {
   align-items: center; }
 
 .btn-darkblue {
-  background: #446B7F; }
+  background: #446B7F;
+  cursor: pointer; }
   .btn-darkblue:hover {
     background: #365564;
     transition: all 0.3s ease; }
@@ -1151,7 +1175,8 @@ a {
     background: #18252c; }
 
 .btn-blue {
-  background: #12BBF1; }
+  background: #12BBF1;
+  cursor: pointer; }
   .btn-blue:hover {
     background: #0c9fce;
     transition: all 0.3s ease; }
@@ -1160,7 +1185,8 @@ a {
 
 .btn-green {
   background: #78BD6F;
-  margin-bottom: 20%; }
+  margin-bottom: 20%;
+  cursor: pointer; }
   .btn-green:hover {
     background: #5eb053;
     transition: all 0.3s ease; }
@@ -1170,7 +1196,8 @@ a {
 .btn-red {
   background: #FF194E;
   margin-left: 8%;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  cursor: pointer; }
   .btn-red:hover {
     background: #ef0037;
     transition: all 0.3s ease; }

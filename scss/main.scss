@@ -1,6 +1,6 @@
 @import 'form.scss';
 @import 'donation.scss';
-/* @import 'dashboard.scss'; */
+@import 'dashboard.scss'; 
 
 $bluecolor: blue;
 $white:white;
@@ -176,17 +176,20 @@ a {
 
 .btn-darkblue {
     @include button-bg(#446B7F);
+    cursor: pointer;
 
 }
 
 .btn-blue {
     @include button-bg(#12BBF1);
+    cursor: pointer;
 
 }
 
 .btn-green {
     @include button-bg(#78BD6F);
     margin-bottom: 20%;
+    cursor: pointer;
 
 }
 
@@ -194,6 +197,7 @@ a {
     @include button-bg(#FF194E);
     margin-left: 8%;
     font-size: 1.1em;
+    cursor: pointer;
 }
 
 // .btn-red_index {

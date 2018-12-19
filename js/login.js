@@ -1,20 +1,15 @@
 'use strict'
 
-
 // Get elements
 const txt_email = document.getElementById("txt_email");
 const txt_password = document.getElementById("txt_password");
-// button that opens the form
-//const btnLogin = document.getElementById("btnLogin");
-const btnLogout = document.getElementById("btnLogout"); // MOCK-UP knap skal slettes
-// // button that send the form
+const btnLogout = document.getElementById("btnLogout");
 const btnSubmitLogIn = document.getElementById("btnSubmitLogIn");
 
 let id;
 let email;
 let pass;
 let auth;
-//let promise;
 
 //Add login event
 btnSubmitLogIn.addEventListener('click', e => {
@@ -39,7 +34,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         console.log("not logged in");
     }
     checkAdmin();
-
 })
 
 function checkAdmin() {

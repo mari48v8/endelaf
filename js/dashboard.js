@@ -3,7 +3,6 @@
 const dbRef = firebase.database();
 init();
 
-//let donations;
 let donationsArr = [];
 
 function init() {
@@ -15,21 +14,16 @@ function init() {
 }
 
 function getDonationsData(data) {
-    //     // console.log(data.val());
     let donations = data.val();
     let keys = Object.keys(donations);
-    //     //console.log(keys);
 
     for (let i = 0; i < keys.length; i++) {
         let k = keys[i];
         let uId = donations[k].uId;
         let items = donations[k].item;
-        //  console.log(uId, items);
-        // donationsArr.push(items);
         searchItems(items);
         money(items);
     }
-
 }
 
 let dogFoodCount = 0;
@@ -46,7 +40,6 @@ let moneyCountArr = [];
 function searchItems(items) {
 
     items.forEach(item => {
-        // console.log(item.id);
         if (item.id === "dogFood") {
             dogFoodCount += 1;
         } else if (item.id === "dogClothes") {
@@ -71,9 +64,9 @@ function searchItems(items) {
         toiletriesGraphs();
         totalGraphs();
     });
-    //    console.log("hundemad: " + dogFoodCount + " hundetøj: " + dogClothesCount + " hundelegetøj: " + dogToyCount + " Frakke:" + wintercoatCount + " Vanter: " + hatAndGlovesCount + " Sokker: " + socksCount + " Tandbørste: " + toothbrushCount + " Tamponer: " + tamponsCount + " Barbergrej: " + shavingCount);
+    // console.log("hundemad: " + dogFoodCount + " hundetøj: " + dogClothesCount + " hundelegetøj: " + dogToyCount + " Frakke:" + wintercoatCount + " Vanter: " + hatAndGlovesCount + " Sokker: " + socksCount + " Tandbørste: " + toothbrushCount + " Tamponer: " + tamponsCount + " Barbergrej: " + shavingCount);
 }
-var sum = 0;
+let sum = 0;
 
 function money(items) {
     items.forEach(item => {
@@ -81,25 +74,19 @@ function money(items) {
         moneyCountArr.push(moneyCount);
 
 
-        for (var i = 0; i < moneyCountArr.length; i++) {
+        for (let i = 0; i < moneyCountArr.length; i++) {
             moneyCountArr[i] = parseInt(moneyCountArr[i], 10);
-            //   console.log(moneyCountArr);
-            myFunction();
+            add();
         }
-
 
         function getSum(total, num) {
             return total + num;
         }
 
-        function myFunction() {
+        function add() {
             document.querySelector(".col-money").innerHTML = moneyCountArr.reduce(getSum);
         }
     })
-
-
-
-
 }
 
 function errData(err) {
@@ -111,12 +98,9 @@ function dogGraphs() {
     let dogFoodHeight = (dogFoodCount * 10);
     let dogClothesHeight = (dogClothesCount * 10);
     let dogToyHeight = (dogToyCount * 10);
-
     document.querySelector("#doggraph1").setAttribute("style", "height:" + dogFoodHeight + "px");
     document.querySelector("#doggraph2").setAttribute("style", "height:" + dogClothesHeight + "px");
     document.querySelector("#doggraph3").setAttribute("style", "height:" + dogToyHeight + "px");
-
-    //  console.log(dogFoodHeight, +" " + dogClothesHeight + " " + dogToyHeight);
 }
 
 function clothesGraphs() {
@@ -126,7 +110,6 @@ function clothesGraphs() {
     document.querySelector("#clothesgraph1").setAttribute("style", "height:" + wintercoatHeight + "px");
     document.querySelector("#clothesgraph2").setAttribute("style", "height:" + hatAndGlovesHeight + "px");
     document.querySelector("#clothesgraph3").setAttribute("style", "height:" + socksHeight + "px");
-    //   console.log(wintercoatHeight, +" " + hatAndGlovesHeight + " " + socksHeight);
 }
 
 function toiletriesGraphs() {
@@ -136,7 +119,6 @@ function toiletriesGraphs() {
     document.querySelector("#toiletriesgraph1").setAttribute("style", "height:" + toothbrushHeight + "px");
     document.querySelector("#toiletriesgraph2").setAttribute("style", "height:" + tamponsHeight + "px");
     document.querySelector("#toiletriesgraph3").setAttribute("style", "height:" + shavingHeight + "px");
-    //  console.log(toothbrushHeight, +" " + tamponsHeight + " " + shavingHeight);
 }
 
 function totalGraphs() {
@@ -146,7 +128,6 @@ function totalGraphs() {
     let totalDogHeight = (dogTotal * 10);
     let totalClothesHeight = (clothesTotal * 10);
     let totalToiletriesHeight = (toiletriesTotal * 10);
-
     document.querySelector("#totaldoggraph1").setAttribute("style", "height:" + totalDogHeight + "px");
     document.querySelector("#totalclothesgraph2").setAttribute("style", "height:" + totalClothesHeight + "px");
     document.querySelector("#totaltoiletriesgraph3").setAttribute("style", "height:" + totalToiletriesHeight + "px");

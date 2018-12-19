@@ -27,7 +27,3 @@ function show2() {
     document.getElementById('div2').style.display = 'block';
 
 }
-
-// document.querySelector('#btnSubmitDonation').addEventListener('click', e => {
-//     document.getElementById("dankort-nr").innerHTML += "required";
-// })

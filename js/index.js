@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 let divs = ["Div1", "Div2", "Div3", "Div4"];
 let visibleDivId = null;
 

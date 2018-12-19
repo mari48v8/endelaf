@@ -21,7 +21,6 @@ function getCheckedBoxes(e) {
             donationItem.value = donations[i].min;
             donationItem.name = donations[i].name;
             itemsArr.push(donationItem);
-            //console.log(toiletriesItem);
         }
     }
     timestamp();
@@ -47,7 +46,6 @@ const uId = localStorage.getItem("uId");
 
 // save donation to firebase
 function submitDonation() {
-    console.log(itemsArr);
     if (itemsArr.length == 0) {
         choose.style.display = "block";
 
@@ -55,12 +53,10 @@ function submitDonation() {
 
         function hide() {
             choose.style.display = "none";
-            console.log("du har ikke valgt en donation");
         }
     } else {
 
         let newdbDonationRef = dbRefDonation.push();
-        console.log(newdbDonationRef);
         newdbDonationRef.set({
             uId: uId,
             item: itemsArr,

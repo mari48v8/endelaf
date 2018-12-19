@@ -1,21 +1,14 @@
-//'use strict'
-
+'use strict'
 
 let signupForm = document.querySelector("#signup-form");
-// let userName = document.querySelector("#username");
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
 let signupButton = document.querySelector("#signup");
-
-
-// Authentication
-//signupButton.addEventListener("click", clickSignupButton);
 
 // listen for submit - form
 signupForm.addEventListener('submit', submitUserData);
 
 function clickSignupButton() {
-    console.log("nr 1");
     //signup firebase method
     auth.createUserWithEmailAndPassword(email.value, password.value).
         then(function (user) {
@@ -26,41 +19,10 @@ function clickSignupButton() {
         });
 }
 
-// auth.onAuthStateChanged(firebaseUser => {
-//     if (firebaseUser) {
-//         // Add userId to local storage
-//         localStorage.setItem("uId", firebaseUser.uid);
-
-//         // signup.addEventListener('click', e => {
-//         //     console.log("button find opretform")
-//         //     document.location.href = 'donation.html';
-
-//         // })
-
-//         //  show donation.html when signupButton is clicked (from opretkonto.html)
-//         // if (signupButton) {
-//         //     signupButton.addEventListener('click', e => {
-//         //         console.log("button find opretform")
-//         //         document.location.href = 'donation.html';
-//         //     })
-//         // }
-//     } else {
-
-//         //go to donation.html when signupButton is clicked (from opretkonto.html)
-//         // if (signupButton) {
-//         //     signupButton.addEventListener('click', e => {
-//         console.log("Du er ikke logget ind")
-//         // });
-//         //}
-//     }
-
-// });
-
 const dbUserRef = firebase.database().ref('users')
 
 function submitUserData(e) {
     e.preventDefault();
-    console.log("nr 2");
     //get values
     let firstname_val = getInputValues('txt_fornavn');
     let lastname_val = getInputValues('txt_efternavn');
@@ -69,8 +31,6 @@ function submitUserData(e) {
     let by_val = getInputValues('txt_by');
     let email_val = getInputValues('email');
     let phone_val = getInputValues('txt_telefon');
-    //let uId = localStorage.getItem("uId");
-    //console.log(uId);
     saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, email_val, phone_val);
 }
 
@@ -90,9 +50,7 @@ function saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, e
         by: by_val,
         email: email_val,
         telefon: phone_val,
-        //UID: uId // this doesn't not work because it takes Uid from localstorage, but there is nothing in localstorage before the button is pushed.
     })
-    console.log("submit");
     clickSignupButton();
 }
 

@@ -1,5 +1,6 @@
+'use strict'
 // Initialize Firebase
-var config = {
+const config = {
     apiKey: "AIzaSyAYrL_S9fw2UEAFC69J8wNOWPRdx4yCIp4",
     authDomain: "endelaf-ace62.firebaseapp.com",
     databaseURL: "https://endelaf-ace62.firebaseio.com",

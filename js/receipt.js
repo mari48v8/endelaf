@@ -7,7 +7,7 @@ let checkedValue;
 let x;
 
 function checkbox() {
-
+    console.log("valg");
     input = document.querySelectorAll("input[type=checkbox]");
     count = document.querySelectorAll("[type='checkbox']:checked").length;
     checkedValue = "";
@@ -20,23 +20,17 @@ function checkbox() {
             x = input[i].value;
         }
     }
-    var node = document.createElement("LI");
-    var textnode = document.createTextNode(x);
+    let node = document.createElement("LI");
+    let textnode = document.createTextNode(x);
     node.appendChild(textnode);
     document.getElementById("show").appendChild(node);
     document.getElementById("count").value = document.querySelectorAll("[type='checkbox']:checked").length;
-
-
-    // var totalPriceDK = document.getElementById("totalPrice");
-    // totalPriceDK.innerText = "Samlet pris: " + "" + totalPrice + ",- Kr";
-
-
 }
 
 /////////////////////////// Samlet pris //////////////////////////////////////
 
 //Arrays
-var productArray = new Array();
+let productArray = new Array();
 productArray["Hundemad"] = 75;
 productArray["Hundefrakke"] = 150;
 productArray["Hundelegetøj"] = 100;
@@ -50,23 +44,20 @@ productArray["Barbergrej"] = 75;
 //check af de forskellige checkbokse
 function getProduct() {
 
-    var product = 0;
-    var selectedProduct = document.querySelectorAll("input[type=checkbox]");
+    let product = 0;
+    let selectedProduct = document.querySelectorAll("input[type=checkbox]");
 
-    for (var i = 0; i < selectedProduct.length; i++) {
+    for (let i = 0; i < selectedProduct.length; i++) {
         if (selectedProduct[i].checked) {
             product += productArray[selectedProduct[i].value] || 0;
         }
     }
-
     return product;
 }
 
 //Samlet pris
 function getTotals() {
-    var totalPrice = getProduct();
-    var totalPriceDK = document.getElementById("totalPrice");
+    let totalPrice = getProduct();
+    let totalPriceDK = document.getElementById("totalPrice");
     totalPriceDK.innerText = "Samlet pris: " + "" + totalPrice + ",- Kr";
 }
-
-
