@@ -8,6 +8,7 @@
     <title>Donations</title>
     <!---- CSS stylesheet -->
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/information.css">
     <!-- <link rel="stylesheet" href="../css/donation.css"> -->
     <!---- SCSS stylesheet -->
     <!-- <link rel="stylesheet" href="../scss/donation.scss"> -->
@@ -102,9 +103,10 @@
                                 </div>
                                 <div class="left-block">
                                     <p class="infobox">
-                                        <div class="i-img"></div>
-
-
+                                        <div id="infoBob" class="i-img">
+                                            <span class="infotext">Du er med til at give mad til<br>
+                                                mange hjemløse hunde.</span>
+                                        </div>
                                         <div class="i-img"></div>
                                         <div class="i-img"></div>
                                     </p>
@@ -125,12 +127,12 @@
                                     <p class="checkbox-p">
                                         <label><input id="hatAndGloves" min="100" type="checkbox" name="clothes"
                                                 onChange="checkbox(this.value),getTotals()" value="Hue og vanter">
-                                            Hue og vanter 100,-</label>
+                                            Vanter 100,-</label>
                                     </p>
                                     <p class="checkbox-p">
                                         <label><input id="socks" min="125" type="checkbox" name="clothes" onChange="checkbox(this.value),getTotals()"
                                                 value="Uldne strømper">
-                                            Uldne strømper 125,-</label>
+                                            Uldne Sokker 125,-</label>
                                     </p>
                                 </div>
                                 <div class="left-block">
@@ -178,40 +180,47 @@
                         </div>
                         <div class="block4">
                             <!-- creditcard -->
-                            <h3 class="kategori paymethod">Vælg betalingsmetode:</h3>
+                            <h3 class="paymethod">Vælg betalingsmetode:</h3>
 
                             <div class="pay">
-                                <input type="radio" name="payment" id="visa-dankort" value="visa-dankort" required>
+                                <input type="radio" name="payment" id="visa-dankort" value="visa-dankort" class="test1"
+                                    onclick="show1();" required>
                                 <label for="visa-dankort" class="inline">
                                     <p id="m-b-2" class="inline">Visa/Dankort</p>
                                     <!-- <span class="imgs inline"><img src="../img/logo-dankort.png"
                                 alt="dankort logo"></span> -->
                                 </label>
-                                <label class="payment-label-around-div" for="dankort-nr">
-                                    <!--    <span class="close">x</span> -->
-                                    <p><input type="number" name="card-nr" id="dankort-nr" pattern="[0-9]{16}" min="0"
-                                            max="9999999999999999" autocomplete="cc-number" placeholder="Kortnummer"></p>
-                                    <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1" max="12"
-                                            placeholder="mm" class="digit2" pattern="[0-9]{2}" autocomplete="cc-exp-month"><span>
-                                            / </span><input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
-                                            placeholder="yyyy" maxlength="4" class="digit4" autocomplete="cc-exp-year"></p>
-                                    <p><input type="number" id="control" name="control" min="0" max="999" pattern="[0-9]{3}"
-                                            placeholder="CVV" autocomplete="cc-csc" class="digit4"></p>
-                                </label>
+                                <div id="div1" class="hide">
+                                    <label class="payment-label-around-div hidden" for="dankort-nr">
+                                        <!--    <span class="close">x</span> -->
+                                        <p><input type="number" name="card-nr" id="dankort-nr" pattern="[0-9]{16}" min="0"
+                                                max="9999999999999999" autocomplete="cc-number" placeholder="Kortnummer"
+                                                onclick="btnRadio(0)" checked></p>
+                                        <p><input type="number" name="card-exp-month" id="dankort-exp-month" min="1"
+                                                max="12" placeholder="mån." class="digit2" pattern="[0-9]{2}"
+                                                autocomplete="cc-exp-month"><span class="dona-span">
+                                                / </span>
+                                            <input type="number" min="2018" max="2030" name="card-exp-year" id="dankort-exp-year"
+                                                placeholder="årstal" maxlength="4" class="digit4" autocomplete="cc-exp-year"></p>
+                                        <p><input type="number" id="control" name="control" min="0" max="999" pattern="[0-9]{3}"
+                                                placeholder="CVV" autocomplete="cc-csc" class="digit4"></p>
+                                    </label>
+                                </div>
                             </div>
                             <div class="pay">
-                                <input type="radio" name="payment" id="mobile-pay" value="mobile-pay">
+                                <input type="radio" name="payment" id="mobile-pay" value="mobile-pay" onclick="show2();">
                                 <label for="mobile-pay">
                                     <p id="m-b-2" class="inline">MobilePay</p><span class="imgs inline"><img src="../img/mobilepay.png"
                                             alt="mobilepay logo" id="mobile-pay-img"></span>
                                 </label>
-                                <label class="payment-label-around-div half-height" for="mobile-pay-nr">
-                                    <!--    <span class="close">x</span> -->
-                                    <p id="mobile-pay-p">
-                                        <span class="p-span">+45</span>
-                                        <input type="tel" name="card-nr" id="mobile-pay-nr" pattern="[1-9][0-9]{7}">
-                                    </p>
-                                </label>
+                                <div id="div2" class="hide">
+                                    <label class="payment-label-around-div half-height" for="mobile-pay-nr">
+                                        <!--    <span class="close">x</span> -->
+                                        <p id="mobile-pay-p">
+                                            <input type="tel" name="card-nr" id="mobile-pay-nr" placeholder="+45"
+                                                pattern="[1-9][0-9]{7}" onclick="btnRadio(1), removeC(x)">
+                                        </p>
+                                    </label></div>
                             </div>
 
                         </div>
@@ -239,18 +248,20 @@
                         </div>
 
                         <div class="block7">
-                            <button class="button" type="submit">Gennemfør Køb</button>
+                            <div class="container-login-form-btn ">
+                                <div id="choose" class="hide">Vælg venligst en donation inden du trykker på send</div>
+                                <button id="btnSubmitDonation" class="btn btn-green" type="submit">Gennemfør Køb</button>
+                            </div>
                             <div id="mobile-pay-confirm" class="not-active">
                                 <div>
-                                    <p></p>
+                                    <p>></p>
                                 </div>
-                                <p>Swipe to finish</p>
+                                <p id="swip">Send penge</p>
                             </div>
                         </div>
-                        <div class="container-login-form-btn ">
-                            <div id="choose" class="hide">Vælg venligst en donation inden du trykker på send</div>
+                        <!-- <div class="container-login-form-btn ">
                             <input id="btnSubmitDonation" class="login-form-btn" type="submit" value="Send">
-                        </div>
+                        </div> -->
                     </form>
                 </main>
             </div>
@@ -261,6 +272,7 @@
     <script src="../main.js"> </script>
     <script src="../js/kvittering.js"> </script>
     <script src="../js/donation.js"></script>
+    <script src="../js/betalings.js"></script>
     <script src="../js/logOut.js"></script>
 </body>
 

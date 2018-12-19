@@ -1,6 +1,6 @@
 @import 'form.scss';
 @import 'donation.scss';
-@import 'dashboard.scss';
+/* @import 'dashboard.scss'; */
 
 $bluecolor: blue;
 $white:white;
@@ -15,12 +15,6 @@ body,
     {
     margin: 0;
     padding: 0;
-}
-
-input,
-button,
-submit {
-    border: none;
 }
 
 body {
@@ -151,7 +145,7 @@ a {
     font-size: 14px;
 }
 
-#btnSupport{
+#btnSupport {
     margin-bottom: 8%;
 }
 
@@ -187,6 +181,12 @@ a {
 
 .btn-blue {
     @include button-bg(#12BBF1);
+
+}
+
+.btn-green {
+    @include button-bg(#78BD6F);
+    margin-bottom: 20%;
 
 }
 
@@ -322,10 +322,3 @@ a {
 .close-button:hover {
     background-color: darkgray;
 }
-
-// .show-modal {
-//     opacity: 1;
-//     visibility: visible;
-//     transform: scale(1.0);
-//     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-// }
