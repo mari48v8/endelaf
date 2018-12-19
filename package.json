@@ -1,7 +1,6 @@
 {
   "name": "website_endelaf",
   "version": "1.0.0",
-  "description": "",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +15,11 @@
   "homepage": "https://github.com/mari48v8/endelaf#readme",
   "devDependencies": {
     "node-sass": "^4.10.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mari48v8/endelaf.git"
+  },
+  "description": ""
 }
