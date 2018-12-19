@@ -74,6 +74,7 @@ function searchItems(items) {
     //    console.log("hundemad: " + dogFoodCount + " hundetøj: " + dogClothesCount + " hundelegetøj: " + dogToyCount + " Frakke:" + wintercoatCount + " Vanter: " + hatAndGlovesCount + " Sokker: " + socksCount + " Tandbørste: " + toothbrushCount + " Tamponer: " + tamponsCount + " Barbergrej: " + shavingCount);
 }
 var sum = 0;
+
 function money(items) {
     items.forEach(item => {
         let moneyCount = item.value;
@@ -90,6 +91,7 @@ function money(items) {
         function getSum(total, num) {
             return total + num;
         }
+
         function myFunction() {
             document.querySelector(".col-money").innerHTML = moneyCountArr.reduce(getSum);
         }
