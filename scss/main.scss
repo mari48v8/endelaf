@@ -1,6 +1,6 @@
 @import 'form.scss';
 @import 'donation.scss';
-@import 'dashboard.scss'; 
+@import 'dashboard.scss';
 
 $bluecolor: blue;
 $white:white;
@@ -41,14 +41,6 @@ a {
     font-size: 0.9em;
 }
 
-.floatleft {
-    float: left;
-}
-
-.floatright {
-    float: right;
-}
-
 .text-center {
     text-align: center !important;
 }
@@ -59,6 +51,14 @@ a {
 
 .text-left {
     text-align: left !important;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
 }
 
 .p-t-10 {
