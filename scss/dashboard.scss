@@ -1,3 +1,15 @@
+$bluecolor: blue;
+$white:white;
+$green:#78BD6F;
+$darkblue:#446B7F;
+$lightblue:#12bbf1;
+$lightgrey:#5C5656;
+$darkgrey:#707070;
+$ligthergrey:#ccc;
+$black:#000000;
+$red: #FF194E;
+$redgraph:#de4a5e;
+
 body {
     margin: 0;
 }
@@ -26,7 +38,7 @@ body {
     width: 100%;
     padding-top: 3%;
     padding-bottom: 3%;
-    border-top: 2px dotted black;
+    border-top: 2px dotted $black;
 
     &:nth-child(1) {
         width: 100%;
@@ -39,7 +51,7 @@ body {
         width: 100%;
         padding-top: 4%;
         padding-bottom: 3%;
-        border-top: 2px dotted black;
+        border-top: 2px dotted $black;
     }
 }
 
@@ -47,7 +59,7 @@ body {
     width: 100%;
     padding-top: 10%;
     padding-bottom: 10%;
-    background: #12BBF1;
+    background: $lightblue;
 }
 
 .graph-container {
@@ -105,7 +117,7 @@ body {
     text-align: center;
     font-size: 2.2em;
     font-weight: 600;
-    color: white;
+    color: $white;
 }
 
 /*-----------------------  Graph Overskrift  -----------------------*/
@@ -113,14 +125,14 @@ body {
 .dash-h1 {
     font-size: 0.8em;
     text-align: left;
-    color: black;
+    color: $black;
 }
 
 .dash-h1-center {
     font-size: 1.2em;
     font-weight: 400;
     text-align: center;
-    color: white;
+    color: $white;
 }
 
 /*-----------------------  Graph 1 Data  -----------------------*/
@@ -145,18 +157,18 @@ body {
 
 #doggraph1 {
     @extend %blokdesign;
-    background-color: #446b7f;
+    background-color: $darkblue;
 }
 
 #doggraph2 {
     @extend %blokdesign;
-    background-color: #446b7f;
+    background-color: $darkblue;
     opacity: 0.5;
 }
 
 #doggraph3 {
     @extend %blokdesign;
-    background-color: #446b7f;
+    background-color: $darkblue;
     opacity: 0.2;
 }
 
@@ -175,19 +187,19 @@ body {
 
 #clothesgraph1 {
     @extend %blokdesign;
-    background-color: #de4a5e;
+    background-color: $redgraph;
 }
 
 #clothesgraph2 {
     @extend %blokdesign;
-    background-color: #de4a5e;
+    background-color: $redgraph;
     opacity: 0.5;
 
 }
 
 #clothesgraph3 {
     @extend %blokdesign;
-    background-color: #de4a5e;
+    background-color: $redgraph;
     opacity: 0.2;
 
 }
@@ -206,18 +218,18 @@ body {
 
 #toiletriesgraph1 {
     @extend %blokdesign;
-    background-color: #78bd6f;
+    background-color: $green;
 }
 
 #toiletriesgraph2 {
     @extend %blokdesign;
-    background-color: #78bd6f;
+    background-color: $green;
     opacity: 0.5;
 }
 
 #toiletriesgraph3 {
     @extend %blokdesign;
-    background-color: #78bd6f;
+    background-color: $green;
     opacity: 0.2;
 
 }
@@ -232,18 +244,18 @@ body {
 
 #totaldoggraph1 {
     @extend %totaldog;
-    background-color: #446b7f;
+    background-color: $darkblue;
 
 }
 
 #totalclothesgraph2 {
     @extend %totaldog;
-    background-color: #de4a5e;
+    background-color: $redgraph;
 }
 
 #totaltoiletriesgraph3 {
     @extend %totaldog;
-    background-color: #78bd6f;
+    background-color: $green;
 
 }
 
@@ -264,7 +276,7 @@ ul {
 }
 
 .y-axis li {
-    border-top: 1px solid #4e5464;
+    border-top: 1px solid $darkblue;
     display: block;
     height: 8.9px;
     width: 4%;
@@ -272,11 +284,11 @@ ul {
     &:nth-child(even) {
         width: 2.5%;
         margin-right: 4%;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid $ligthergrey;
     }
 
     &:last-child {
-        border-top: 1px solid #4e5464;
+        border-top: 1px solid $darkblue;
         display: block;
         height: 9.2px;
         width: 92%;
@@ -295,7 +307,7 @@ span {
 /*----------------------- Graph Y Axis linje  -----------------------*/
 
 .vl1 {
-    border-left: 1px solid black;
+    border-left: 1px solid $black;
     height: 170px;
     margin-top: -86.9%;
     //margin-left: -3.2%;
@@ -304,21 +316,21 @@ span {
 }
 
 .vl2 {
-    border-left: 1px solid black;
+    border-left: 1px solid $black;
     height: 174px;
     margin-top: -102%;
     margin-left: -4%;
 }
 
 .vl3 {
-    border-left: 1px solid black;
+    border-left: 1px solid $black;
     height: 174px;
     margin-top: -103.1%;
     margin-left: -4%;
 }
 
 .vl4 {
-    border-left: 1px solid black;
+    border-left: 1px solid $black;
     height: 340px;
     margin-top: -161.1%;
     //  margin-left: 0%;
@@ -368,7 +380,7 @@ span {
     width: 100%;
     font-size: 1.6em;
     text-align: center;
-    color: white;
+    color: $white;
 }
 
 /*----------------------- Graph p  -----------------------*/
@@ -386,52 +398,52 @@ span {
 
 .bx1 {
     @extend %color-bx;
-    background-color: #446B7F;
+    background-color: $darkblue;
 }
 
 .bx2 {
     @extend %color-bx;
-    background-color: #446B7F;
+    background-color: $darkblue;
     opacity: 0.5;
 }
 
 .bx3 {
     @extend %color-bx;
-    background-color: #446B7F;
+    background-color: $darkblue;
     opacity: 0.2;
 }
 
 .bx4 {
     @extend %color-bx;
-    background-color: #de4a5e;
+    background-color: $redgraph;
 }
 
 .bx5 {
     @extend %color-bx;
-    background-color: #de4a5e;
+    background-color: $redgraph;
     opacity: 0.5;
 }
 
 .bx6 {
     @extend %color-bx;
-    background-color: #de4a5e;
+    background-color: $redgraph;
     opacity: 0.2;
 }
 
 .bx7 {
     @extend %color-bx;
-    background-color: #78bd6f;
+    background-color: $green;
 }
 
 .bx8 {
     @extend %color-bx;
-    background-color: #78bd6f;
+    background-color: $green;
     opacity: 0.5;
 }
 
 .bx9 {
     @extend %color-bx;
-    background-color: #78bd6f;
+    background-color: $green;
     opacity: 0.2;
 }
 

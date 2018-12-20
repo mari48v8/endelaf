@@ -1,3 +1,13 @@
+$bluecolor: blue;
+$white:white;
+$green:#78BD6F;
+$darkblue:#446B7F;
+$lightblue:#12bbf1;
+$lightgrey:#5C5656;
+$darkgrey:#707070;
+$ligthergrey:#ccc;
+$black:#000000;
+$red: #FF194E;
 /*----------------------- Background Image -----------------------*/
 
 .bg-img {
@@ -12,15 +22,10 @@
     background: -webkit-linear-gradient(-45deg, rgba(83, 111, 124, 1) 0%, rgba(156, 197, 229, 1) 49%, rgba(188, 211, 229, 1) 99%);
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, rgba(83, 111, 124, 1) 0%, rgba(156, 197, 229, 1) 49%, rgba(188, 211, 229, 1) 99%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 /*----------------------- Form Container and Wrapper -----------------------*/
-
-.container-login {
-    width: 92%;
-
-    /*  min-height: 100vh; */
+%containers {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -29,14 +34,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     z-index: 1;
-    background-color: white;
+    background-color: $white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -54,104 +57,30 @@
         left: 0;
         background-color: rgba(255, 255, 255, 0.99);
     }
+}
+
+.container-login {
+    @extend %containers;
+    width: 92%;
+
 }
 
 .container-dashboard {
+    @extend %containers;
     width: 92%;
-
-    /*  min-height: 100vh; */
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-
-
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0.99);
-    }
 }
 
 .container-dashboard-pt {
+    @extend %containers;
     width: 92%;
     padding-left: 15px;
     padding-right: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    z-index: 1;
-
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0.99);
-    }
+    box-shadow: none;
 }
 
 .container-login-donation {
+    @extend %containers;
     width: 100%;
-    /*  min-height: 100vh; */
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0.99);
-    }
 }
 
 
@@ -181,7 +110,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $white;
     margin: 0 auto;
 }
 
@@ -204,48 +133,38 @@
     justify-content: center;
 }
 
-.login-form-btn {
-    color: #5C5656;
+%form-btn {
+    border-radius: 3px;
+    width: 210px;
     text-decoration: none;
     padding: 5px 10px;
-    border-radius: 3px;
     font-size: 1.2em;
-    background-color: white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     cursor: pointer;
+}
+
+.login-form-btn {
+    @extend %form-btn;
+    color: #5C5656;
+    background-color: $white;
+
 }
 
 .login-form-btn-red {
+    @extend %form-btn;
     color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    width: 210px;
-    border-radius: 3px;
-    font-size: 1.2em;
-    background-color: #FF194E;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    cursor: pointer;
+    background-color: $red;
+
 }
 
 .login-form-btn-blue {
+    @extend %form-btn;
     color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    width: 210px;
-    border-radius: 3px;
-    font-size: 1.2em;
-    background-color: #12BBF1;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    cursor: pointer;
+    background-color: $lightblue;
+
 }
 
 
@@ -255,7 +174,7 @@
 .wrap-input {
     width: 100%;
     position: relative;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid $ligthergrey;
     margin-bottom: 30px;
 }
 
@@ -324,7 +243,7 @@ input {
     &:-moz-placeholder,
     &::-moz-placeholder,
     &:-ms-input-placeholder {
-        color: #5C5656;
+        color: $lightgrey;
     }
 }
 
@@ -334,7 +253,7 @@ textarea {
     &:-moz-placeholder,
     &::-moz-placeholder,
     &:-ms-input-placeholder {
-        color: #5C5656;
+        color: $lightgrey;
     }
 }
 

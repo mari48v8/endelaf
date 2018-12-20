@@ -4,6 +4,8 @@
 
 $bluecolor: blue;
 $white:white;
+$green:#78BD6F;
+$darkblue:#446B7F;
 $lightblue:#12bbf1;
 $lightgrey:#5C5656;
 $darkgrey:#707070;
@@ -23,13 +25,6 @@ body {
     font-size: 18px;
 }
 
-@mixin font-weight($weight) {
-    $weights: (light: 300,
-        regular: 400,
-        medium: 500,
-        semi-bold: 600,
-        bold: 700, )
-}
 
 a {
     color: $lightblue;
@@ -91,10 +86,16 @@ a {
 
 .header {
     background-color: $lightblue;
-    padding: 3%;
-    padding-bottom: 4%;
+    padding: 3% 3% 4% 3% !important;
     z-index: 1000;
-    position: relative;
+    //position: relative;
+}
+
+.thankyou {
+    background-color: $lightblue;
+    padding: 3% 5% 8% 3% !important;
+    z-index: 1000;
+    //position: relative;
 }
 
 .btn {
@@ -174,36 +175,31 @@ a {
 }
 
 .btn-darkblue {
-    @include button-bg(#446B7F);
+    @include button-bg($darkblue);
     cursor: pointer;
 
 }
 
 .btn-blue {
-    @include button-bg(#12BBF1);
+    @include button-bg($lightblue);
     cursor: pointer;
 
 }
 
 .btn-green {
-    @include button-bg(#78BD6F);
+    @include button-bg($green);
     margin-bottom: 20%;
     cursor: pointer;
 
 }
 
 .btn-red {
-    @include button-bg(#FF194E);
+    @include button-bg($red);
     margin-left: 8%;
     font-size: 1.1em;
     cursor: pointer;
 }
 
-// .btn-red_index {
-//     @include button-bg(#FF194E);
-//     margin-left: 8%;
-//     font-size: 1.1em;
-// }
 
 .ctn {
     width: 100%;
@@ -212,23 +208,23 @@ a {
 }
 
 .c1 {
-    @include button-bg(#446B7F);
+    @include button-bg($darkblue);
 
 }
 
 .c2 {
-    @include button-bg(#446B7F);
+    @include button-bg($darkblue);
     opacity: 0.8;
 
 }
 
 .c3 {
-    @include button-bg(#446B7F);
+    @include button-bg($darkblue);
     opacity: 0.6;
 }
 
 .c4 {
-    @include button-bg(#446B7F);
+    @include button-bg($darkblue);
     opacity: 0.4;
 }
 
@@ -236,34 +232,13 @@ a {
     display: none;
 }
 
-#myDIV1 {
-    width: 150px;
-    height: 150px;
-    background-color: lightblue;
-    display: none;
-}
-
-
-#myDIV2 {
-    width: 150px;
-    height: 150px;
-    background-color: lightblue;
-    display: none;
-}
-
-
-#myDIV3 {
-    width: 150px;
-    height: 150px;
-    background-color: lightblue;
-    display: none;
-}
-
-
+#myDIV1,
+#myDIV2,
+#myDIV3,
 #myDIV4 {
     width: 150px;
     height: 150px;
-    background-color: lightblue;
+    background-color: $lightblue;
     display: none;
 }
 
@@ -305,7 +280,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: $white;
     padding: 1rem 1.5rem;
     width: 24rem;
     border-radius: 0.5rem;
@@ -318,9 +293,9 @@ a {
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: lightgray;
+    background-color: $darkgrey;
 }
 
 .close-button:hover {
-    background-color: darkgray;
+    background-color: $lightgrey;
 }

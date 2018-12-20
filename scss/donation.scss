@@ -1,3 +1,15 @@
+$bluecolor: blue;
+$mobilpaycolor: #5B79FF;
+$white:white;
+$green:#78BD6F;
+$darkblue:#446B7F;
+$b2:#7ea6ba;
+$b3:#b2c9d6;
+$lightblue:#12bbf1;
+$lightgrey:#5C5656;
+$darkgrey:#707070;
+$ligthergrey:#ccc;
+$black:#000000;
 $red: #FF194E;
 
 input[type=number] {
@@ -44,7 +56,7 @@ submit {
 input {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
-    color: #ccc;
+    color: $ligthergrey;
     line-height: 1.2;
     background: transparent;
     outline: none;
@@ -53,35 +65,33 @@ input {
     top: 8px;
 }
 
-
-#dankort-nr {
-    background: url(../img/logo-dankort.png);
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-origin: content-box;
-    background-size: 2.5rem 1.9rem;
-    padding-right: 8px;
+%kvittering {
+    background-repeat: no-repeat !important;
+    background-position: right center !important;
+    background-origin: content-box !important;
     outline: none;
     border: none;
     position: relative;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: -8px;
+    border-bottom: 2px solid $ligthergrey;
     width: 90%;
+
+}
+
+#dankort-nr {
+    @extend %kvittering;
+    background: url(../img/logo-dankort.png);
+    background-size: 2.5rem 1.9rem;
+    padding-right: 8px;
+    margin-bottom: -8px;
 }
 
 .visa-nr {
+    @extend %kvittering;
     background: url(../img/visa.png);
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-origin: content-box;
     background-size: 3.5rem 1.2rem;
     padding-right: 8px;
-    outline: none;
-    border: none;
-    position: relative;
-    border-bottom: 2px solid #ccc;
     margin-bottom: 30px;
-    width: 90%;
+
 }
 
 input#dankort-exp-month,
@@ -118,41 +128,30 @@ label {
     margin-top: 12%;
 }
 
-.i-img:nth-child(2) {
-    background: url(../img/information_icon.png);
+.i-img {
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 25%;
     background-size: contain;
-    height: 18px;
-    width: 18px;
+    height: 15px;
+    width: 15px;
     position: relative;
-    top: -26px;
+    background: url(../img/information_icon.png);
+
+    &:nth-child(2) {
+        top: -35px;
+    }
+
+    &:nth-child(3) {
+        top: -9px;
+    }
+
+    &:nth-child(4) {
+        top: 13px;
+    }
 }
 
-.i-img:nth-child(3) {
-    background: url(../img/information_icon.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 25%;
-    background-size: contain;
-    height: 18px;
-    width: 18px;
-    position: relative;
-    top: -7px;
-}
 
-.i-img:nth-child(4) {
-    background: url(../img/information_icon.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 25%;
-    background-size: contain;
-    height: 18px;
-    width: 18px;
-    position: relative;
-    top: 13px;
-}
 
 .infobox {
     height: auto;
@@ -168,7 +167,7 @@ label {
 .checkbox-p {
     height: 20px;
     padding: 0;
-    color: white;
+    color: $white;
 }
 
 .left-block {
@@ -182,24 +181,23 @@ label {
     font-size: 1em;
 }
 
-/* @mixin div-colour($divbg) {
-      background-color: $divbg;
-  } */
+%b {
+    padding-bottom: 8%;
+}
 
 .b1 {
-    /*  @include div-colour(#446B7F); */
-    background-color: #446B7F;
-    padding-bottom: 8%;
+    background-color: $darkblue;
+    @extend %b;
 }
 
 .b2 {
-    background-color: #7ea6ba;
-    padding-bottom: 8%;
+    background-color: $b2;
+    @extend %b;
 }
 
 .b3 {
-    background-color: #b2c9d6;
-    padding-bottom: 8%;
+    background-color: $b3;
+    @extend %b;
 }
 
 .pay {
@@ -213,7 +211,7 @@ label {
     font-size: 1em;
     margin-left: 34%;
     padding-top: 8%;
-    color: white;
+    color: $white;
 }
 
 .paymethod {
@@ -221,44 +219,40 @@ label {
     text-align: center;
 }
 
-#kategori-img-dog {
-    background: url(../img/dog.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+%billed-kategori {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
     height: 100px;
     width: 18%;
+    display: inline-block;
+}
+
+#kategori-img-dog {
+    @extend %billed-kategori;
+    background: url(../img/dog.png);
     margin-right: 4%;
     margin-left: 7%;
-    display: inline-block;
+
 }
 
 #kategori-img-hue {
+    @extend %billed-kategori;
     background: url(../img/hue.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 100px;
-    width: 18%;
     margin-right: 3%;
     margin-left: 8%;
-    display: inline-block;
+
 }
 
 #kategori-img-tand {
+    @extend %billed-kategori;
     background: url(../img/tand.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 100px;
-    width: 18%;
     margin-right: 1%;
     margin-left: 11%;
-    display: inline-block;
+
 }
 
 .order-overview {
-    //background-color: #446B7F;
     background: url(../img/notes.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -285,7 +279,7 @@ label {
     padding: 5px 10px;
     border-radius: 3px;
     font-size: 1.2em;
-    background-color: white;
+    background-color: $white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
@@ -316,7 +310,7 @@ label {
 #count {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
-    color: #5c5656;
+    color: $lightgrey;
     line-height: 1.2;
     background: transparent;
     outline: none;
@@ -360,7 +354,7 @@ label {
 
 #choose {
     background-color: $red;
-    color: white;
+    color: $white;
     position: absolute;
     left: 7%;
     right: 7%;
@@ -369,7 +363,7 @@ label {
 }
 
 #totalPrice {
-    color: #5c5656;
+    color: $lightgrey;
     text-align: left;
     font-size: 20px;
     font-weight: 600;
@@ -386,7 +380,7 @@ label {
 }
 
 #mobile-pay-confirm {
-    background-color: #5B79FF;
+    background-color: $mobilpaycolor;
     border-radius: 34px;
     display: flex;
     height: 60px;
@@ -400,7 +394,7 @@ label {
 }
 
 #mobile-pay-confirm div {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 28px;
     display: flex;
     height: 56px;
@@ -412,7 +406,7 @@ label {
 
 #mobile-pay-confirm div p {
     align-self: center;
-    color: #5B79FF;
+    color: $mobilpaycolor;
     font-weight: 700;
     text-align: center;
     width: 100%
@@ -420,7 +414,7 @@ label {
 
 #mobile-pay-confirm div+p {
     align-self: center;
-    color: #fff;
+    color: $white;
     display: inline-block;
     text-align: center;
     width: 100%
@@ -438,8 +432,8 @@ label {
     visibility: hidden;
     width: 120px;
     font-size: 0.8em;
-    background-color: #10a8d8;
-    color: #fff;
+    background-color: $lightblue;
+    color: $white;
     text-align: center;
     border-radius: 6px;
     padding-left: 10px;
