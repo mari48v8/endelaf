@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         //show donations.html when btnSupport is clicked (from index.html)
         if (btnSupport) {
             btnSupport.addEventListener('click', e => {
-                document.location.href = '../pages/donation.html';
+                document.location.href = 'pages/donation.html';
             });
         }
     } else {
@@ -32,7 +32,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         //show newuser.html when btnSupport is clicked (from index.html)
         if (btnSupport) {
             btnSupport.addEventListener('click', e => {
-                document.location.href = '../pages/newuser.html';
+                document.location.href = 'pages/newuser.html';
             });
         }
 
