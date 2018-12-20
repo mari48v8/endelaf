@@ -1,7 +1,7 @@
 'use strict';
 
 let itemsArr = [];
-//let donationArr = [];
+
 const btnSubmitDonation = document.getElementById("btnSubmitDonation");
 const submitDonationForm = document.getElementById("donationForm");
 const choose = document.querySelector("#choose");

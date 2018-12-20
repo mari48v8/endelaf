@@ -8,7 +8,7 @@
     <title>Donations</title>
     <!---- CSS stylesheet -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/information.css">
+    <!-- <link rel="stylesheet" href="../css/information.css"> -->
     <!-- <link rel="stylesheet" href="../css/donation.css"> -->
     <!---- SCSS stylesheet -->
     <!-- <link rel="stylesheet" href="../scss/donation.scss"> -->
@@ -18,41 +18,11 @@
 
 
 
-    <!-- <script>
-        $(document).ready(displayCheckbox);
 
-        function displayCheckbox() {    
-    
-        var checkboxes = $("input[type=checkbox]");
-        var results = $("#results");
-
-        $.each(checkboxes, function() {
-        $(this).change(printChecked);
-        })
-        
-        function printChecked() {
-            var checkedIds = [];
-            
-            checkboxes.each(function() {
-                if($(this).is(':checked')) {
-                    checkedIds.push($(this).attr('id'));
-                }
-            });
-
-            var count = $("[type='checkbox']:checked").length;
-            $('#count').val($("[type='checkbox']:checked").length);
-            
-            console.log(results);
-            results.text(checkedIds);
-    }
-    
-} 
-    </script>
- -->
 </head>
 
 
-<body>
+<body class="bg-img">
     <div class="header">
         <a href="../index.html">
             <div class="logo floatleft"></div>
@@ -63,7 +33,7 @@
             <button id="btnSignUp" class="btn btn-blue">Ny bruger</button>
         </div>
     </div>
-    <div class="bg-img">
+    <div>
         <div class="wrapper">
             <div class="container-login-donation donation-padding">
                 <h2 class="into-txt">Velkommen til</h2> <img src="../img/Logo.png" alt="logo">

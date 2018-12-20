@@ -1,12 +1,13 @@
 {
   "name": "website_endelaf",
   "version": "1.0.0",
-  "description": "",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node script.js",
-    "endelafsass": "node-sass scss/main.scss css/main.css -w"
+    "endelafsass": "node-sass scss/main.scss css/main.css -w",
+    "dev": "parcel <your entry file>",
+    "build": "parcel build <your entry file>"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,15 @@
   },
   "homepage": "https://github.com/mari48v8/endelaf#readme",
   "devDependencies": {
+    "cssnano": "^4.1.7",
     "node-sass": "^4.10.0"
-  }
+  },
+  "dependencies": {
+    "scss": "^0.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mari48v8/endelaf.git"
+  },
+  "description": ""
 }

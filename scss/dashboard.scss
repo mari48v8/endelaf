@@ -318,20 +318,20 @@ ul {
     padding: 0;
 }
 
-li {
+.y-axis li {
     border-top: 1px solid #4e5464;
     display: block;
     height: 8.9px;
     width: 4%;
 }
 
-li:nth-child(even) {
+.y-axis li:nth-child(even) {
     width: 2.5%;
     margin-right: 4%;
     border-top: 1px solid #ccc;
 }
 
-li:last-child {
+.y-axis li:last-child {
     border-top: 1px solid #4e5464;
     display: block;
     height: 9.2px;
