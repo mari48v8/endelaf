@@ -62,6 +62,7 @@ function submitDonation() {
             item: itemsArr,
             time: formattedTime,
         })
+        console.log(newdbDonationRef);
 
         submitDonationForm.submit();
     }
