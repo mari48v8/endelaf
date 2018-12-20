@@ -459,6 +459,14 @@ label {
   font-weight: 600;
   font-family: 'Raleway', sans-serif; }
 
+.mobil-btn {
+  height: 90px;
+  width: 100%;
+  background-color: white;
+  border: none;
+  margin-bottom: 50px;
+  font-size: 1em; }
+
 #mobile-pay {
   position: relative;
   top: 2px; }

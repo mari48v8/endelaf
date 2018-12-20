@@ -2,12 +2,13 @@
 
 let itemsArr = [];
 
-const btnSubmitDonation = document.getElementById("btnSubmitDonation");
+//const btnSubmitDonation = document.getElementById("btnSubmitDonation");
 const submitDonationForm = document.getElementById("donationForm");
 const choose = document.querySelector("#choose");
 
 // Eventlistner for submitDonation
 submitDonationForm.addEventListener('submit', getCheckedBoxes);
+
 
 function getCheckedBoxes(e) {
     e.preventDefault();

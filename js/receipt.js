@@ -61,3 +61,11 @@ function getTotals() {
     let totalPriceDK = document.getElementById("totalPrice");
     totalPriceDK.innerText = "Samlet pris: " + "" + totalPrice + ",- Kr";
 }
+
+/////////////////////////// Samlet pris //////////////////////////////////////
+
+/* function swipeRedirect() {
+    var x = location.href;
+    location.href = 'thankyou.html';
+    document.getElementById("swipe").innerHTML = x;
+} */
