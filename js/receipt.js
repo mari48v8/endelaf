@@ -1,27 +1,22 @@
 "use strict";
 
 /////////////////////////// Display value and counts //////////////////////////////////////
-let input
-let count;
-let checkedValue;
-let x;
+
+let results;
 
 function checkbox() {
-    console.log("valg");
-    input = document.querySelectorAll("input[type=checkbox]");
-    count = document.querySelectorAll("[type='checkbox']:checked").length;
-    checkedValue = "";
-    let result = [];
-    console.log(input);
+    //console.log("valg");
+    let input = document.querySelectorAll("input[type=checkbox]");
+    //checkedValue = "";
+    //console.log(input);
     for (let i = 0; i < input.length; i++) {
         if (input[i].checked) {
-            result.push(input[i].value);
-            console.log("Pushed : " + input[i].value);
-            x = input[i].value;
+            //console.log("Pushed : " + input[i].value);
+            results = input[i].value;
         }
     }
     let node = document.createElement("LI");
-    let textnode = document.createTextNode(x);
+    let textnode = document.createTextNode(results);
     node.appendChild(textnode);
     document.getElementById("show").appendChild(node);
     document.getElementById("count").value = document.querySelectorAll("[type='checkbox']:checked").length;
@@ -63,9 +58,3 @@ function getTotals() {
 }
 
 /////////////////////////// Samlet pris //////////////////////////////////////
-
-/* function swipeRedirect() {
-    var x = location.href;
-    location.href = 'thankyou.html';
-    document.getElementById("swipe").innerHTML = x;
-} */
