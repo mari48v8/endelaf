@@ -683,29 +683,22 @@ body {
   height: 0px;
   border: 1px black solid; }
 
-article {
-  background-color: blueviolet;
-  height: 250px;
-  width: 100%; }
-
 /*-----------------------  Wrapper og Container  -----------------------*/
 .wrapper-grid {
   width: 100%;
   padding-top: 3%;
   padding-bottom: 3%;
   border-top: 2px dotted black; }
-
-.wrapper-grid:nth-child(1) {
-  width: 100%;
-  padding-top: 3%;
-  border: none;
-  padding-bottom: 3%; }
-
-.wrapper-grid:nth-child(4) {
-  width: 100%;
-  padding-top: 4%;
-  padding-bottom: 3%;
-  border-top: 2px dotted black; }
+  .wrapper-grid:nth-child(1) {
+    width: 100%;
+    padding-top: 3%;
+    border: none;
+    padding-bottom: 3%; }
+  .wrapper-grid:nth-child(4) {
+    width: 100%;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    border-top: 2px dotted black; }
 
 .wrapper-grid-total {
   width: 100%;
@@ -781,29 +774,23 @@ article {
   width: 30%;
   height: 10%; }
 
-#doggraph1 {
-  background-color: #446b7f;
+#doggraph1, #doggraph2, #doggraph3, #clothesgraph1, #clothesgraph2, #clothesgraph3, #toiletriesgraph1, #toiletriesgraph2, #toiletriesgraph3 {
   margin: 0;
   padding: 0;
   border: none;
   transition: all 0.6s ease;
   align-self: end; }
 
+#doggraph1 {
+  background-color: #446b7f; }
+
 #doggraph2 {
   background-color: #446b7f;
-  padding: 0;
-  border: none;
-  opacity: 0.9;
-  transition: all 0.6s ease;
-  align-self: end; }
+  opacity: 0.5; }
 
 #doggraph3 {
   background-color: #446b7f;
-  padding: 0;
-  border: none;
-  opacity: 0.2;
-  transition: all 0.6s ease;
-  align-self: end; }
+  opacity: 0.2; }
 
 /*----------------------- Graph 2 Data -----------------------*/
 .dashboard-hue-size {
@@ -815,28 +802,15 @@ article {
   height: 8%; }
 
 #clothesgraph1 {
-  background-color: #de4a5e;
-  margin: 0;
-  padding: 0;
-  border: none;
-  transition: all 0.6s ease;
-  align-self: end; }
+  background-color: #de4a5e; }
 
 #clothesgraph2 {
   background-color: #de4a5e;
-  padding: 0;
-  border: none;
-  opacity: 0.5;
-  transition: all 0.6s ease;
-  align-self: end; }
+  opacity: 0.5; }
 
 #clothesgraph3 {
   background-color: #de4a5e;
-  padding: 0;
-  border: none;
-  opacity: 0.2;
-  transition: all 0.6s ease;
-  align-self: end; }
+  opacity: 0.2; }
 
 /*----------------------- Graph 3 Data  -----------------------*/
 .dashboard-tand-size {
@@ -848,50 +822,31 @@ article {
   height: 8%; }
 
 #toiletriesgraph1 {
-  background-color: #78bd6f;
-  margin: 0;
-  padding: 0;
-  border: none;
-  transition: all 0.6s ease;
-  align-self: end; }
+  background-color: #78bd6f; }
 
 #toiletriesgraph2 {
   background-color: #78bd6f;
-  padding: 0;
-  border: none;
-  opacity: 0.5;
-  transition: all 0.6s ease;
-  align-self: end; }
+  opacity: 0.5; }
 
 #toiletriesgraph3 {
   background-color: #78bd6f;
-  padding: 0;
-  border: none;
-  opacity: 0.2;
-  transition: all 0.6s ease;
-  align-self: end; }
+  opacity: 0.2; }
 
 /*----------------------- Graph 4 Data  -----------------------*/
-#totaldoggraph1 {
-  background-color: #446b7f;
+#totaldoggraph1, #totalclothesgraph2, #totaltoiletriesgraph3 {
   padding: 0;
   border: none;
   transition: all 0.6s ease;
   align-self: end; }
+
+#totaldoggraph1 {
+  background-color: #446b7f; }
 
 #totalclothesgraph2 {
-  background-color: #de4a5e;
-  padding: 0;
-  border: none;
-  transition: all 0.6s ease;
-  align-self: end; }
+  background-color: #de4a5e; }
 
 #totaltoiletriesgraph3 {
-  background-color: #78bd6f;
-  padding: 0;
-  border: none;
-  transition: all 0.6s ease;
-  align-self: end; }
+  background-color: #78bd6f; }
 
 /*----------------------- Graph Y Axis  -----------------------*/
 .y-axis {
@@ -911,18 +866,16 @@ li {
   display: block;
   height: 8.9px;
   width: 4%; }
-
-li:nth-child(even) {
-  width: 2.5%;
-  margin-right: 4%;
-  border-top: 1px solid #ccc; }
-
-li:last-child {
-  border-top: 1px solid #4e5464;
-  display: block;
-  height: 9.2px;
-  width: 92%;
-  position: relative; }
+  li:nth-child(even) {
+    width: 2.5%;
+    margin-right: 4%;
+    border-top: 1px solid #ccc; }
+  li:last-child {
+    border-top: 1px solid #4e5464;
+    display: block;
+    height: 9.2px;
+    width: 92%;
+    position: relative; }
 
 span {
   display: block;
@@ -995,7 +948,7 @@ span {
   color: white; }
 
 /*----------------------- Graph p  -----------------------*/
-.color-bx {
+.bx1, .bx2, .bx3, .bx4, .bx5, .bx6, .bx7, .bx8, .bx9 {
   float: left;
   width: 10px;
   height: 10px;
@@ -1039,9 +992,7 @@ span {
   opacity: 0.2; }
 
 /*----------------------- Graph padding's  -----------------------*/
-.p-r-10 {
-  margin-right: 12px; }
-
+.p-r-10,
 .p-r-11 {
   margin-right: 12px; }
 
@@ -1070,12 +1021,6 @@ a {
 .p-s-09 {
   font-size: 0.9em; }
 
-.floatleft {
-  float: left; }
-
-.floatright {
-  float: right; }
-
 .text-center {
   text-align: center !important; }
 
@@ -1084,6 +1029,12 @@ a {
 
 .text-left {
   text-align: left !important; }
+
+.floatleft {
+  float: left; }
+
+.floatright {
+  float: right; }
 
 .p-t-10 {
   padding-top: 10px; }

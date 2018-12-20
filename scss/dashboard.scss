@@ -135,8 +135,7 @@ body {
     height: 10%;
 }
 
-#doggraph1 {
-    background-color: #446b7f;
+%blokdesign {
     margin: 0;
     padding: 0;
     border: none;
@@ -144,22 +143,21 @@ body {
     align-self: end;
 }
 
-#doggraph2 {
+#doggraph1 {
+    @extend %blokdesign;
     background-color: #446b7f;
-    padding: 0;
-    border: none;
-    opacity: 0.9;
-    transition: all 0.6s ease;
-    align-self: end;
+}
+
+#doggraph2 {
+    @extend %blokdesign;
+    background-color: #446b7f;
+    opacity: 0.5;
 }
 
 #doggraph3 {
+    @extend %blokdesign;
     background-color: #446b7f;
-    padding: 0;
-    border: none;
     opacity: 0.2;
-    transition: all 0.6s ease;
-    align-self: end;
 }
 
 /*----------------------- Graph 2 Data -----------------------*/
@@ -174,31 +172,24 @@ body {
     height: 8%;
 }
 
+
 #clothesgraph1 {
+    @extend %blokdesign;
     background-color: #de4a5e;
-    margin: 0;
-    padding: 0;
-    border: none;
-    transition: all 0.6s ease;
-    align-self: end;
 }
 
 #clothesgraph2 {
+    @extend %blokdesign;
     background-color: #de4a5e;
-    padding: 0;
-    border: none;
     opacity: 0.5;
-    transition: all 0.6s ease;
-    align-self: end;
+
 }
 
 #clothesgraph3 {
+    @extend %blokdesign;
     background-color: #de4a5e;
-    padding: 0;
-    border: none;
     opacity: 0.2;
-    transition: all 0.6s ease;
-    align-self: end;
+
 }
 
 /*----------------------- Graph 3 Data  -----------------------*/
@@ -214,56 +205,46 @@ body {
 }
 
 #toiletriesgraph1 {
+    @extend %blokdesign;
     background-color: #78bd6f;
-    margin: 0;
-    padding: 0;
-    border: none;
-    transition: all 0.6s ease;
-    align-self: end;
 }
 
 #toiletriesgraph2 {
+    @extend %blokdesign;
     background-color: #78bd6f;
-    padding: 0;
-    border: none;
     opacity: 0.5;
-    transition: all 0.6s ease;
-    align-self: end;
 }
 
 #toiletriesgraph3 {
+    @extend %blokdesign;
     background-color: #78bd6f;
-    padding: 0;
-    border: none;
     opacity: 0.2;
-    transition: all 0.6s ease;
-    align-self: end;
+
 }
 
 /*----------------------- Graph 4 Data  -----------------------*/
-
-#totaldoggraph1 {
-    background-color: #446b7f;
+%totaldog {
     padding: 0;
     border: none;
     transition: all 0.6s ease;
     align-self: end;
+}
+
+#totaldoggraph1 {
+    @extend %totaldog;
+    background-color: #446b7f;
+
 }
 
 #totalclothesgraph2 {
+    @extend %totaldog;
     background-color: #de4a5e;
-    padding: 0;
-    border: none;
-    transition: all 0.6s ease;
-    align-self: end;
 }
 
 #totaltoiletriesgraph3 {
+    @extend %totaldog;
     background-color: #78bd6f;
-    padding: 0;
-    border: none;
-    transition: all 0.6s ease;
-    align-self: end;
+
 }
 
 /*----------------------- Graph Y Axis  -----------------------*/
@@ -392,17 +373,6 @@ span {
 
 /*----------------------- Graph p  -----------------------*/
 
-/* .color-bx {
-    float: left;
-    width: 10px;
-    height: 10px;
-    margin-bottom: 5px;
-    margin-right: 7px;
-    position: relative;
-    top: -2px;
-    margin-left: 6px;
-} */
-
 %color-bx {
     float: left;
     width: 10px;
@@ -415,52 +385,52 @@ span {
 }
 
 .bx1 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #446B7F;
 }
 
 .bx2 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #446B7F;
     opacity: 0.5;
 }
 
 .bx3 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #446B7F;
     opacity: 0.2;
 }
 
 .bx4 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #de4a5e;
 }
 
 .bx5 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #de4a5e;
     opacity: 0.5;
 }
 
 .bx6 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #de4a5e;
     opacity: 0.2;
 }
 
 .bx7 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #78bd6f;
 }
 
 .bx8 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #78bd6f;
     opacity: 0.5;
 }
 
 .bx9 {
-    @extend %message-shared;
+    @extend %color-bx;
     background-color: #78bd6f;
     opacity: 0.2;
 }
