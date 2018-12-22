@@ -1,4 +1,5 @@
 "use strict"
+let x;
 
 function btnRadio(x) {
     if (x == 0) {
